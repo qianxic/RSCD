@@ -925,13 +925,13 @@ class RemoteSensingApp(QMainWindow):
                          self.execute_change_detection.result_image_path is not None)
             
             if has_result:
-                # 有结果图像路径，表示可以导出
+                # 使用图像导出模块导出结果
                 result_path = self.execute_change_detection.result_image_path
-                self.navigation_functions.log_message(f"结果导出成功: {result_path}")
-                # 这里可以添加进一步的导出逻辑，如复制文件到用户选择的位置等
+                self.image_export.export_result_image(result_path)
             else:
                 # 没有结果图像路径，表示无法导出
                 self.navigation_functions.log_message("导出失败: 没有可用的检测结果")
+                self.image_export._show_styled_message_box("导出失败", "没有可用的检测结果，请先执行变化检测。", "warning")
         except Exception as e:
             # 捕获可能的异常并记录
             self.navigation_functions.log_message(f"导出过程中发生错误: {str(e)}")
@@ -964,6 +964,13 @@ class RemoteSensingApp(QMainWindow):
             self.text_log
         )
         self.image_display = ImageDisplay(self.navigation_functions)
+        
+        # 初始化图像导出模块
+        from function.image_export import ImageExport
+        self.image_export = ImageExport(self.navigation_functions)
+        
+        # 设置NavigationFunctions的main_window引用，方便子模块访问
+        self.navigation_functions.main_window = self
 
     def apply_theme(self):
         """应用当前主题样式"""

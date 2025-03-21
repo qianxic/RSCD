@@ -5,6 +5,7 @@ from .import_after_image import ImportAfterImage
 from .execute_change_detection_task import ExecuteChangeDetectionTask
 from .clear_task import ClearTask
 from .image_display import ImageDisplay
+from .image_export import ImageExport
 
 __all__ = [
     'ImageStandardization',
@@ -13,5 +14,6 @@ __all__ = [
     'ImportAfterImage',
     'ExecuteChangeDetectionTask',
     'ClearTask',
-    'ImageDisplay'
+    'ImageDisplay',
+    'ImageExport'
 ] 

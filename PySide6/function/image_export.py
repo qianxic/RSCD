@@ -1,91 +1,84 @@
 import os
-from PySide6.QtGui import QPixmap
+import shutil
+from pathlib import Path
+from PySide6.QtWidgets import QFileDialog, QMessageBox
 
-class ExecuteChangeDetectionTask:
-    def __init__(self, navigation_functions, label_output):
+class ImageExport:
+    def __init__(self, navigation_functions):
         """
-        初始化执行变化检测任务模块
+        初始化图像导出模块
         
         Args:
             navigation_functions: NavigationFunctions实例，用于日志记录和图像显示
-            label_output: 用于显示解译结果的标签
         """
         self.navigation_functions = navigation_functions
-        self.label_output = label_output
-        self.result_image_path = None
+        self.temp_output_dir = "D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/output_image"
     
-    def on_begin_clicked(self):
-        """开始执行变化检测任务"""
-        try:
-            # 检查是否已导入前后时相影像
-            if not self.navigation_functions.file_path or not self.navigation_functions.file_path_after:
-                self.navigation_functions.log_message("请先导入前后时相影像")
-                self._show_styled_message_box("检测失败", "没有可用影像，请先导入前后时相影像", "warning")
-                return
-            
-            # 获取前后时相影像路径
-            before_image_path = self.navigation_functions.file_path
-            after_image_path = self.navigation_functions.file_path_after
-            
-            # 设置统一的输出路径
-            output_dir = "D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/output_image"
-            os.makedirs(output_dir, exist_ok=True)
-            
-            self.navigation_functions.log_message(f"执行变化检测: {before_image_path} 与 {after_image_path}")
-            self.navigation_functions.log_message(f"结果将保存到: {output_dir}")
-            
-            # 在这里添加模型推理代码
-            # ...
-            
-            # 模拟生成结果图像路径（实际应由模型生成）
-            import time
-            timestamp = int(time.time())
-            result_filename = f"change_detection_result_{timestamp}.png"
-            result_image_path = os.path.join(output_dir, result_filename)
-            
-            # TODO: 这里应该有实际的模型推理代码，将结果保存到result_image_path
-            
-            # 假设模型推理完成并生成了结果
-            self.navigation_functions.log_message(f"检测完成，结果保存为: {result_image_path}")
-            
-            # 缓存结果路径以供导出
-            self.result_image_path = result_image_path
-            
-            # 直接显示结果到解译窗口，无需确认
-            self.display_change_detection_result(result_image_path)
-            
-        except Exception as e:
-            self.navigation_functions.log_message(f"执行变化检测时出错: {str(e)}")
-            import traceback
-            self.navigation_functions.log_message(traceback.format_exc())
-            self._show_styled_message_box("检测失败", f"执行变化检测时出错: {str(e)}", "critical")
-    
-    def display_change_detection_result(self, result_image_path, stats=None):
-        """显示变化检测结果
+    def export_result_image(self, result_image_path=None):
+        """
+        导出结果图像到用户选择的位置
         
         Args:
-            result_image_path: 结果图像路径
-            stats: 变化统计数据
+            result_image_path: 结果图像路径，如果为None则尝试从变化检测模块获取
         """
         try:
-            # 加载结果图像
-            pixmap = QPixmap(result_image_path)
-            if pixmap.isNull():
-                self.navigation_functions.log_message(f"无法加载结果图像: {result_image_path}")
-                return
+            # 确定需要导出的图像路径
+            if result_image_path is None:
+                # 尝试从主程序的变化检测模块获取结果路径
+                if hasattr(self.navigation_functions, 'main_window') and \
+                   hasattr(self.navigation_functions.main_window, 'execute_change_detection') and \
+                   hasattr(self.navigation_functions.main_window.execute_change_detection, 'result_image_path'):
+                    result_image_path = self.navigation_functions.main_window.execute_change_detection.result_image_path
             
-            # 显示在解译结果区域
-            self.label_output.set_pixmap(pixmap)
-            self.navigation_functions.log_message("检测结果已加载到解译结果窗口")
+            if not result_image_path or not os.path.exists(result_image_path):
+                self.navigation_functions.log_message("没有可导出的结果图像")
+                self._show_styled_message_box("导出失败", "没有可导出的结果图像，请先执行变化检测。", "warning")
+                return False
+                
+            # 获取原始文件名
+            original_filename = os.path.basename(result_image_path)
             
-            # 保存结果路径以供后续导出
-            self.result_image_path = result_image_path
+            # 弹出文件保存对话框
+            options = QFileDialog.Options()
+            save_path, _ = QFileDialog.getSaveFileName(
+                None,
+                "保存检测结果",
+                original_filename,
+                "图像文件 (*.png *.jpg *.jpeg *.tif *.tiff);;所有文件 (*)",
+                options=options
+            )
+            
+            if not save_path:
+                self.navigation_functions.log_message("用户取消导出操作")
+                return False
+                
+            # 确保目标目录存在
+            target_dir = os.path.dirname(save_path)
+            os.makedirs(target_dir, exist_ok=True)
+            
+            # 移动（剪切）文件到新位置
+            shutil.move(result_image_path, save_path)
+            self.navigation_functions.log_message(f"结果图像已导出到: {save_path}")
+            
+            # 检查临时目录是否为空，如果为空则删除
+            if os.path.exists(self.temp_output_dir) and len(os.listdir(self.temp_output_dir)) == 0:
+                try:
+                    os.rmdir(self.temp_output_dir)
+                    self.navigation_functions.log_message(f"已删除临时目录: {self.temp_output_dir}")
+                except Exception as e:
+                    self.navigation_functions.log_message(f"尝试删除临时目录时出错: {str(e)}")
+            
+            # 显示成功消息
+            self._show_styled_message_box("导出成功", f"结果图像已成功导出到:\n{save_path}", "information")
+            return True
             
         except Exception as e:
-            self.navigation_functions.log_message(f"显示变化检测结果时出错: {str(e)}")
+            self.navigation_functions.log_message(f"导出图像时出错: {str(e)}")
             import traceback
             self.navigation_functions.log_message(traceback.format_exc())
-    
+            self._show_styled_message_box("导出失败", f"导出图像时发生错误:\n{str(e)}", "critical")
+            return False
+
     def _show_styled_message_box(self, title, text, icon_type="information"):
         """显示符合应用主题的消息框
         
@@ -217,13 +210,4 @@ class ExecuteChangeDetectionTask:
         layout.addLayout(button_layout)
         
         # 显示对话框
-        return dialog.exec_()
-
-class ChangeDetectionModel:
-    """变化检测模型类"""
-    def __init__(self):
-        self.model_type = "BIT-CD"
-        self.model_version = "1.0"
-        # 其他模型初始化代码...
-        
-    # 其他模型方法...
+        return dialog.exec_() 
