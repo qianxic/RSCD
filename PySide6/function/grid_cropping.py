@@ -44,54 +44,67 @@ class GridCropping:
             return
         
         try:
-            self.navigation_functions.log_message(f"正在裁剪图像: {file_path}")
-            self.navigation_functions.log_message(f"网格大小: {grid_size}x{grid_size}")
-            self.navigation_functions.log_message(f"保存位置: {save_dir}")
+            # 检查文件类型
+            file_ext = os.path.splitext(file_path)[1].lower()
             
-            # 保存最后生成的文件路径，用于更新显示
-            last_generated_file = None
+            # 初始化变量
+            grid_preview_path = None
+            last_files = []
             
-            # 生成网格示意图
-            grid_preview_path = self._generate_grid_preview(file_path, grid_size, save_dir)
-            if grid_preview_path:
-                self.navigation_functions.log_message(f"已生成网格示意图: {grid_preview_path}")
-            
-            # 根据文件类型使用不同的方法进行裁剪
-            if file_path.lower().endswith(('.tif', '.tiff')):
-                try:
-                    # 尝试使用GDAL裁剪GeoTIFF文件
-                    last_files = self._crop_geotiff_grid(file_path, grid_size, save_dir, is_before)
-                    if last_files:
-                        last_generated_file = last_files[0]  # 获取第一个文件
-                except Exception as e:
-                    self.navigation_functions.log_message(f"GDAL裁剪失败，回退到OpenCV: {str(e)}")
-                    # 如果GDAL裁剪失败，回退到OpenCV
-                    last_files = self._crop_image_grid_cv2(file_path, grid_size, save_dir, is_before)
-                    if last_files:
-                        last_generated_file = last_files[0]  # 获取第一个文件
-            else:
-                # 使用OpenCV裁剪普通图像
-                last_files = self._crop_image_grid_cv2(file_path, grid_size, save_dir, is_before)
+            # 处理不同类型的图像
+            if file_ext in ['.tif', '.tiff']:
+                # 处理GeoTIFF格式
+                self.navigation_functions.log_message("检测到GeoTIFF格式，使用GDAL处理...")
+                last_files = self._crop_geotiff_grid(file_path, grid_size, save_dir, is_before)
+                
+                # 创建网格示例图
                 if last_files:
-                    last_generated_file = last_files[0]  # 获取第一个文件
+                    # 保存一张示意图
+                    grid_preview_path = self._generate_grid_preview(file_path, grid_size, save_dir)
+            else:
+                # 处理普通图像格式
+                self.navigation_functions.log_message("检测到普通图像格式，使用PIL处理...")
+                last_files = self._crop_image_grid_cv2(file_path, grid_size, save_dir, is_before)
+                
+                # 创建网格示例图（普通图像也需要生成网格预览）
+                if last_files:
+                    grid_preview_path = self._generate_grid_preview(file_path, grid_size, save_dir)
             
             # 裁剪完成后，可以选择显示其中一个裁剪后的图像或网格示意图
             if grid_preview_path:
+                # 检查是否使用深色主题
+                is_dark_theme = hasattr(self.navigation_functions, 'is_dark_theme') and self.navigation_functions.is_dark_theme
+                
                 # 创建对话框
                 dialog = QDialog()
                 dialog.setWindowTitle("裁剪完成")
                 dialog.setFixedSize(350, 180)
-                dialog.setStyleSheet("""
-                    QDialog {
-                        background-color: #202124;
-                        color: #f7f7f8;
-                    }
-                    QLabel {
-                        color: #f7f7f8;
-                        font-size: 12px;
-                        font-weight: bold;
-                    }
-                """)
+                
+                # 根据主题设置样式
+                if is_dark_theme:
+                    dialog.setStyleSheet("""
+                        QDialog {
+                            background-color: #202124;
+                            color: #f7f7f8;
+                        }
+                        QLabel {
+                            color: #f7f7f8;
+                            font-size: 12px;
+                            font-weight: bold;
+                        }
+                    """)
+                else:
+                    dialog.setStyleSheet("""
+                        QDialog {
+                            background-color: #ffffff;
+                            color: #333333;
+                        }
+                        QLabel {
+                            color: #333333;
+                            font-size: 12px;
+                            font-weight: bold;
+                        }
+                    """)
                 
                 # 创建布局
                 layout = QVBoxLayout(dialog)
@@ -101,13 +114,27 @@ class GridCropping:
                 # 创建提示标签
                 label = QLabel("网格裁剪完成，裁剪结果保存至目标文件夹。\n你要查看哪个影像？")
                 label.setAlignment(Qt.AlignCenter)
-                label.setStyleSheet("""
-                    font-size: 13px;
-                    font-weight: bold;
-                    margin: 0;
-                    padding: 5px;
-                    qproperty-alignment: AlignCenter;
-                """)
+                
+                # 根据主题设置标签样式
+                if is_dark_theme:
+                    label.setStyleSheet("""
+                        font-size: 13px;
+                        font-weight: bold;
+                        margin: 0;
+                        padding: 5px;
+                        qproperty-alignment: AlignCenter;
+                        color: #f7f7f8;
+                    """)
+                else:
+                    label.setStyleSheet("""
+                        font-size: 13px;
+                        font-weight: bold;
+                        margin: 0;
+                        padding: 5px;
+                        qproperty-alignment: AlignCenter;
+                        color: #333333;
+                    """)
+                
                 layout.addWidget(label)
                 
                 # 创建按钮容器，设置透明背景
@@ -117,22 +144,40 @@ class GridCropping:
                 button_layout.setContentsMargins(0, 10, 0, 0)
                 button_layout.setSpacing(15)
                 
-                # 按钮样式 - 统一使用灰色背景
-                button_style = """
-                    QPushButton {
-                        background-color: #444a5a;
-                        color: white;
-                        border-radius: 4px;
-                        padding: 6px 10px;
-                        min-width: 70px;
-                    }
-                    QPushButton:hover {
-                        background-color: #5d6576;
-                    }
-                    QPushButton:pressed {
-                        background-color: #353b4a;
-                    }
-                """
+                # 根据主题设置按钮样式
+                if is_dark_theme:
+                    button_style = """
+                        QPushButton {
+                            background-color: #444a5a;
+                            color: white;
+                            border-radius: 4px;
+                            padding: 6px 10px;
+                            min-width: 70px;
+                        }
+                        QPushButton:hover {
+                            background-color: #5d6576;
+                        }
+                        QPushButton:pressed {
+                            background-color: #353b4a;
+                        }
+                    """
+                else:
+                    button_style = """
+                        QPushButton {
+                            background-color: #f0f0f2;
+                            color: #333333;
+                            border: 1px solid #e6e6e6;
+                            border-radius: 4px;
+                            padding: 6px 10px;
+                            min-width: 70px;
+                        }
+                        QPushButton:hover {
+                            background-color: #e6e6e9;
+                        }
+                        QPushButton:pressed {
+                            background-color: #d9d9dc;
+                        }
+                    """
                 
                 # 添加按钮
                 btn_preview = QPushButton("网格示意图")
@@ -181,19 +226,35 @@ class GridCropping:
             self.navigation_functions.log_message("无效的图像路径")
             return
         
+        # 检查是否使用深色主题
+        is_dark_theme = hasattr(self.navigation_functions, 'is_dark_theme') and self.navigation_functions.is_dark_theme
+        
         # 创建图像浏览器对话框
         browser = QDialog()
         browser.setWindowTitle("网格示意图")
         browser.setMinimumSize(500, 400)  # 设置更大的初始尺寸
-        browser.setStyleSheet("""
-            QDialog {
-                background-color: #202124;
-                color: #f7f7f8;
-            }
-            QLabel {
-                color: #f7f7f8;
-            }
-        """)
+        
+        # 根据主题设置样式
+        if is_dark_theme:
+            browser.setStyleSheet("""
+                QDialog {
+                    background-color: #202124;
+                    color: #f7f7f8;
+                }
+                QLabel {
+                    color: #f7f7f8;
+                }
+            """)
+        else:
+            browser.setStyleSheet("""
+                QDialog {
+                    background-color: #ffffff;
+                    color: #333333;
+                }
+                QLabel {
+                    color: #333333;
+                }
+            """)
         
         # 创建布局
         layout = QVBoxLayout(browser)
@@ -209,58 +270,6 @@ class GridCropping:
         # 添加图像信息标签
         info_label = QLabel()
         info_label.setAlignment(Qt.AlignCenter)
-        info_label.setStyleSheet("""
-            font-size: 9pt;
-            color: #f7f7f8;
-            margin: 0;
-            padding: 5px;
-            qproperty-alignment: AlignCenter;
-        """)
-        layout.addWidget(info_label)
-        
-        # 添加按钮布局
-        button_layout = QHBoxLayout()
-        button_layout.setSpacing(5)  # 增加按钮之间的间距
-        button_layout.setContentsMargins(0, 5, 0, 0)  # 上方添加一些间距
-        
-        # 创建底部按钮容器，设置透明背景
-        button_container = QWidget()
-        button_container.setStyleSheet("background-color: transparent;")
-        button_container_layout = QHBoxLayout(button_container)
-        button_container_layout.setContentsMargins(0, 10, 0, 0)
-        button_container_layout.setSpacing(15)
-        
-        # 添加按钮
-        btn_load_before = QPushButton("加载为前时相")
-        btn_load_after = QPushButton("加载为后时相")
-        
-        # 设置按钮样式 - 统一使用灰色背景
-        button_style = """
-            QPushButton {
-                background-color: #444a5a;
-                color: white;
-                border-radius: 4px;
-                padding: 6px 10px;
-                min-width: 90px;
-            }
-            QPushButton:hover {
-                background-color: #5d6576;
-            }
-            QPushButton:pressed {
-                background-color: #353b4a;
-            }
-        """
-        
-        # 设置按钮样式
-        btn_load_before.setStyleSheet(button_style)
-        btn_load_after.setStyleSheet(button_style)
-        
-        button_container_layout.addStretch()  # 添加弹性空间，使按钮居中
-        button_container_layout.addWidget(btn_load_before)
-        button_container_layout.addWidget(btn_load_after)
-        button_container_layout.addStretch()  # 添加弹性空间，使按钮居中
-        
-        layout.addWidget(button_container)
         
         # 显示图像并调整大小
         try:
@@ -270,7 +279,11 @@ class GridCropping:
             
             # 为路径信息设置特定的容器
             path_container = QWidget()
-            path_container.setStyleSheet("background-color: #2c2c2e; border: 1px solid #444a5a; border-radius: 4px;")
+            if is_dark_theme:
+                path_container.setStyleSheet("background-color: #2c2c2e; border: 1px solid #444a5a; border-radius: 4px;")
+            else:
+                path_container.setStyleSheet("background-color: #f5f5f7; border: 1px solid #e6e6e6; border-radius: 4px;")
+            
             path_layout = QVBoxLayout(path_container)
             path_layout.setContentsMargins(5, 5, 5, 5)
             path_layout.addWidget(info_label)
@@ -314,37 +327,66 @@ class GridCropping:
             import traceback
             self.navigation_functions.log_message(traceback.format_exc())
         
-        # 加载为前时相并关闭浏览器
-        def load_as_before():
-            try:
-                self.navigation_functions.file_path = image_path
-                self.navigation_functions.update_image_display(is_before=True)
-                self.navigation_functions.log_message(f"已加载网格示意图为前时相: {image_path}")
-                browser.accept()  # 关闭对话框
-            except Exception as e:
-                self.navigation_functions.log_message(f"加载网格示意图为前时相时出错: {str(e)}")
+        # 添加按钮
+        button_layout = QHBoxLayout()
+        button_layout.setContentsMargins(10, 0, 10, 10)
+        button_layout.setSpacing(10)
         
-        # 加载为后时相并关闭浏览器
-        def load_as_after():
-            try:
-                self.navigation_functions.file_path_after = image_path
-                self.navigation_functions.update_image_display(is_before=False)
-                self.navigation_functions.log_message(f"已加载网格示意图为后时相: {image_path}")
-                browser.accept()  # 关闭对话框
-            except Exception as e:
-                self.navigation_functions.log_message(f"加载网格示意图为后时相时出错: {str(e)}")
+        # 根据主题设置按钮样式
+        if is_dark_theme:
+            button_style = """
+                QPushButton {
+                    background-color: #444a5a;
+                    color: white;
+                    border-radius: 4px;
+                    padding: 6px 10px;
+                    min-width: 100px;
+                }
+                QPushButton:hover {
+                    background-color: #5d6576;
+                }
+                QPushButton:pressed {
+                    background-color: #353b4a;
+                }
+            """
+        else:
+            button_style = """
+                QPushButton {
+                    background-color: #f0f0f2;
+                    color: #333333;
+                    border: 1px solid #e6e6e6;
+                    border-radius: 4px;
+                    padding: 6px 10px;
+                    min-width: 100px;
+                }
+                QPushButton:hover {
+                    background-color: #e6e6e9;
+                }
+                QPushButton:pressed {
+                    background-color: #d9d9dc;
+                }
+            """
         
-        # 连接按钮事件
-        btn_load_before.clicked.connect(load_as_before)
-        btn_load_after.clicked.connect(load_as_after)
+        # 加载为前时相按钮
+        btn_as_before = QPushButton("加载为前时相")
+        btn_as_before.setStyleSheet(button_style)
+        btn_as_before.clicked.connect(lambda: self._load_as_before_image(image_path, browser))
         
-        # 按键事件处理
-        def keyPressEvent(event):
-            if event.key() == Qt.Key_Escape:
-                browser.reject()  # 按ESC键关闭对话框
+        # 加载为后时相按钮
+        btn_as_after = QPushButton("加载为后时相")
+        btn_as_after.setStyleSheet(button_style)
+        btn_as_after.clicked.connect(lambda: self._load_as_after_image(image_path, browser))
         
-        # 添加键盘事件处理
-        browser.keyPressEvent = keyPressEvent
+        # 关闭按钮
+        btn_close = QPushButton("不加载")
+        btn_close.setStyleSheet(button_style)
+        btn_close.clicked.connect(browser.close)
+        
+        # 添加按钮到布局
+        button_layout.addWidget(btn_as_before)
+        button_layout.addWidget(btn_as_after)
+        button_layout.addWidget(btn_close)
+        layout.addLayout(button_layout)
         
         # 显示对话框
         browser.exec()
@@ -730,22 +772,41 @@ class GridCropping:
             self.navigation_functions.log_message("没有可显示的裁剪图像")
             return
         
+        # 检查是否使用深色主题
+        is_dark_theme = hasattr(self.navigation_functions, 'is_dark_theme') and self.navigation_functions.is_dark_theme
+        
         # 创建图像浏览器对话框
         browser = QDialog()
         browser.setWindowTitle("裁剪图像浏览器")
         browser.setMinimumSize(500, 400)  # 设置更大的初始尺寸
-        browser.setStyleSheet("""
-            QDialog {
-                background-color: #202124;
-                color: #f7f7f8;
-            }
-            QLabel {
-                color: #f7f7f8;
-            }
-            QWidget {
-                background-color: #202124;
-            }
-        """)
+        
+        # 根据主题设置样式
+        if is_dark_theme:
+            browser.setStyleSheet("""
+                QDialog {
+                    background-color: #202124;
+                    color: #f7f7f8;
+                }
+                QLabel {
+                    color: #f7f7f8;
+                }
+                QWidget {
+                    background-color: #202124;
+                }
+            """)
+        else:
+            browser.setStyleSheet("""
+                QDialog {
+                    background-color: #ffffff;
+                    color: #333333;
+                }
+                QLabel {
+                    color: #333333;
+                }
+                QWidget {
+                    background-color: #ffffff;
+                }
+            """)
         
         # 创建布局
         layout = QVBoxLayout(browser)
@@ -761,65 +822,36 @@ class GridCropping:
         # 添加图像信息标签
         info_label = QLabel()
         info_label.setAlignment(Qt.AlignCenter)
-        info_label.setStyleSheet("""
-            font-size: 9pt;
-            color: #f7f7f8;
-            margin: 0;
-            padding: 5px;
-            qproperty-alignment: AlignCenter;
-        """)
-        layout.addWidget(info_label)
         
-        # 添加导航按钮布局
+        # 根据主题设置标签样式
+        if is_dark_theme:
+            info_label.setStyleSheet("""
+                font-size: 9pt;
+                color: #f7f7f8;
+                margin: 0;
+                padding: 5px;
+                qproperty-alignment: AlignCenter;
+            """)
+        else:
+            info_label.setStyleSheet("""
+                font-size: 9pt;
+                color: #333333;
+                margin: 0;
+                padding: 5px;
+                qproperty-alignment: AlignCenter;
+            """)
+        
+        # 创建按钮容器
+        button_container = QWidget()
+        if is_dark_theme:
+            button_container.setStyleSheet("background-color: #2c2c2e; border: 1px solid #444a5a; border-radius: 4px;")
+        else:
+            button_container.setStyleSheet("background-color: #f5f5f7; border: 1px solid #e6e6e6; border-radius: 4px;")
+        
+        # 创建导航按钮
         nav_layout = QHBoxLayout()
-        nav_layout.setSpacing(5)  # 增加按钮之间的间距
-        nav_layout.setContentsMargins(0, 5, 0, 0)  # 上方添加一些间距
-        
-        # 创建底部按钮容器，设置透明背景
-        nav_container = QWidget()
-        nav_container.setStyleSheet("background-color: transparent;")
-        nav_container_layout = QHBoxLayout(nav_container)
-        nav_container_layout.setContentsMargins(0, 10, 0, 0)
-        nav_container_layout.setSpacing(15)  # 增加按钮间距
-        
-        # 导航按钮样式 - 统一使用灰色背景
-        button_style = """
-            QPushButton {
-                background-color: #444a5a;
-                color: white;
-                border-radius: 4px;
-                padding: 6px 10px;
-                min-width: 70px;
-            }
-            QPushButton:hover {
-                background-color: #5d6576;
-            }
-            QPushButton:pressed {
-                background-color: #353b4a;
-            }
-        """
-        
-        # 添加导航按钮
-        btn_prev = QPushButton("上一个")
-        btn_next = QPushButton("下一个")
-        btn_load_before = QPushButton("加载为前时相")
-        btn_load_after = QPushButton("加载为后时相")
-        
-        # 设置按钮样式
-        btn_prev.setStyleSheet(button_style)
-        btn_next.setStyleSheet(button_style)
-        
-        # 设置按钮样式
-        btn_load_before.setStyleSheet(button_style)
-        btn_load_after.setStyleSheet(button_style)
-        
-        nav_container_layout.addWidget(btn_prev)
-        nav_container_layout.addWidget(btn_next)
-        nav_container_layout.addStretch()  # 添加弹性空间在中间
-        nav_container_layout.addWidget(btn_load_before)
-        nav_container_layout.addWidget(btn_load_after)
-        
-        layout.addWidget(nav_container)
+        nav_layout.setContentsMargins(0, 0, 0, 0)
+        nav_layout.setSpacing(10)
         
         # 当前图像索引
         current_index = 0
@@ -827,7 +859,11 @@ class GridCropping:
         
         # 为路径信息设置特定的容器
         path_container = QWidget()
-        path_container.setStyleSheet("background-color: #2c2c2e; border: 1px solid #444a5a; border-radius: 4px;")
+        if is_dark_theme:
+            path_container.setStyleSheet("background-color: #2c2c2e; border: 1px solid #444a5a; border-radius: 4px;")
+        else:
+            path_container.setStyleSheet("background-color: #f5f5f7; border: 1px solid #e6e6e6; border-radius: 4px;")
+        
         path_layout = QVBoxLayout(path_container)
         path_layout.setContentsMargins(5, 5, 5, 5)
         path_layout.addWidget(info_label)
@@ -876,65 +912,128 @@ class GridCropping:
             except Exception as e:
                 self.navigation_functions.log_message(f"更新图像显示时出错: {str(e)}")
         
-        # 导航到上一个图像
-        def go_to_prev():
+        # 创建上一个和下一个按钮
+        # 根据主题设置按钮样式
+        if is_dark_theme:
+            button_style = """
+                QPushButton {
+                    background-color: #444a5a;
+                    color: white;
+                    border-radius: 4px;
+                    padding: 6px 10px;
+                    min-width: 40px;
+                }
+                QPushButton:hover {
+                    background-color: #5d6576;
+                }
+                QPushButton:pressed {
+                    background-color: #353b4a;
+                }
+                QPushButton:disabled {
+                    background-color: #2c2c2e;
+                    color: #666666;
+                }
+            """
+        else:
+            button_style = """
+                QPushButton {
+                    background-color: #f0f0f2;
+                    color: #333333;
+                    border: 1px solid #e6e6e6;
+                    border-radius: 4px;
+                    padding: 6px 10px;
+                    min-width: 40px;
+                }
+                QPushButton:hover {
+                    background-color: #e6e6e9;
+                }
+                QPushButton:pressed {
+                    background-color: #d9d9dc;
+                }
+                QPushButton:disabled {
+                    background-color: #f5f5f7;
+                    color: #999999;
+                    border: 1px solid #e6e6e6;
+                }
+            """
+        
+        btn_prev = QPushButton("上一张")
+        btn_prev.setStyleSheet(button_style)
+        
+        btn_next = QPushButton("下一张")
+        btn_next.setStyleSheet(button_style)
+        
+        # 加载按钮
+        btn_load_before = QPushButton("加载为前时相")
+        btn_load_before.setStyleSheet(button_style)
+        
+        btn_load_after = QPushButton("加载为后时相")
+        btn_load_after.setStyleSheet(button_style)
+        
+        # 添加按钮到导航布局
+        nav_layout.addWidget(btn_prev)
+        nav_layout.addWidget(btn_next)
+        nav_layout.addWidget(btn_load_before)
+        nav_layout.addWidget(btn_load_after)
+        
+        # 设置按钮点击事件
+        def on_prev_clicked():
             nonlocal current_index
-            if current_index > 0:
-                current_index -= 1
-                update_display()
-                self.navigation_functions.log_message(f"显示上一个裁剪图像: {current_index + 1}/{total_images}")
-        
-        # 导航到下一个图像
-        def go_to_next():
+            current_index = (current_index - 1) % total_images
+            update_display()
+            
+        def on_next_clicked():
             nonlocal current_index
-            if current_index < total_images - 1:
-                current_index += 1
-                update_display()
-                self.navigation_functions.log_message(f"显示下一个裁剪图像: {current_index + 1}/{total_images}")
+            current_index = (current_index + 1) % total_images
+            update_display()
+            
+        btn_prev.clicked.connect(on_prev_clicked)
+        btn_next.clicked.connect(on_next_clicked)
         
-        # 加载当前图像为前时相并关闭浏览器
-        def load_as_before():
-            try:
-                current_path = image_files[current_index]
-                self.navigation_functions.file_path = current_path
-                self.navigation_functions.update_image_display(is_before=True)
-                self.navigation_functions.log_message(f"已加载图像为前时相: {current_path}")
-                browser.accept()  # 关闭对话框
-            except Exception as e:
-                self.navigation_functions.log_message(f"加载图像为前时相时出错: {str(e)}")
+        # 设置加载按钮点击事件
+        btn_load_before.clicked.connect(lambda: self._load_as_before_image(image_files[current_index], browser))
+        btn_load_after.clicked.connect(lambda: self._load_as_after_image(image_files[current_index], browser))
         
-        # 加载当前图像为后时相并关闭浏览器
-        def load_as_after():
-            try:
-                current_path = image_files[current_index]
-                self.navigation_functions.file_path_after = current_path
-                self.navigation_functions.update_image_display(is_before=False)
-                self.navigation_functions.log_message(f"已加载图像为后时相: {current_path}")
-                browser.accept()  # 关闭对话框
-            except Exception as e:
-                self.navigation_functions.log_message(f"加载图像为后时相时出错: {str(e)}")
+        # 将导航布局添加到按钮容器
+        button_container_layout = QVBoxLayout(button_container)
+        button_container_layout.setContentsMargins(10, 10, 10, 10)
+        button_container_layout.addLayout(nav_layout)
         
-        # 连接按钮事件
-        btn_prev.clicked.connect(go_to_prev)
-        btn_next.clicked.connect(go_to_next)
-        btn_load_before.clicked.connect(load_as_before)
-        btn_load_after.clicked.connect(load_as_after)
+        # 添加按钮容器到主布局
+        layout.addWidget(button_container)
         
-        # 初始显示第一个图像
+        # 初始化显示
         update_display()
-        self.navigation_functions.log_message(f"显示第一个裁剪图像: 1/{total_images}")
-        
-        # 按键事件处理
-        def keyPressEvent(event):
-            if event.key() == Qt.Key_Left:
-                go_to_prev()
-            elif event.key() == Qt.Key_Right:
-                go_to_next()
-            elif event.key() == Qt.Key_Escape:
-                browser.reject()  # 按ESC键关闭对话框
-        
-        # 添加键盘事件处理
-        browser.keyPressEvent = keyPressEvent
         
         # 显示对话框
         browser.exec()
+
+    def _load_as_before_image(self, image_path, dialog):
+        """加载图像为前时相并关闭对话框
+        
+        Args:
+            image_path: 要加载的图像路径
+            dialog: 要关闭的对话框
+        """
+        try:
+            self.navigation_functions.file_path = image_path
+            self.navigation_functions.update_image_display(is_before=True)
+            self.navigation_functions.log_message(f"已加载图像为前时相: {image_path}")
+            dialog.accept()  # 关闭对话框
+        except Exception as e:
+            self.navigation_functions.log_message(f"加载图像为前时相时出错: {str(e)}")
+    
+    def _load_as_after_image(self, image_path, dialog):
+        """加载图像为后时相并关闭对话框
+        
+        Args:
+            image_path: 要加载的图像路径
+            dialog: 要关闭的对话框
+        """
+        try:
+            self.navigation_functions.file_path_after = image_path
+            self.navigation_functions.update_image_display(is_before=False)
+            self.navigation_functions.log_message(f"已加载图像为后时相: {image_path}")
+            dialog.accept()  # 关闭对话框
+        except Exception as e:
+            self.navigation_functions.log_message(f"加载图像为后时相时出错: {str(e)}")

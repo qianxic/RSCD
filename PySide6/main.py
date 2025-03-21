@@ -26,7 +26,7 @@ else:
 
 from PySide6.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QHBoxLayout, QTextEdit, QLabel, QPushButton, QWidget, QMessageBox, QGroupBox, QSizePolicy, QDialog, QTextBrowser
 from PySide6.QtCore import Qt, QSize
-from PySide6.QtGui import QFont, QPixmap, QImage
+from PySide6.QtGui import QFont, QPixmap, QImage, QIcon
 
 from display import NavigationFunctions, ZoomableLabel
 
@@ -53,8 +53,11 @@ class RemoteSensingApp(QMainWindow):
         self.setWindowTitle("遥感影像变化检测系统 V2.0")
         self.setGeometry(100, 100, 1280, 800)
         
-        # 设置应用程序样式 - 使用黑色/灰色背景主题
-        self.setStyleSheet("""
+        # 主题变量 (默认为深色主题)
+        self.is_dark_theme = True
+        
+        # 定义深色主题样式
+        self.dark_theme_style = """
             QMainWindow, QWidget {
                 background-color: #202124;
                 color: #f7f7f8;
@@ -112,9 +115,7 @@ class RemoteSensingApp(QMainWindow):
             }
             QDialog {
                 background-color: #202124;
-
                 color: #f7f7f8;
-
             }
             QCheckBox, QRadioButton {
                 color: #f7f7f8;
@@ -188,7 +189,145 @@ class RemoteSensingApp(QMainWindow):
                 height: 0;
                 width: 0;
             }
-        """)
+        """
+        
+        # 定义浅色主题样式
+        self.light_theme_style = """
+            QMainWindow, QWidget {
+                background-color: #ffffff;
+                color: #333333;
+            }
+            QMenuBar, QStatusBar {
+                background-color: #ffffff;
+                color: #333333;
+            }
+            QHeaderView::section {
+                background-color: #f5f5f7;
+                color: #333333;
+                padding: 4px;
+                border: 1px solid #e6e6e6;
+            }
+            QGroupBox {
+                border: 1px solid #e6e6e6;
+                border-radius: 3px;
+                margin-top: 8px;
+                font-weight: bold;
+                color: #333333;
+                background-color: #ffffff;
+            }
+            QGroupBox::title {
+                subcontrol-origin: margin;
+                left: 10px;
+                padding: 0 3px 0 3px;
+                background-color: #ffffff;
+            }
+            QTextEdit, QTextBrowser {
+                background-color: #f5f5f7;
+                color: #333333;
+                border: 1px solid #e6e6e6;
+                border-radius: 3px;
+            }
+            QPushButton {
+                background-color: #f0f0f2;
+                color: #333333;
+                border: 1px solid #e6e6e6;
+                border-radius: 4px;
+                padding: 8px 16px;
+                font-weight: bold;
+                min-width: 80px;
+            }
+            QPushButton:hover {
+                background-color: #e6e6e9;
+            }
+            QPushButton:pressed {
+                background-color: #d9d9dc;
+            }
+            QLabel {
+                color: #333333;
+            }
+            QSplitter::handle {
+                background-color: #e6e6e6;
+            }
+            QDialog {
+                background-color: #ffffff;
+                color: #333333;
+            }
+            QCheckBox, QRadioButton {
+                color: #333333;
+            }
+            QMessageBox {
+                background-color: #ffffff;
+                color: #333333;
+            }
+            QTabWidget::pane {
+                border: 1px solid #e6e6e6;
+                background-color: #ffffff;
+            }
+            QTabBar::tab {
+                background-color: #f5f5f7;
+                color: #333333;
+                border: 1px solid #e6e6e6;
+                border-bottom: none;
+                padding: 5px 10px;
+            }
+            QTabBar::tab:selected {
+                background-color: #ffffff;
+                border-bottom: 1px solid #ffffff;
+            }
+            QLineEdit, QComboBox, QSpinBox {
+                background-color: #f5f5f7;
+                color: #333333;
+                border: 1px solid #e6e6e6;
+                border-radius: 4px;
+                padding: 3px;
+            }
+            QToolTip {
+                background-color: #f5f5f7;
+                color: #333333;
+                border: 1px solid #e6e6e6;
+            }
+            
+            /* 滚动条样式 */
+            QScrollBar:vertical {
+                border: none;
+                background-color: #f5f5f7;
+                width: 10px;
+                margin: 0;
+            }
+            QScrollBar::handle:vertical {
+                background-color: #cccccc;
+                min-height: 20px;
+                border-radius: 5px;
+            }
+            QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+                border: none;
+                background: none;
+                height: 0;
+                width: 0;
+            }
+            
+            /* 水平滚动条样式 */
+            QScrollBar:horizontal {
+                border: none;
+                background-color: #f5f5f7;
+                height: 10px;
+                margin: 0;
+            }
+            QScrollBar::handle:horizontal {
+                background-color: #cccccc;
+                min-width: 20px;
+                border-radius: 5px;
+            }
+            QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+                border: none;
+                background: none;
+                height: 0;
+                width: 0;
+            }
+        """
+        
+        # 应用当前主题
+        self.apply_theme()
         
         # 创建中央控件和主布局
         central_widget = QWidget()
@@ -228,7 +367,7 @@ class RemoteSensingApp(QMainWindow):
         bottom_layout.addWidget(output_group, 3)  # 比例为3
         
         # 初始化NavigationFunctions
-        self.navigation_functions = NavigationFunctions(self.text_log, self.label_before, self.label_after)
+        self.navigation_functions = NavigationFunctions(self.label_before, self.label_after, self.label_result, self.text_log)
         
         # 初始化功能模块
         self.init_function_modules()
@@ -264,13 +403,24 @@ class RemoteSensingApp(QMainWindow):
         self.label_before = ZoomableLabel()
         self.label_before.setAlignment(Qt.AlignCenter)
         self.label_before.setText("前时相影像")
-        self.label_before.setStyleSheet("""
-            background-color: #2c2c2e; 
-            border: 1px solid #444a5a;
-            border-radius: 4px;
-            color: #f7f7f8;
-            font-size: 12pt;
-        """)
+        
+        # 根据当前主题设置样式
+        if self.is_dark_theme:
+            self.label_before.setStyleSheet("""
+                background-color: #2c2c2e; 
+                border: 1px solid #444a5a;
+                border-radius: 4px;
+                color: #f7f7f8;
+                font-size: 12pt;
+            """)
+        else:
+            self.label_before.setStyleSheet("""
+                background-color: #f5f5f7; 
+                border: 1px solid #e6e6e6;
+                border-radius: 4px;
+                color: #333333;
+                font-size: 12pt;
+            """)
         
         # 设置最小尺寸但允许自适应放大
         self.label_before.setMinimumSize(400, 400)
@@ -292,13 +442,24 @@ class RemoteSensingApp(QMainWindow):
         self.label_after = ZoomableLabel()
         self.label_after.setAlignment(Qt.AlignCenter)
         self.label_after.setText("后时相影像")
-        self.label_after.setStyleSheet("""
-            background-color: #2c2c2e; 
-            border: 1px solid #444a5a;
-            border-radius: 4px;
-            color: #f7f7f8;
-            font-size: 12pt;
-        """)
+        
+        # 根据当前主题设置样式
+        if self.is_dark_theme:
+            self.label_after.setStyleSheet("""
+                background-color: #2c2c2e; 
+                border: 1px solid #444a5a;
+                border-radius: 4px;
+                color: #f7f7f8;
+                font-size: 12pt;
+            """)
+        else:
+            self.label_after.setStyleSheet("""
+                background-color: #f5f5f7; 
+                border: 1px solid #e6e6e6;
+                border-radius: 4px;
+                color: #333333;
+                font-size: 12pt;
+            """)
         
         # 设置最小尺寸但允许自适应放大
         self.label_after.setMinimumSize(400, 400)
@@ -320,12 +481,22 @@ class RemoteSensingApp(QMainWindow):
         self.text_log = QTextEdit()
         self.text_log.setReadOnly(True)
         self.text_log.setFont(QFont("Consolas", 9))
-        self.text_log.setStyleSheet("""
-            background-color: #2c2c2e; 
-            color: #f7f7f8;
-            border: 1px solid #444a5a;
-            border-radius: 4px;
-        """)
+        
+        # 根据当前主题设置样式
+        if self.is_dark_theme:
+            self.text_log.setStyleSheet("""
+                background-color: #2c2c2e; 
+                color: #f7f7f8;
+                border: 1px solid #444a5a;
+                border-radius: 4px;
+            """)
+        else:
+            self.text_log.setStyleSheet("""
+                background-color: #f5f5f7; 
+                color: #333333;
+                border: 1px solid #e6e6e6;
+                border-radius: 4px;
+            """)
         
         layout_log.addWidget(self.text_log)
         return self.group_log
@@ -341,13 +512,24 @@ class RemoteSensingApp(QMainWindow):
         self.label_result = ZoomableLabel()
         self.label_result.setAlignment(Qt.AlignCenter)
         self.label_result.setText("未生成结果")
-        self.label_result.setStyleSheet("""
-            background-color: #2c2c2e; 
-            border: 1px solid #444a5a;
-            border-radius: 4px;
-            color: #f7f7f8;
-            font-size: 12pt;
-        """)
+        
+        # 根据当前主题设置样式
+        if self.is_dark_theme:
+            self.label_result.setStyleSheet("""
+                background-color: #2c2c2e; 
+                border: 1px solid #444a5a;
+                border-radius: 4px;
+                color: #f7f7f8;
+                font-size: 12pt;
+            """)
+        else:
+            self.label_result.setStyleSheet("""
+                background-color: #f5f5f7; 
+                border: 1px solid #e6e6e6;
+                border-radius: 4px;
+                color: #333333;
+                font-size: 12pt;
+            """)
         
         # 移除掩码和边界标签
         self.label_mask = None  # 仅用于兼容性
@@ -371,61 +553,110 @@ class RemoteSensingApp(QMainWindow):
         self.btn_import_after = QPushButton("导入后时相影像")
         self.btn_begin = QPushButton("开始检测")
         self.btn_export = QPushButton("结果导出")
-        self.btn_clear = QPushButton("退出任务")
+        self.btn_clear = QPushButton("清空当前界面")
         self.btn_help = QPushButton("帮助")
+        self.btn_theme = QPushButton("切换主题")
         
         # 设置按钮样式
         primary_buttons = [self.btn_begin, self.btn_export]
         for btn in primary_buttons:
-            btn.setStyleSheet("""
-                QPushButton {
-                    background-color: #5e55d6;
-                    color: white;
-                    font-weight: bold;
-                    border-radius: 4px;
-                }
-                QPushButton:hover {
-                    background-color: #6c63e6;
-                }
-                QPushButton:pressed {
-                    background-color: #4c44b3;
-                }
-            """)
+            if self.is_dark_theme:
+                btn.setStyleSheet("""
+                    QPushButton {
+                        background-color: #5e55d6;
+                        color: white;
+                        font-weight: bold;
+                        border-radius: 4px;
+                    }
+                    QPushButton:hover {
+                        background-color: #6c63e6;
+                    }
+                    QPushButton:pressed {
+                        background-color: #4c44b3;
+                    }
+                """)
+            else:
+                btn.setStyleSheet("""
+                    QPushButton {
+                        background-color: #4e7ae2;
+                        color: white;
+                        font-weight: bold;
+                        border-radius: 4px;
+                    }
+                    QPushButton:hover {
+                        background-color: #5c89f2;
+                    }
+                    QPushButton:pressed {
+                        background-color: #3c69d1;
+                    }
+                """)
         
         secondary_buttons = [self.btn_standard, self.btn_crop, self.btn_import, self.btn_import_after]
         for btn in secondary_buttons:
-            btn.setStyleSheet("""
-                QPushButton {
-                    background-color: #444a5a;
-                    color: white;
-                    border-radius: 4px;
-                }
-                QPushButton:hover {
-                    background-color: #5d6576;
-                }
-                QPushButton:pressed {
-                    background-color: #353b4a;
-                }
-            """)
+            if self.is_dark_theme:
+                btn.setStyleSheet("""
+                    QPushButton {
+                        background-color: #444a5a;
+                        color: white;
+                        border-radius: 4px;
+                    }
+                    QPushButton:hover {
+                        background-color: #5d6576;
+                    }
+                    QPushButton:pressed {
+                        background-color: #353b4a;
+                    }
+                """)
+            else:
+                btn.setStyleSheet("""
+                    QPushButton {
+                        background-color: #f0f0f2;
+                        color: #333333;
+                        border: 1px solid #e6e6e6;
+                        border-radius: 4px;
+                    }
+                    QPushButton:hover {
+                        background-color: #e6e6e9;
+                    }
+                    QPushButton:pressed {
+                        background-color: #d9d9dc;
+                    }
+                """)
         
-        utility_buttons = [self.btn_clear, self.btn_help]
+        utility_buttons = [self.btn_clear, self.btn_help, self.btn_theme]
         for btn in utility_buttons:
-            btn.setStyleSheet("""
-                QPushButton {
-                    background-color: #2c2c2e;
-                    color: white;
-                    border-radius: 4px;
-                }
-                QPushButton:hover {
-                    background-color: #3e3e40;
-                }
-                QPushButton:pressed {
-                    background-color: #242425;
-                }
-            """)
+            if self.is_dark_theme:
+                btn.setStyleSheet("""
+                    QPushButton {
+                        background-color: #2c2c2e;
+                        color: white;
+                        border-radius: 4px;
+                    }
+                    QPushButton:hover {
+                        background-color: #3e3e40;
+                    }
+                    QPushButton:pressed {
+                        background-color: #242425;
+                    }
+                """)
+            else:
+                btn.setStyleSheet("""
+                    QPushButton {
+                        background-color: #e6e6e9;
+                        color: #333333;
+                        border: 1px solid #d9d9dc;
+                        border-radius: 4px;
+                    }
+                    QPushButton:hover {
+                        background-color: #d9d9dc;
+                    }
+                    QPushButton:pressed {
+                        background-color: #ccccce;
+                    }
+                """)
         
         # 添加按钮到布局
-        for btn in [self.btn_import, self.btn_import_after, self.btn_standard, self.btn_crop, self.btn_begin, self.btn_export, self.btn_clear, self.btn_help]:
+        for btn in [ self.btn_standard, self.btn_crop, self.btn_import, self.btn_import_after,self.btn_begin, self.btn_export,self.btn_theme, self.btn_clear,self.btn_help]:
             button_layout.addWidget(btn)
             # 设置固定高度并增加间距
             btn.setFixedHeight(32)
@@ -437,11 +668,14 @@ class RemoteSensingApp(QMainWindow):
         parent_layout.addLayout(button_layout)
         
         # 在按钮下方添加分隔线
-        separator = QWidget()
-        separator.setFixedHeight(1)
-        separator.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
-        separator.setStyleSheet("background-color: #444a5a;")
-        parent_layout.addWidget(separator)
+        self.nav_separator = QWidget()
+        self.nav_separator.setFixedHeight(1)
+        self.nav_separator.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        if self.is_dark_theme:
+            self.nav_separator.setStyleSheet("background-color: #444a5a;")
+        else:
+            self.nav_separator.setStyleSheet("background-color: #e6e6e6;")
+        parent_layout.addWidget(self.nav_separator)
     
     def connect_buttons(self):
         """连接按钮点击事件"""
@@ -453,6 +687,7 @@ class RemoteSensingApp(QMainWindow):
         self.btn_clear.clicked.connect(self.clear_task.clear_interface)
         self.btn_help.clicked.connect(self.show_help)
         self.btn_export.clicked.connect(self.on_export_clicked)
+        self.btn_theme.clicked.connect(self.toggle_theme)
     
     def show_help(self):
         """显示帮助信息对话框"""
@@ -466,94 +701,190 @@ class RemoteSensingApp(QMainWindow):
         
         # 创建QTextBrowser用于显示帮助内容
         text_browser = QTextBrowser()
-        text_browser.setHtml("""
-            <html>
-            <body style="background-color: #2c2c2e; color: #f7f7f8; font-size: 10pt;">
-                <h2 style="color: #f7f7f8;">遥感影像变化检测系统</h2>
-                <p>本系统用于处理和分析遥感影像，用于变化检测。</p>
-                
-                <h3 style="color: #f7f7f8;">主要功能</h3>
-                <ul>
-                    <li><b>导入前时相图像</b>: 导入变化前的遥感影像。</li>
-                    <li><b>导入后时相图像</b>: 导入变化后的遥感影像。</li>
-                    <li><b>尺寸裁剪</b>: 将图像裁剪为指定尺寸。</li>
-                    <li><b>网格分割</b>: 将图像按网格分割为多个小块。</li>
-                    <li><b>开始检测</b>: 执行变化检测算法。</li>
-                    <li><b>结果导出</b>: 保存检测结果。</li>
-                    <li><b>退出任务</b>: 退出当前检测任务。</li>
-                </ul>
-                
-                <h3 style="color: #f7f7f8;">注意事项</h3>
-                <p>1. 前时相和后时相图像应当具有相同的尺寸和视角。</p>
-                <p>2. 支持的图像格式包括PNG, JPG, TIFF等。</p>
-                <p>3. 变化检测结果以RGB图像方式展示，其中以黑白色来呈现变化结果</p>
-            </body>
-            </html>
-        """)
         
-        text_browser.setStyleSheet("""
-            QTextBrowser {
-                background-color: #2c2c2e; 
-                color: #f7f7f8;
-                border: 1px solid #444a5a;
-                border-radius: 3px;
-            }
-            QScrollBar:vertical {
-                border: none;
-                background-color: #2c2c2e;
-                width: 10px;
-                margin: 0;
-            }
-            QScrollBar::handle:vertical {
-                background-color: #444a5a;
-                min-height: 20px;
-                border-radius: 5px;
-            }
-            QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
-                border: none;
-                background: none;
-                height: 0;
-                width: 0;
-            }
-            QScrollBar:horizontal {
-                border: none;
-                background-color: #2c2c2e;
-                height: 10px;
-                margin: 0;
-            }
-            QScrollBar::handle:horizontal {
-                background-color: #444a5a;
-                min-width: 20px;
-                border-radius: 5px;
-            }
-            QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
-                border: none;
-                background: none;
-                height: 0;
-                width: 0;
-            }
-        """)
+        # 根据当前主题设置不同的HTML内容
+        if self.is_dark_theme:
+            text_browser.setHtml("""
+                <html>
+                <body style="background-color: #2c2c2e; color: #f7f7f8; font-size: 10pt;">
+                    <h2 style="color: #f7f7f8;">遥感影像变化检测系统</h2>
+                    <p>本系统用于处理和分析遥感影像，用于变化检测。</p>
+                    
+                    <h3 style="color: #f7f7f8;">主要功能</h3>
+                    <ul>
+                        <li><b>导入前时相图像</b>: 导入变化前的遥感影像。</li>
+                        <li><b>导入后时相图像</b>: 导入变化后的遥感影像。</li>
+                        <li><b>尺寸裁剪</b>: 将图像裁剪为指定尺寸。</li>
+                        <li><b>网格分割</b>: 将图像按网格分割为多个小块。</li>
+                        <li><b>开始检测</b>: 执行变化检测算法。</li>
+                        <li><b>结果导出</b>: 保存检测结果。</li>
+                        <li><b>退出任务</b>: 退出当前检测任务。</li>
+                        <li><b>切换主题</b>: 在深色和浅色主题间切换。</li>
+                    </ul>
+                    
+                    <h3 style="color: #f7f7f8;">注意事项</h3>
+                    <p>1. 前时相和后时相图像应当具有相同的尺寸和视角。</p>
+                    <p>2. 支持的图像格式包括PNG, JPG, TIFF等。</p>
+                    <p>3. 变化检测结果以RGB图像方式展示，其中以黑白色来呈现变化结果</p>
+                </body>
+                </html>
+            """)
+        else:
+            text_browser.setHtml("""
+                <html>
+                <body style="background-color: #f5f5f7; color: #333333; font-size: 10pt;">
+                    <h2 style="color: #333333;">遥感影像变化检测系统</h2>
+                    <p>本系统用于处理和分析遥感影像，用于变化检测。</p>
+                    
+                    <h3 style="color: #333333;">主要功能</h3>
+                    <ul>
+                        <li><b>导入前时相图像</b>: 导入变化前的遥感影像。</li>
+                        <li><b>导入后时相图像</b>: 导入变化后的遥感影像。</li>
+                        <li><b>尺寸裁剪</b>: 将图像裁剪为指定尺寸。</li>
+                        <li><b>网格分割</b>: 将图像按网格分割为多个小块。</li>
+                        <li><b>开始检测</b>: 执行变化检测算法。</li>
+                        <li><b>结果导出</b>: 保存检测结果。</li>
+                        <li><b>退出任务</b>: 退出当前检测任务。</li>
+                        <li><b>切换主题</b>: 在深色和浅色主题间切换。</li>
+                    </ul>
+                    
+                    <h3 style="color: #333333;">注意事项</h3>
+                    <p>1. 前时相和后时相图像应当具有相同的尺寸和视角。</p>
+                    <p>2. 支持的图像格式包括PNG, JPG, TIFF等。</p>
+                    <p>3. 变化检测结果以RGB图像方式展示，其中以黑白色来呈现变化结果</p>
+                </body>
+                </html>
+            """)
+        
+        # 根据当前主题设置样式
+        if self.is_dark_theme:
+            text_browser.setStyleSheet("""
+                QTextBrowser {
+                    background-color: #2c2c2e; 
+                    color: #f7f7f8;
+                    border: 1px solid #444a5a;
+                    border-radius: 3px;
+                }
+                QScrollBar:vertical {
+                    border: none;
+                    background-color: #2c2c2e;
+                    width: 10px;
+                    margin: 0;
+                }
+                QScrollBar::handle:vertical {
+                    background-color: #444a5a;
+                    min-height: 20px;
+                    border-radius: 5px;
+                }
+                QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+                    border: none;
+                    background: none;
+                    height: 0;
+                    width: 0;
+                }
+                QScrollBar:horizontal {
+                    border: none;
+                    background-color: #2c2c2e;
+                    height: 10px;
+                    margin: 0;
+                }
+                QScrollBar::handle:horizontal {
+                    background-color: #444a5a;
+                    min-width: 20px;
+                    border-radius: 5px;
+                }
+                QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+                    border: none;
+                    background: none;
+                    height: 0;
+                    width: 0;
+                }
+            """)
+        else:
+            text_browser.setStyleSheet("""
+                QTextBrowser {
+                    background-color: #f5f5f7; 
+                    color: #333333;
+                    border: 1px solid #e6e6e6;
+                    border-radius: 3px;
+                }
+                QScrollBar:vertical {
+                    border: none;
+                    background-color: #f5f5f7;
+                    width: 10px;
+                    margin: 0;
+                }
+                QScrollBar::handle:vertical {
+                    background-color: #cccccc;
+                    min-height: 20px;
+                    border-radius: 5px;
+                }
+                QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+                    border: none;
+                    background: none;
+                    height: 0;
+                    width: 0;
+                }
+                QScrollBar:horizontal {
+                    border: none;
+                    background-color: #f5f5f7;
+                    height: 10px;
+                    margin: 0;
+                }
+                QScrollBar::handle:horizontal {
+                    background-color: #cccccc;
+                    min-width: 20px;
+                    border-radius: 5px;
+                }
+                QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+                    border: none;
+                    background: none;
+                    height: 0;
+                    width: 0;
+                }
+            """)
         
         layout.addWidget(text_browser)
         
         # 添加"关闭"按钮
         close_button = QPushButton("关闭")
-        close_button.setStyleSheet("""
-            QPushButton {
-                background-color: #2c2c2e;
-                color: #f7f7f8;
-                border: 1px solid #444a5a;
-                border-radius: 3px;
-                padding: 5px;
-                min-width: 80px;
-            }
-            QPushButton:hover {
-                background-color: #3e3e40;
-            }
-            QPushButton:pressed {
-                background-color: #242425;
-            }
-        """)
+        
+        # 根据当前主题设置按钮样式
+        if self.is_dark_theme:
+            close_button.setStyleSheet("""
+                QPushButton {
+                    background-color: #2c2c2e;
+                    color: #f7f7f8;
+                    border: 1px solid #444a5a;
+                    border-radius: 3px;
+                    padding: 5px;
+                    min-width: 80px;
+                }
+                QPushButton:hover {
+                    background-color: #3e3e40;
+                }
+                QPushButton:pressed {
+                    background-color: #242425;
+                }
+            """)
+        else:
+            close_button.setStyleSheet("""
+                QPushButton {
+                    background-color: #f0f0f2;
+                    color: #333333;
+                    border: 1px solid #e6e6e6;
+                    border-radius: 3px;
+                    padding: 5px;
+                    min-width: 80px;
+                }
+                QPushButton:hover {
+                    background-color: #e6e6e9;
+                }
+                QPushButton:pressed {
+                    background-color: #d9d9dc;
+                }
+            """)
+            
         close_button.clicked.connect(dialog.accept)
         
         # 将按钮添加到布局
@@ -563,15 +894,26 @@ class RemoteSensingApp(QMainWindow):
         layout.addLayout(button_layout)
         
         # 设置对话框的整体样式
-        dialog.setStyleSheet("""
-            QDialog {
-                background-color: #202124;
-                color: #f7f7f8;
-            }
-            QLabel {
-                color: #f7f7f8;
-            }
-        """)
+        if self.is_dark_theme:
+            dialog.setStyleSheet("""
+                QDialog {
+                    background-color: #202124;
+                    color: #f7f7f8;
+                }
+                QLabel {
+                    color: #f7f7f8;
+                }
+            """)
+        else:
+            dialog.setStyleSheet("""
+                QDialog {
+                    background-color: #ffffff;
+                    color: #333333;
+                }
+                QLabel {
+                    color: #333333;
+                }
+            """)
         
         dialog.exec()
 
@@ -623,6 +965,229 @@ class RemoteSensingApp(QMainWindow):
         )
         self.image_display = ImageDisplay(self.navigation_functions)
 
+    def apply_theme(self):
+        """应用当前主题样式"""
+        if self.is_dark_theme:
+            self.setStyleSheet(self.dark_theme_style)
+        else:
+            self.setStyleSheet(self.light_theme_style)
+    
+    def toggle_theme(self):
+        """切换深浅主题"""
+        self.is_dark_theme = not self.is_dark_theme
+        
+        # 应用主题样式表
+        self.apply_theme()
+        
+        # 更新各个UI元素的样式
+        
+        # 更新顶部容器的样式
+        if hasattr(self, 'top_container'):
+            if self.is_dark_theme:
+                self.top_container.setStyleSheet("""
+                    background-color: #202124;
+                    border-bottom: 1px solid #444a5a;
+                    padding: 0;
+                    margin: 0;
+                """)
+            else:
+                self.top_container.setStyleSheet("""
+                    background-color: #ffffff;
+                    border-bottom: 1px solid #e6e6e6;
+                    padding: 0;
+                    margin: 0;
+                """)
+        
+        # 更新标题标签样式
+        if hasattr(self, 'label_before_title') and hasattr(self, 'label_after_title'):
+            if self.is_dark_theme:
+                label_style = """
+                    color: #f7f7f8;
+                    font-size: 14px;
+                    font-weight: bold;
+                """
+            else:
+                label_style = """
+                    color: #333333;
+                    font-size: 14px;
+                    font-weight: bold;
+                """
+            self.label_before_title.setStyleSheet(label_style)
+            self.label_after_title.setStyleSheet(label_style)
+        
+        # 更新图像显示区域样式
+        if self.is_dark_theme:
+            self.label_before.setStyleSheet("""
+                background-color: #2c2c2e; 
+                border: 1px solid #444a5a;
+                border-radius: 4px;
+                color: #f7f7f8;
+                font-size: 12pt;
+            """)
+            self.label_after.setStyleSheet("""
+                background-color: #2c2c2e; 
+                border: 1px solid #444a5a;
+                border-radius: 4px;
+                color: #f7f7f8;
+                font-size: 12pt;
+            """)
+            self.text_log.setStyleSheet("""
+                background-color: #2c2c2e; 
+                color: #f7f7f8;
+                border: 1px solid #444a5a;
+                border-radius: 4px;
+            """)
+            self.label_result.setStyleSheet("""
+                background-color: #2c2c2e; 
+                border: 1px solid #444a5a;
+                border-radius: 4px;
+                color: #f7f7f8;
+                font-size: 12pt;
+            """)
+            
+            # 更新导航栏分隔线颜色
+            if hasattr(self, 'nav_separator'):
+                self.nav_separator.setStyleSheet("background-color: #444a5a;")
+        else:
+            self.label_before.setStyleSheet("""
+                background-color: #f5f5f7; 
+                border: 1px solid #e6e6e6;
+                border-radius: 4px;
+                color: #333333;
+                font-size: 12pt;
+            """)
+            self.label_after.setStyleSheet("""
+                background-color: #f5f5f7; 
+                border: 1px solid #e6e6e6;
+                border-radius: 4px;
+                color: #333333;
+                font-size: 12pt;
+            """)
+            self.text_log.setStyleSheet("""
+                background-color: #f5f5f7; 
+                color: #333333;
+                border: 1px solid #e6e6e6;
+                border-radius: 4px;
+            """)
+            self.label_result.setStyleSheet("""
+                background-color: #f5f5f7; 
+                border: 1px solid #e6e6e6;
+                border-radius: 4px;
+                color: #333333;
+                font-size: 12pt;
+            """)
+            
+            # 更新导航栏分隔线颜色
+            if hasattr(self, 'nav_separator'):
+                self.nav_separator.setStyleSheet("background-color: #e6e6e6;")
+        
+        # 更新按钮样式
+        # 主要按钮
+        primary_buttons = [self.btn_begin, self.btn_export]
+        for btn in primary_buttons:
+            if self.is_dark_theme:
+                btn.setStyleSheet("""
+                    QPushButton {
+                        background-color: #5e55d6;
+                        color: white;
+                        font-weight: bold;
+                        border-radius: 4px;
+                    }
+                    QPushButton:hover {
+                        background-color: #6c63e6;
+                    }
+                    QPushButton:pressed {
+                        background-color: #4c44b3;
+                    }
+                """)
+            else:
+                btn.setStyleSheet("""
+                    QPushButton {
+                        background-color: #4e7ae2;
+                        color: white;
+                        font-weight: bold;
+                        border-radius: 4px;
+                    }
+                    QPushButton:hover {
+                        background-color: #5c89f2;
+                    }
+                    QPushButton:pressed {
+                        background-color: #3c69d1;
+                    }
+                """)
+        
+        # 次要按钮
+        secondary_buttons = [self.btn_standard, self.btn_crop, self.btn_import, self.btn_import_after]
+        for btn in secondary_buttons:
+            if self.is_dark_theme:
+                btn.setStyleSheet("""
+                    QPushButton {
+                        background-color: #444a5a;
+                        color: white;
+                        border-radius: 4px;
+                    }
+                    QPushButton:hover {
+                        background-color: #5d6576;
+                    }
+                    QPushButton:pressed {
+                        background-color: #353b4a;
+                    }
+                """)
+            else:
+                btn.setStyleSheet("""
+                    QPushButton {
+                        background-color: #f0f0f2;
+                        color: #333333;
+                        border: 1px solid #e6e6e6;
+                        border-radius: 4px;
+                    }
+                    QPushButton:hover {
+                        background-color: #e6e6e9;
+                    }
+                    QPushButton:pressed {
+                        background-color: #d9d9dc;
+                    }
+                """)
+        
+        # 功能按钮
+        utility_buttons = [self.btn_clear, self.btn_help, self.btn_theme]
+        for btn in utility_buttons:
+            if self.is_dark_theme:
+                btn.setStyleSheet("""
+                    QPushButton {
+                        background-color: #2c2c2e;
+                        color: white;
+                        border-radius: 4px;
+                    }
+                    QPushButton:hover {
+                        background-color: #3e3e40;
+                    }
+                    QPushButton:pressed {
+                        background-color: #242425;
+                    }
+                """)
+            else:
+                btn.setStyleSheet("""
+                    QPushButton {
+                        background-color: #e6e6e9;
+                        color: #333333;
+                        border: 1px solid #d9d9dc;
+                        border-radius: 4px;
+                    }
+                    QPushButton:hover {
+                        background-color: #d9d9dc;
+                    }
+                    QPushButton:pressed {
+                        background-color: #ccccce;
+                    }
+                """)
+        
+        # 日志记录
+        theme_name = "深色" if self.is_dark_theme else "浅色"
+        if hasattr(self, 'navigation_functions'):
+            self.navigation_functions.is_dark_theme = self.is_dark_theme
+            self.navigation_functions.log_message(f"已切换至{theme_name}主题")
+
 def main():
     """主函数"""
     app = QApplication(sys.argv)
@@ -631,6 +1196,4 @@ def main():
     sys.exit(app.exec())
 
 if __name__ == "__main__":
-    main()
-
     main()

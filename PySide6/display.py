@@ -368,18 +368,39 @@ class ZoomableLabel(QLabel):#定义图像为缩放的标签类
             self.updateLabelDimensions()
 
 class NavigationFunctions:
-    def __init__(self, text_log, label_before, label_after):
-        self.text_log = text_log  # UI中的文本日志控件
-        self.label_before = label_before  # 前时相标签
-        self.label_after = label_after  # 后时相标签
+    """提供导航和图像显示功能的类"""
+    
+    def __init__(self, label_before, label_after, label_result, text_log):
+        """
+        初始化导航功能
+        
+        Args:
+            label_before: 前时相图像显示标签
+            label_after: 后时相图像显示标签
+            label_result: 结果图像显示标签
+            text_log: 日志文本框
+        """
+        self.label_before = label_before
+        self.label_after = label_after
+        self.label_result = label_result
+        self.text_log = text_log
+        
+        # 初始化图像文件路径
+        self.file_path = None  # 前时相图像路径
+        self.file_path_after = None  # 后时相图像路径
+        
+        # 初始化主题设置
+        self.is_dark_theme = True  # 默认使用深色主题
+        
+        # 初始化日志时间
+        self.log_start_time = datetime.now()
+        
+        # 记录启动时间
+        self.log_message("NavigationFunctions模块已初始化")
         
         # 确保标签是可缩放的
         self.replace_with_zoomable_label(self.label_before)
         self.replace_with_zoomable_label(self.label_after)
-        
-        # 初始化文件路径变量
-        self.file_path = None  # 前时相图像路径
-        self.file_path_after = None  # 后时相图像路径
         
         # 初始化原始图像尺寸信息
         self.before_image_original_size = None

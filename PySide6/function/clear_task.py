@@ -67,7 +67,7 @@ class ClearTask:
             self.clean_temp_files()
             
             # 添加清除完成的消息到日志
-            self.navigation_functions.log_message("任务已退出，所有文件路径和临时文件已清理")
+            self.navigation_functions.log_message("当前界面已清空，您可以载入新的影像")
             
         except Exception as e:
             self.navigation_functions.log_message(f"清除界面时出错: {str(e)}")

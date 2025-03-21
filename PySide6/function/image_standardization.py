@@ -74,21 +74,39 @@ class ImageStandardization:
             standardized_img.save(str(output_path))
             self.navigation_functions.log_message(f"图像已标准化为{width}x{height}，保存至: {output_path}")
             
+            # 检查是否使用深色主题
+            is_dark_theme = hasattr(self.navigation_functions, 'is_dark_theme') and self.navigation_functions.is_dark_theme
+            
             # 创建自定义对话框
             dialog = QDialog()
             dialog.setWindowTitle("裁剪完成")
             dialog.setFixedSize(350, 180)
-            dialog.setStyleSheet("""
-                QDialog {
-                    background-color: #202124;
-                    color: #f7f7f8;
-                }
-                QLabel {
-                    color: #f7f7f8;
-                    font-size: 12px;
-                    font-weight: bold;
-                }
-            """)
+            
+            # 根据主题设置对话框样式
+            if is_dark_theme:
+                dialog.setStyleSheet("""
+                    QDialog {
+                        background-color: #202124;
+                        color: #f7f7f8;
+                    }
+                    QLabel {
+                        color: #f7f7f8;
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                """)
+            else:
+                dialog.setStyleSheet("""
+                    QDialog {
+                        background-color: #ffffff;
+                        color: #333333;
+                    }
+                    QLabel {
+                        color: #333333;
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                """)
             
             # 创建布局
             layout = QVBoxLayout(dialog)
@@ -98,13 +116,27 @@ class ImageStandardization:
             # 提示标签
             label = QLabel("加载到哪里？")
             label.setAlignment(Qt.AlignCenter)
-            label.setStyleSheet("""
-                font-size: 13px;
-                font-weight: bold;
-                margin: 0;
-                padding: 5px;
-                qproperty-alignment: AlignCenter;
-            """)
+            
+            # 根据主题设置标签样式
+            if is_dark_theme:
+                label.setStyleSheet("""
+                    font-size: 13px;
+                    font-weight: bold;
+                    margin: 0;
+                    padding: 5px;
+                    qproperty-alignment: AlignCenter;
+                    color: #f7f7f8;
+                """)
+            else:
+                label.setStyleSheet("""
+                    font-size: 13px;
+                    font-weight: bold;
+                    margin: 0;
+                    padding: 5px;
+                    qproperty-alignment: AlignCenter;
+                    color: #333333;
+                """)
+                
             layout.addWidget(label)
             
             # 创建按钮容器，设置透明背景
@@ -114,22 +146,40 @@ class ImageStandardization:
             button_layout.setContentsMargins(0, 10, 0, 0)
             button_layout.setSpacing(15)
             
-            # 按钮样式 - 统一使用灰色背景
-            button_style = """
-                QPushButton {
-                    background-color: #444a5a;
-                    color: white;
-                    border-radius: 4px;
-                    padding: 6px 10px;
-                    min-width: 70px;
-                }
-                QPushButton:hover {
-                    background-color: #5d6576;
-                }
-                QPushButton:pressed {
-                    background-color: #353b4a;
-                }
-            """
+            # 根据主题设置按钮样式
+            if is_dark_theme:
+                button_style = """
+                    QPushButton {
+                        background-color: #444a5a;
+                        color: white;
+                        border-radius: 4px;
+                        padding: 6px 10px;
+                        min-width: 70px;
+                    }
+                    QPushButton:hover {
+                        background-color: #5d6576;
+                    }
+                    QPushButton:pressed {
+                        background-color: #353b4a;
+                    }
+                """
+            else:
+                button_style = """
+                    QPushButton {
+                        background-color: #f0f0f2;
+                        color: #333333;
+                        border: 1px solid #e6e6e6;
+                        border-radius: 4px;
+                        padding: 6px 10px;
+                        min-width: 70px;
+                    }
+                    QPushButton:hover {
+                        background-color: #e6e6e9;
+                    }
+                    QPushButton:pressed {
+                        background-color: #d9d9dc;
+                    }
+                """
             
             # 创建按钮
             btn_before = QPushButton("前时相位置")
