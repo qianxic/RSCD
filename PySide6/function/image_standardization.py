@@ -40,7 +40,7 @@ class ImageStandardization:
             width, ok = QInputDialog.getInt(
                 None, 
                 "输入宽度", 
-                "请输入标准化后的宽度（像素）:", 
+                "请输入裁剪后影像的尺寸大小", 
                 256, 1, 10000, 1
             )
             if not ok:
@@ -51,7 +51,7 @@ class ImageStandardization:
             height, ok = QInputDialog.getInt(
                 None, 
                 "输入高度", 
-                "请输入标准化后的高度（像素）:", 
+                "请输入裁剪后影像的尺寸大小", 
                 256, 1, 10000, 1
             )
             if not ok:
@@ -72,7 +72,7 @@ class ImageStandardization:
             
             # 保存标准化图像
             standardized_img.save(str(output_path))
-            self.navigation_functions.log_message(f"图像已标准化为{width}x{height}，保存至: {output_path}")
+            self.navigation_functions.log_message(f"图像已裁剪为{width}x{height}，保存至: {output_path}")
             
             # 检查是否使用深色主题
             is_dark_theme = hasattr(self.navigation_functions, 'is_dark_theme') and self.navigation_functions.is_dark_theme

@@ -547,7 +547,7 @@ class RemoteSensingApp(QMainWindow):
         button_layout.setContentsMargins(5, 0, 5, 0)
         
         # 创建美化后的按钮
-        self.btn_standard = QPushButton("尺寸裁剪")
+        self.btn_standard = QPushButton("影像裁剪")
         self.btn_crop = QPushButton("渔网分割")
         self.btn_import = QPushButton("导入前时相影像")
         self.btn_import_after = QPushButton("导入后时相影像")
@@ -714,7 +714,7 @@ class RemoteSensingApp(QMainWindow):
                     <ul>
                         <li><b>导入前时相图像</b>: 导入变化前的遥感影像。</li>
                         <li><b>导入后时相图像</b>: 导入变化后的遥感影像。</li>
-                        <li><b>尺寸裁剪</b>: 将图像裁剪为指定尺寸。</li>
+                        <li><b>裁剪影像</b>: 将图像裁剪为指定尺寸。</li>
                         <li><b>网格分割</b>: 将图像按网格分割为多个小块。</li>
                         <li><b>开始检测</b>: 执行变化检测算法。</li>
                         <li><b>结果导出</b>: 保存检测结果。</li>
