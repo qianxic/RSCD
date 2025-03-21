@@ -1,0 +1,2377 @@
+2025-03-20 12:32:02,041 - INFO - 应用程序启动
+2025-03-20 12:32:02,413 - INFO - 创建新日志文件: logs\log_20250320_123202.txt
+2025-03-20 12:32:02,413 - INFO - 日志文件保存在: logs\log_20250320_123202.txt
+2025-03-20 12:32:08,263 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 12:32:08,263 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 12:32:10,387 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:32:16,302 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:32:16,310 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:32:16,310 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:32:20,955 - INFO - 正在显示图像信息...
+2025-03-20 12:32:20,955 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 12:32:20,955 - INFO - 
+前时相图像:
+2025-03-20 12:32:20,955 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 12:32:20,955 - INFO - 
+后时相图像:
+2025-03-20 12:32:20,955 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:32:20,955 - INFO - 
+=========================
+2025-03-20 12:32:22,187 - INFO - 正在加载变化检测模型...
+2025-03-20 12:32:22,187 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:32:22,187 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:32:24,497 - INFO - 正在执行变化检测...
+2025-03-20 12:32:24,497 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png 与 D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:32:24,497 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 12:32:24,512 - INFO - 执行变化检测时出错: No module named 'inferrence'
+2025-03-20 12:32:24,512 - INFO - Traceback (most recent call last):
+  File "d:\VS_WORKBASE\BIT\PySide6\main.py", line 234, in on_begin_clicked
+    from inferrence.merged_bit_cd import detect_change
+ModuleNotFoundError: No module named 'inferrence'
+
+2025-03-20 12:32:31,750 - INFO - 正在执行变化检测...
+2025-03-20 12:32:31,751 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png 与 D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:32:31,752 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 12:32:31,753 - INFO - 执行变化检测时出错: No module named 'inferrence'
+2025-03-20 12:32:31,754 - INFO - Traceback (most recent call last):
+  File "d:\VS_WORKBASE\BIT\PySide6\main.py", line 234, in on_begin_clicked
+    from inferrence.merged_bit_cd import detect_change
+ModuleNotFoundError: No module named 'inferrence'
+
+2025-03-20 12:32:41,793 - INFO - 没有可导出的解译结果，请先执行变化检测
+2025-03-20 12:32:43,050 - INFO - 正在执行变化检测...
+2025-03-20 12:32:43,050 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png 与 D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:32:43,050 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 12:32:43,053 - INFO - 执行变化检测时出错: No module named 'inferrence'
+2025-03-20 12:32:43,054 - INFO - Traceback (most recent call last):
+  File "d:\VS_WORKBASE\BIT\PySide6\main.py", line 234, in on_begin_clicked
+    from inferrence.merged_bit_cd import detect_change
+ModuleNotFoundError: No module named 'inferrence'
+
+2025-03-20 12:32:43,671 - INFO - 正在执行变化检测...
+2025-03-20 12:32:43,671 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png 与 D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:32:43,672 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 12:32:43,672 - INFO - 执行变化检测时出错: No module named 'inferrence'
+2025-03-20 12:32:43,672 - INFO - Traceback (most recent call last):
+  File "d:\VS_WORKBASE\BIT\PySide6\main.py", line 234, in on_begin_clicked
+    from inferrence.merged_bit_cd import detect_change
+ModuleNotFoundError: No module named 'inferrence'
+
+2025-03-20 12:33:22,258 - INFO - 应用程序启动
+2025-03-20 12:33:22,303 - INFO - 创建新日志文件: logs\log_20250320_123322.txt
+2025-03-20 12:33:22,304 - INFO - 日志文件保存在: logs\log_20250320_123322.txt
+2025-03-20 12:33:27,867 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 12:33:27,867 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 12:33:27,877 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:33:29,702 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:33:29,704 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:33:29,706 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:33:31,297 - INFO - 正在显示图像信息...
+2025-03-20 12:33:31,297 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 12:33:31,299 - INFO - 
+前时相图像:
+2025-03-20 12:33:31,299 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 12:33:31,299 - INFO - 
+后时相图像:
+2025-03-20 12:33:31,299 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:33:31,299 - INFO - 
+=========================
+2025-03-20 12:33:31,883 - INFO - 正在加载变化检测模型...
+2025-03-20 12:33:31,883 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:33:31,883 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:33:33,903 - INFO - 正在执行变化检测...
+2025-03-20 12:33:33,903 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png 与 D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:33:33,903 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 12:33:33,919 - INFO - 添加项目根目录到sys.path: d:\VS_WORKBASE\BIT
+2025-03-20 12:33:37,342 - INFO - 执行变化检测时出错: Plain typing.Self is not valid as type argument
+2025-03-20 12:33:37,356 - INFO - Traceback (most recent call last):
+  File "d:\VS_WORKBASE\BIT\PySide6\main.py", line 244, in on_begin_clicked
+    success = detect_change(before_image_path, after_image_path, output_dir, verbose=True)
+  File "d:\VS_WORKBASE\BIT\inferrence\merged_bit_cd.py", line 125, in detect_change
+    success = inferencer.run()
+  File "d:\VS_WORKBASE\BIT\inferrence\inference.py", line 97, in run
+    pred = self.process_image_pair(self.args.img_a_path, self.args.img_b_path)
+  File "d:\VS_WORKBASE\BIT\inferrence\inference.py", line 67, in process_image_pair
+    output = self.model(img_a, img_b)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\networks.py", line 359, in forward
+    self.tokens = self._forward_transformer(self.tokens_)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\networks.py", line 321, in _forward_transformer
+    x = self.transformer(x)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 165, in forward
+    x = attn(x, mask = mask)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 23, in forward
+    return self.fn(x, **kwargs) + x
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 40, in forward
+    return self.fn(self.norm(x), **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 133, in forward
+    q, k, v = map(lambda t: rearrange(t, 'b n (h d) -> b h n d', h = h), qkv)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 133, in <lambda>
+    q, k, v = map(lambda t: rearrange(t, 'b n (h d) -> b h n d', h = h), qkv)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\einops.py", line 600, in rearrange
+    return reduce(tensor, pattern, reduction="rearrange", **axes_lengths)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\einops.py", line 527, in reduce
+    backend = get_backend(tensor)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\_backends.py", line 53, in get_backend
+    backend = BackendSubclass()
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\_backends.py", line 222, in __init__
+    from . import _torch_specific  # noqa
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\_torch_specific.py", line 128, in <module>
+    allow_ops_in_compiled_graph()
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\_torch_specific.py", line 107, in allow_ops_in_compiled_graph
+    from torch._dynamo import allow_in_graph
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\__init__.py", line 3, in <module>
+    from . import convert_frame, eval_frame, resume_execution
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\convert_frame.py", line 33, in <module>
+    from torch._dynamo.symbolic_convert import TensorifyState
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\symbolic_convert.py", line 30, in <module>
+    from . import config, exc, logging as torchdynamo_logging, trace_rules, variables
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\trace_rules.py", line 46, in <module>
+    from .variables import (
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\variables\__init__.py", line 42, in <module>
+    from .higher_order_ops import (
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\variables\higher_order_ops.py", line 39, in <module>
+    from .lazy import LazyVariableTracker
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\variables\lazy.py", line 36, in <module>
+    class LazyVariableTracker(VariableTracker):
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\variables\lazy.py", line 68, in LazyVariableTracker
+    def unwrap(self) -> Union[VariableTracker, Self]:
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 312, in inner
+    return func(*args, **kwds)
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 403, in __getitem__
+    return self._getitem(self, parameters)
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 515, in Union
+    parameters = tuple(_type_check(p, msg) for p in parameters)
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 515, in <genexpr>
+    parameters = tuple(_type_check(p, msg) for p in parameters)
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 171, in _type_check
+    raise TypeError(f"Plain {arg} is not valid as type argument")
+TypeError: Plain typing.Self is not valid as type argument
+
+2025-03-20 12:33:48,624 - INFO - 正在执行变化检测...
+2025-03-20 12:33:48,625 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png 与 D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:33:48,625 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 12:33:49,061 - INFO - 执行变化检测时出错: Plain typing.Self is not valid as type argument
+2025-03-20 12:33:49,063 - INFO - Traceback (most recent call last):
+  File "d:\VS_WORKBASE\BIT\PySide6\main.py", line 244, in on_begin_clicked
+    success = detect_change(before_image_path, after_image_path, output_dir, verbose=True)
+  File "d:\VS_WORKBASE\BIT\inferrence\merged_bit_cd.py", line 125, in detect_change
+    success = inferencer.run()
+  File "d:\VS_WORKBASE\BIT\inferrence\inference.py", line 97, in run
+    pred = self.process_image_pair(self.args.img_a_path, self.args.img_b_path)
+  File "d:\VS_WORKBASE\BIT\inferrence\inference.py", line 67, in process_image_pair
+    output = self.model(img_a, img_b)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\networks.py", line 359, in forward
+    self.tokens = self._forward_transformer(self.tokens_)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\networks.py", line 321, in _forward_transformer
+    x = self.transformer(x)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 165, in forward
+    x = attn(x, mask = mask)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 23, in forward
+    return self.fn(x, **kwargs) + x
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 40, in forward
+    return self.fn(self.norm(x), **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 133, in forward
+    q, k, v = map(lambda t: rearrange(t, 'b n (h d) -> b h n d', h = h), qkv)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 133, in <lambda>
+    q, k, v = map(lambda t: rearrange(t, 'b n (h d) -> b h n d', h = h), qkv)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\einops.py", line 600, in rearrange
+    return reduce(tensor, pattern, reduction="rearrange", **axes_lengths)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\einops.py", line 527, in reduce
+    backend = get_backend(tensor)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\_backends.py", line 53, in get_backend
+    backend = BackendSubclass()
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\_backends.py", line 222, in __init__
+    from . import _torch_specific  # noqa
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\_torch_specific.py", line 128, in <module>
+    allow_ops_in_compiled_graph()
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\_torch_specific.py", line 107, in allow_ops_in_compiled_graph
+    from torch._dynamo import allow_in_graph
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\__init__.py", line 3, in <module>
+    from . import convert_frame, eval_frame, resume_execution
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\convert_frame.py", line 33, in <module>
+    from torch._dynamo.symbolic_convert import TensorifyState
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\symbolic_convert.py", line 30, in <module>
+    from . import config, exc, logging as torchdynamo_logging, trace_rules, variables
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\trace_rules.py", line 46, in <module>
+    from .variables import (
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\variables\__init__.py", line 42, in <module>
+    from .higher_order_ops import (
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\variables\higher_order_ops.py", line 39, in <module>
+    from .lazy import LazyVariableTracker
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\variables\lazy.py", line 36, in <module>
+    class LazyVariableTracker(VariableTracker):
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\variables\lazy.py", line 68, in LazyVariableTracker
+    def unwrap(self) -> Union[VariableTracker, Self]:
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 312, in inner
+    return func(*args, **kwds)
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 403, in __getitem__
+    return self._getitem(self, parameters)
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 515, in Union
+    parameters = tuple(_type_check(p, msg) for p in parameters)
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 515, in <genexpr>
+    parameters = tuple(_type_check(p, msg) for p in parameters)
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 171, in _type_check
+    raise TypeError(f"Plain {arg} is not valid as type argument")
+TypeError: Plain typing.Self is not valid as type argument
+
+2025-03-20 12:35:24,089 - INFO - 已清理Python缓存文件: __pycache__\inference.cpython-310.pyc
+2025-03-20 12:35:24,089 - INFO - 已清理Python缓存文件: inferrence\__pycache__\bit_cd.cpython-310.pyc
+2025-03-20 12:35:24,089 - INFO - 已清理Python缓存文件: inferrence\__pycache__\inference.cpython-310.pyc
+2025-03-20 12:35:24,094 - INFO - 已清理Python缓存文件: inferrence\__pycache__\merged_bit_cd.cpython-310.pyc
+2025-03-20 12:35:24,095 - INFO - 已清理Python缓存文件: inferrence\__pycache__\utils.cpython-310.pyc
+2025-03-20 12:35:24,095 - INFO - 已清理Python缓存文件: PySide6\__pycache__\change_detection_model.cpython-310.pyc
+2025-03-20 12:35:24,095 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-20 12:35:24,095 - INFO - 已清理Python缓存文件: 备份\__pycache__\inference.cpython-310.pyc
+2025-03-20 12:35:24,095 - INFO - 共清理 8 个临时文件
+2025-03-20 12:35:24,098 - INFO - 已清理 8 个临时文件
+2025-03-20 12:35:26,357 - INFO - 应用程序启动
+2025-03-20 12:35:26,404 - INFO - 创建新日志文件: logs\log_20250320_123526.txt
+2025-03-20 12:35:26,404 - INFO - 日志文件保存在: logs\log_20250320_123526.txt
+2025-03-20 12:35:37,157 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 12:35:37,157 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 12:35:37,161 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:35:38,619 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:35:38,619 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:35:38,619 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:35:40,347 - INFO - 正在显示图像信息...
+2025-03-20 12:35:40,347 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 12:35:40,347 - INFO - 
+前时相图像:
+2025-03-20 12:35:40,347 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 12:35:40,347 - INFO - 
+后时相图像:
+2025-03-20 12:35:40,347 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:35:40,347 - INFO - 
+=========================
+2025-03-20 12:35:40,623 - INFO - 正在加载变化检测模型...
+2025-03-20 12:35:40,623 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:35:40,623 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:35:41,974 - INFO - 正在执行变化检测...
+2025-03-20 12:35:41,975 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png 与 D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:35:41,976 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 12:35:41,977 - INFO - 添加项目根目录到sys.path: d:\VS_WORKBASE\BIT
+2025-03-20 12:35:44,899 - INFO - 执行变化检测时出错: Plain typing.Self is not valid as type argument
+2025-03-20 12:35:44,899 - INFO - Traceback (most recent call last):
+  File "d:\VS_WORKBASE\BIT\PySide6\main.py", line 244, in on_begin_clicked
+    success = detect_change(before_image_path, after_image_path, output_dir, verbose=True)
+  File "d:\VS_WORKBASE\BIT\inferrence\merged_bit_cd.py", line 125, in detect_change
+    success = inferencer.run()
+  File "d:\VS_WORKBASE\BIT\inferrence\inference.py", line 97, in run
+    pred = self.process_image_pair(self.args.img_a_path, self.args.img_b_path)
+  File "d:\VS_WORKBASE\BIT\inferrence\inference.py", line 67, in process_image_pair
+    output = self.model(img_a, img_b)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\networks.py", line 359, in forward
+    self.tokens = self._forward_transformer(self.tokens_)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\networks.py", line 321, in _forward_transformer
+    x = self.transformer(x)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 165, in forward
+    x = attn(x, mask = mask)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 23, in forward
+    return self.fn(x, **kwargs) + x
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 40, in forward
+    return self.fn(self.norm(x), **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 133, in forward
+    q, k, v = map(lambda t: rearrange(t, 'b n (h d) -> b h n d', h = h), qkv)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 133, in <lambda>
+    q, k, v = map(lambda t: rearrange(t, 'b n (h d) -> b h n d', h = h), qkv)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\einops.py", line 591, in rearrange
+    return reduce(tensor, pattern, reduction="rearrange", **axes_lengths)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\einops.py", line 518, in reduce
+    backend = get_backend(tensor)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\_backends.py", line 53, in get_backend
+    backend = BackendSubclass()
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\_backends.py", line 221, in __init__
+    from . import _torch_specific  # noqa
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\_torch_specific.py", line 127, in <module>
+    allow_ops_in_compiled_graph()
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\_torch_specific.py", line 106, in allow_ops_in_compiled_graph
+    from torch._dynamo import allow_in_graph
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\__init__.py", line 3, in <module>
+    from . import convert_frame, eval_frame, resume_execution
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\convert_frame.py", line 33, in <module>
+    from torch._dynamo.symbolic_convert import TensorifyState
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\symbolic_convert.py", line 30, in <module>
+    from . import config, exc, logging as torchdynamo_logging, trace_rules, variables
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\trace_rules.py", line 46, in <module>
+    from .variables import (
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\variables\__init__.py", line 42, in <module>
+    from .higher_order_ops import (
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\variables\higher_order_ops.py", line 39, in <module>
+    from .lazy import LazyVariableTracker
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\variables\lazy.py", line 36, in <module>
+    class LazyVariableTracker(VariableTracker):
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\variables\lazy.py", line 68, in LazyVariableTracker
+    def unwrap(self) -> Union[VariableTracker, Self]:
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 312, in inner
+    return func(*args, **kwds)
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 403, in __getitem__
+    return self._getitem(self, parameters)
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 515, in Union
+    parameters = tuple(_type_check(p, msg) for p in parameters)
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 515, in <genexpr>
+    parameters = tuple(_type_check(p, msg) for p in parameters)
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 171, in _type_check
+    raise TypeError(f"Plain {arg} is not valid as type argument")
+TypeError: Plain typing.Self is not valid as type argument
+
+2025-03-20 12:35:57,780 - INFO - 正在执行变化检测...
+2025-03-20 12:35:57,781 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png 与 D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:35:57,782 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 12:35:58,203 - INFO - 执行变化检测时出错: Plain typing.Self is not valid as type argument
+2025-03-20 12:35:58,205 - INFO - Traceback (most recent call last):
+  File "d:\VS_WORKBASE\BIT\PySide6\main.py", line 244, in on_begin_clicked
+    success = detect_change(before_image_path, after_image_path, output_dir, verbose=True)
+  File "d:\VS_WORKBASE\BIT\inferrence\merged_bit_cd.py", line 125, in detect_change
+    success = inferencer.run()
+  File "d:\VS_WORKBASE\BIT\inferrence\inference.py", line 97, in run
+    pred = self.process_image_pair(self.args.img_a_path, self.args.img_b_path)
+  File "d:\VS_WORKBASE\BIT\inferrence\inference.py", line 67, in process_image_pair
+    output = self.model(img_a, img_b)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\networks.py", line 359, in forward
+    self.tokens = self._forward_transformer(self.tokens_)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\networks.py", line 321, in _forward_transformer
+    x = self.transformer(x)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 165, in forward
+    x = attn(x, mask = mask)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 23, in forward
+    return self.fn(x, **kwargs) + x
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 40, in forward
+    return self.fn(self.norm(x), **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\nn\modules\module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 133, in forward
+    q, k, v = map(lambda t: rearrange(t, 'b n (h d) -> b h n d', h = h), qkv)
+  File "d:\VS_WORKBASE\BIT\inferrence\models\help_funcs.py", line 133, in <lambda>
+    q, k, v = map(lambda t: rearrange(t, 'b n (h d) -> b h n d', h = h), qkv)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\einops.py", line 591, in rearrange
+    return reduce(tensor, pattern, reduction="rearrange", **axes_lengths)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\einops.py", line 518, in reduce
+    backend = get_backend(tensor)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\_backends.py", line 53, in get_backend
+    backend = BackendSubclass()
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\_backends.py", line 221, in __init__
+    from . import _torch_specific  # noqa
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\_torch_specific.py", line 127, in <module>
+    allow_ops_in_compiled_graph()
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\einops\_torch_specific.py", line 106, in allow_ops_in_compiled_graph
+    from torch._dynamo import allow_in_graph
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\__init__.py", line 3, in <module>
+    from . import convert_frame, eval_frame, resume_execution
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\convert_frame.py", line 33, in <module>
+    from torch._dynamo.symbolic_convert import TensorifyState
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\symbolic_convert.py", line 30, in <module>
+    from . import config, exc, logging as torchdynamo_logging, trace_rules, variables
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\trace_rules.py", line 46, in <module>
+    from .variables import (
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\variables\__init__.py", line 42, in <module>
+    from .higher_order_ops import (
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\variables\higher_order_ops.py", line 39, in <module>
+    from .lazy import LazyVariableTracker
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\variables\lazy.py", line 36, in <module>
+    class LazyVariableTracker(VariableTracker):
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\torch\_dynamo\variables\lazy.py", line 68, in LazyVariableTracker
+    def unwrap(self) -> Union[VariableTracker, Self]:
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 312, in inner
+    return func(*args, **kwds)
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 403, in __getitem__
+    return self._getitem(self, parameters)
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 515, in Union
+    parameters = tuple(_type_check(p, msg) for p in parameters)
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 515, in <genexpr>
+    parameters = tuple(_type_check(p, msg) for p in parameters)
+  File "D:\anaconda3\envs\pytorch2.6\lib\typing.py", line 171, in _type_check
+    raise TypeError(f"Plain {arg} is not valid as type argument")
+TypeError: Plain typing.Self is not valid as type argument
+
+2025-03-20 12:36:07,378 - INFO - 已清理Python缓存文件: inferrence\__pycache__\inference.cpython-310.pyc
+2025-03-20 12:36:07,380 - INFO - 已清理Python缓存文件: inferrence\__pycache__\merged_bit_cd.cpython-310.pyc
+2025-03-20 12:36:07,380 - INFO - 已清理Python缓存文件: inferrence\__pycache__\utils.cpython-310.pyc
+2025-03-20 12:36:07,381 - INFO - 已清理Python缓存文件: PySide6\__pycache__\change_detection_model.cpython-310.pyc
+2025-03-20 12:36:07,382 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-20 12:36:07,382 - INFO - 共清理 5 个临时文件
+2025-03-20 12:36:07,382 - INFO - 已清理 5 个临时文件
+2025-03-20 12:39:04,855 - INFO - 应用程序启动
+2025-03-20 12:39:04,906 - INFO - 创建新日志文件: logs\log_20250320_123904.txt
+2025-03-20 12:39:04,906 - INFO - 日志文件保存在: logs\log_20250320_123904.txt
+2025-03-20 12:39:09,885 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 12:39:09,885 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 12:39:09,895 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:39:11,385 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:39:11,385 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:39:11,394 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:39:13,132 - INFO - 正在显示图像信息...
+2025-03-20 12:39:13,132 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 12:39:13,132 - INFO - 
+前时相图像:
+2025-03-20 12:39:13,132 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 12:39:13,132 - INFO - 
+后时相图像:
+2025-03-20 12:39:13,132 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:39:13,132 - INFO - 
+=========================
+2025-03-20 12:39:13,718 - INFO - 正在加载变化检测模型...
+2025-03-20 12:39:13,718 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:39:13,718 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:39:14,245 - INFO - 正在执行变化检测...
+2025-03-20 12:39:14,245 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png 与 D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:39:14,245 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 12:39:14,245 - INFO - 添加项目根目录到sys.path: d:\VS_WORKBASE\BIT
+2025-03-20 12:39:17,517 - INFO - 变化检测完成! 结果已保存到: inferrence/test_simple_results
+2025-03-20 12:39:17,518 - INFO - 变化检测结果图例：
+绿色 - 新增
+红色 - 拆除
+蓝色 - 其他变化
+白色 - 变化区域边界线
+2025-03-20 12:39:17,518 - INFO - 显示结果时出错: 'new_count'
+2025-03-20 12:41:30,861 - INFO - 应用程序启动
+2025-03-20 12:41:30,917 - INFO - 创建新日志文件: logs\log_20250320_124130.txt
+2025-03-20 12:41:30,918 - INFO - 日志文件保存在: logs\log_20250320_124130.txt
+2025-03-20 12:41:36,140 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 12:41:36,140 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 12:41:36,160 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:41:37,529 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:41:37,529 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:41:37,529 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:41:38,174 - INFO - 正在显示图像信息...
+2025-03-20 12:41:38,174 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 12:41:38,174 - INFO - 
+前时相图像:
+2025-03-20 12:41:38,178 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 12:41:38,178 - INFO - 
+后时相图像:
+2025-03-20 12:41:38,178 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:41:38,178 - INFO - 
+=========================
+2025-03-20 12:41:38,442 - INFO - 正在加载变化检测模型...
+2025-03-20 12:41:38,442 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:41:38,442 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:41:38,823 - INFO - 正在执行变化检测...
+2025-03-20 12:41:38,840 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png 与 D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 12:41:38,840 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 12:41:38,841 - INFO - 添加项目根目录到sys.path: d:\VS_WORKBASE\BIT
+2025-03-20 12:41:42,038 - INFO - 变化检测完成! 结果已保存到: inferrence/test_simple_results
+2025-03-20 12:41:42,038 - INFO - 变化检测结果图例：
+绿色 - 新增
+红色 - 拆除
+蓝色 - 其他变化
+白色 - 变化区域边界线
+2025-03-20 12:41:42,038 - INFO - 变化检测已完成，但详细统计信息不可用
+2025-03-20 12:45:14,620 - INFO - 应用程序启动
+2025-03-20 12:45:14,694 - INFO - 创建新日志文件: logs\log_20250320_124514.txt
+2025-03-20 12:45:14,694 - INFO - 日志文件保存在: logs\log_20250320_124514.txt
+2025-03-20 12:45:22,257 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_7_0256_0512.png
+2025-03-20 12:45:22,258 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_7_0256_0512.png
+2025-03-20 12:45:22,269 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:45:26,811 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_7_0256_0512.png
+2025-03-20 12:45:26,811 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_7_0256_0512.png
+2025-03-20 12:45:26,814 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:45:29,361 - INFO - 正在显示图像信息...
+2025-03-20 12:45:29,362 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 12:45:29,363 - INFO - 
+前时相图像:
+2025-03-20 12:45:29,363 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_7_0256_0512.png
+2025-03-20 12:45:29,363 - INFO - 
+后时相图像:
+2025-03-20 12:45:29,366 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_7_0256_0512.png
+2025-03-20 12:45:29,366 - INFO - 
+=========================
+2025-03-20 12:45:30,565 - INFO - 正在加载变化检测模型...
+2025-03-20 12:45:30,565 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:45:30,565 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:45:31,990 - INFO - 正在执行变化检测...
+2025-03-20 12:45:31,990 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_7_0256_0512.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/test_7_0256_0512.png
+2025-03-20 12:45:31,990 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 12:45:31,995 - INFO - 添加项目根目录到sys.path: d:\VS_WORKBASE\BIT
+2025-03-20 12:45:35,365 - INFO - 变化检测完成! 结果已保存到: inferrence/test_simple_results
+2025-03-20 12:45:35,365 - INFO - 变化检测结果图例：
+绿色 - 新增
+红色 - 拆除
+蓝色 - 其他变化
+白色 - 变化区域边界线
+2025-03-20 12:45:35,365 - INFO - 变化检测已完成，但详细统计信息不可用
+2025-03-20 12:45:44,972 - INFO - 正在显示图像信息...
+2025-03-20 12:45:44,985 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 12:45:44,986 - INFO - 
+前时相图像:
+2025-03-20 12:45:44,987 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_7_0256_0512.png
+2025-03-20 12:45:44,987 - INFO - 
+后时相图像:
+2025-03-20 12:45:44,989 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_7_0256_0512.png
+2025-03-20 12:45:44,989 - INFO - 
+=========================
+2025-03-20 12:53:42,773 - INFO - 应用程序启动
+2025-03-20 12:53:42,823 - INFO - 创建新日志文件: logs\log_20250320_125342.txt
+2025-03-20 12:53:42,823 - INFO - 日志文件保存在: logs\log_20250320_125342.txt
+2025-03-20 12:53:49,474 - INFO - 未设置网格参数，裁剪操作取消
+2025-03-20 12:53:51,182 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 12:53:51,182 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 12:53:51,190 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:53:52,503 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test1_前时相.png
+2025-03-20 12:53:52,503 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test1_前时相.png
+2025-03-20 12:53:52,503 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:53:54,679 - INFO - 正在加载变化检测模型...
+2025-03-20 12:53:54,679 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:53:54,679 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:53:55,766 - INFO - 正在执行变化检测...
+2025-03-20 12:53:55,782 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png 与 D:/VS_WORKBASE/BIT/PySide6/testdata/test1_前时相.png
+2025-03-20 12:53:55,782 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 12:53:55,782 - INFO - 添加项目根目录到sys.path: d:\VS_WORKBASE\BIT
+2025-03-20 12:53:58,921 - INFO - 变化检测完成! 结果已保存到: inferrence/test_simple_results
+2025-03-20 12:53:58,937 - INFO - 变化检测结果图例：
+绿色 - 新增
+红色 - 拆除
+蓝色 - 其他变化
+白色 - 变化区域边界线
+2025-03-20 12:53:58,938 - INFO - 变化检测已完成，但详细统计信息不可用
+2025-03-20 12:54:18,553 - INFO - 已删除临时文件: inferrence/test_simple_results\test0_后时相_change_color.png
+2025-03-20 12:54:18,556 - INFO - 已清理Python缓存文件: inferrence\__pycache__\inference.cpython-310.pyc
+2025-03-20 12:54:18,556 - INFO - 已清理Python缓存文件: inferrence\__pycache__\merged_bit_cd.cpython-310.pyc
+2025-03-20 12:54:18,556 - INFO - 已清理Python缓存文件: inferrence\__pycache__\utils.cpython-310.pyc
+2025-03-20 12:54:18,563 - INFO - 已清理Python缓存文件: PySide6\__pycache__\change_detection_model.cpython-310.pyc
+2025-03-20 12:54:18,563 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-20 12:54:18,564 - INFO - 共清理 5 个临时文件
+2025-03-20 12:54:18,564 - INFO - 已清理 5 个临时文件
+2025-03-20 12:54:21,471 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test1_后时相.png
+2025-03-20 12:54:21,484 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test1_后时相.png
+2025-03-20 12:54:21,484 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:54:23,115 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test1_前时相.png
+2025-03-20 12:54:23,123 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test1_前时相.png
+2025-03-20 12:54:23,123 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:54:23,690 - INFO - 正在显示图像信息...
+2025-03-20 12:54:23,690 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 12:54:23,696 - INFO - 
+前时相图像:
+2025-03-20 12:54:23,696 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test1_后时相.png
+2025-03-20 12:54:23,696 - INFO - 
+后时相图像:
+2025-03-20 12:54:23,696 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test1_前时相.png
+2025-03-20 12:54:23,696 - INFO - 
+=========================
+2025-03-20 12:54:24,027 - INFO - 正在加载变化检测模型...
+2025-03-20 12:54:24,027 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:54:24,027 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:54:24,525 - INFO - 正在执行变化检测...
+2025-03-20 12:54:24,525 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/PySide6/testdata/test1_后时相.png 与 D:/VS_WORKBASE/BIT/PySide6/testdata/test1_前时相.png
+2025-03-20 12:54:24,525 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 12:54:25,003 - INFO - 变化检测完成! 结果已保存到: inferrence/test_simple_results
+2025-03-20 12:54:25,017 - INFO - 变化检测结果图例：
+绿色 - 新增
+红色 - 拆除
+蓝色 - 其他变化
+白色 - 变化区域边界线
+2025-03-20 12:54:25,017 - INFO - 变化检测已完成，但详细统计信息不可用
+2025-03-20 12:54:38,205 - INFO - 正在显示图像信息...
+2025-03-20 12:54:38,205 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 12:54:38,205 - INFO - 
+前时相图像:
+2025-03-20 12:54:38,205 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test1_后时相.png
+2025-03-20 12:54:38,205 - INFO - 
+后时相图像:
+2025-03-20 12:54:38,205 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test1_前时相.png
+2025-03-20 12:54:38,205 - INFO - 
+=========================
+2025-03-20 12:57:57,040 - INFO - 应用程序启动
+2025-03-20 12:57:57,097 - INFO - 创建新日志文件: logs\log_20250320_125757.txt
+2025-03-20 12:57:57,097 - INFO - 日志文件保存在: logs\log_20250320_125757.txt
+2025-03-20 12:58:10,402 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_55_0256_0000.png
+2025-03-20 12:58:10,402 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_55_0256_0000.png
+2025-03-20 12:58:10,408 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:58:14,877 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_55_0256_0000.png
+2025-03-20 12:58:14,877 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_55_0256_0000.png
+2025-03-20 12:58:14,887 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 12:58:15,780 - INFO - 正在显示图像信息...
+2025-03-20 12:58:15,786 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 12:58:15,786 - INFO - 
+前时相图像:
+2025-03-20 12:58:15,786 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_55_0256_0000.png
+2025-03-20 12:58:15,786 - INFO - 
+后时相图像:
+2025-03-20 12:58:15,786 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_55_0256_0000.png
+2025-03-20 12:58:15,786 - INFO - 
+=========================
+2025-03-20 12:58:16,818 - INFO - 正在加载变化检测模型...
+2025-03-20 12:58:16,818 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:58:16,818 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 12:58:18,022 - INFO - 正在执行变化检测...
+2025-03-20 12:58:18,022 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_55_0256_0000.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/test_55_0256_0000.png
+2025-03-20 12:58:18,022 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 12:58:18,022 - INFO - 添加项目根目录到sys.path: d:\VS_WORKBASE\BIT
+2025-03-20 12:58:21,169 - INFO - 变化检测完成! 结果已保存到: inferrence/test_simple_results
+2025-03-20 12:58:21,174 - INFO - 变化检测结果图例：
+绿色 - 新增
+红色 - 拆除
+蓝色 - 其他变化
+白色 - 变化区域边界线
+2025-03-20 12:58:21,174 - INFO - 变化检测已完成，但详细统计信息不可用
+2025-03-20 12:58:36,224 - INFO - 解译结果已成功导出到：
+C:/Users/qianx/Desktop\解译结果_20250320_125836
+2025-03-20 12:59:04,909 - INFO - 已删除临时文件: inferrence/test_simple_results\test_55_0256_0000_change_color.png
+2025-03-20 12:59:04,925 - INFO - 已清理Python缓存文件: inferrence\__pycache__\inference.cpython-310.pyc
+2025-03-20 12:59:04,925 - INFO - 已清理Python缓存文件: inferrence\__pycache__\merged_bit_cd.cpython-310.pyc
+2025-03-20 12:59:04,925 - INFO - 已清理Python缓存文件: inferrence\__pycache__\utils.cpython-310.pyc
+2025-03-20 12:59:04,925 - INFO - 已清理Python缓存文件: PySide6\__pycache__\change_detection_model.cpython-310.pyc
+2025-03-20 12:59:04,925 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-20 12:59:04,925 - INFO - 共清理 5 个临时文件
+2025-03-20 12:59:04,925 - INFO - 已清理 5 个临时文件
+2025-03-20 13:01:59,336 - INFO - 应用程序启动
+2025-03-20 13:01:59,383 - INFO - 创建新日志文件: logs\log_20250320_130159.txt
+2025-03-20 13:01:59,383 - INFO - 日志文件保存在: logs\log_20250320_130159.txt
+2025-03-20 13:02:46,839 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/train_386_0512_0768.png
+2025-03-20 13:02:46,839 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/train_386_0512_0768.png
+2025-03-20 13:02:46,856 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:02:55,760 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_121_0768_0256.png
+2025-03-20 13:02:55,760 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_121_0768_0256.png
+2025-03-20 13:02:55,763 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:02:57,597 - INFO - 正在显示图像信息...
+2025-03-20 13:02:57,597 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:02:57,597 - INFO - 
+前时相图像:
+2025-03-20 13:02:57,613 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/train_386_0512_0768.png
+2025-03-20 13:02:57,613 - INFO - 
+后时相图像:
+2025-03-20 13:02:57,613 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_121_0768_0256.png
+2025-03-20 13:02:57,613 - INFO - 
+=========================
+2025-03-20 13:02:58,585 - INFO - 正在加载变化检测模型...
+2025-03-20 13:02:58,585 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:02:58,585 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:02:59,167 - INFO - 正在执行变化检测...
+2025-03-20 13:02:59,172 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/train_386_0512_0768.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/test_121_0768_0256.png
+2025-03-20 13:02:59,173 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:02:59,173 - INFO - 添加项目根目录到sys.path: d:\VS_WORKBASE\BIT
+2025-03-20 13:03:02,419 - INFO - 检测成功
+2025-03-20 13:03:02,419 - INFO - 检测成功
+2025-03-20 13:03:11,100 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:03:11,114 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:03:11,114 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:03:12,637 - INFO - 正在显示图像信息...
+2025-03-20 13:03:12,637 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:03:12,637 - INFO - 
+前时相图像:
+2025-03-20 13:03:12,637 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:03:12,637 - INFO - 
+后时相图像:
+2025-03-20 13:03:12,637 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_121_0768_0256.png
+2025-03-20 13:03:12,637 - INFO - 
+=========================
+2025-03-20 13:03:13,355 - INFO - 正在加载变化检测模型...
+2025-03-20 13:03:13,355 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:03:13,355 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:03:15,236 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:03:15,250 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:03:15,250 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:03:19,364 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:03:19,364 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:03:19,376 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:03:24,514 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 13:03:24,514 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 13:03:24,518 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:03:26,662 - INFO - 正在执行变化检测...
+2025-03-20 13:03:26,662 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 13:03:26,662 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:03:27,147 - INFO - 检测成功
+2025-03-20 13:03:27,147 - INFO - 检测成功
+2025-03-20 13:03:36,411 - INFO - 已删除临时文件: inferrence/test_simple_results\test_2_0000_0000_change.png
+2025-03-20 13:03:36,411 - INFO - 已清理Python缓存文件: inferrence\__pycache__\inference.cpython-310.pyc
+2025-03-20 13:03:36,411 - INFO - 已清理Python缓存文件: inferrence\__pycache__\merged_bit_cd.cpython-310.pyc
+2025-03-20 13:03:36,411 - INFO - 已清理Python缓存文件: inferrence\__pycache__\utils.cpython-310.pyc
+2025-03-20 13:03:36,422 - INFO - 已清理Python缓存文件: PySide6\__pycache__\change_detection_model.cpython-310.pyc
+2025-03-20 13:03:36,423 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-20 13:03:36,423 - INFO - 共清理 5 个临时文件
+2025-03-20 13:03:36,423 - INFO - 已清理 5 个临时文件
+2025-03-20 13:03:38,487 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/train_36_0512_0512.png
+2025-03-20 13:03:38,503 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/train_36_0512_0512.png
+2025-03-20 13:03:38,503 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:03:42,841 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/train_36_0512_0512.png
+2025-03-20 13:03:42,841 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/train_36_0512_0512.png
+2025-03-20 13:03:42,841 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:03:44,611 - INFO - 正在执行变化检测...
+2025-03-20 13:03:44,625 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/train_36_0512_0512.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/train_36_0512_0512.png
+2025-03-20 13:03:44,625 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:03:45,103 - INFO - 检测成功
+2025-03-20 13:03:45,103 - INFO - 检测成功
+2025-03-20 13:04:17,513 - INFO - 已删除临时文件: inferrence/test_simple_results\test_55_0256_0000_change.png
+2025-03-20 13:04:17,513 - INFO - 没有临时文件需要清理
+2025-03-20 13:04:19,786 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:04:19,786 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:04:19,786 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:04:23,508 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 13:04:23,508 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 13:04:23,515 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:04:24,440 - INFO - 正在显示图像信息...
+2025-03-20 13:04:24,445 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:04:24,446 - INFO - 
+前时相图像:
+2025-03-20 13:04:24,446 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:04:24,446 - INFO - 
+后时相图像:
+2025-03-20 13:04:24,446 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 13:04:24,446 - INFO - 
+=========================
+2025-03-20 13:04:24,826 - INFO - 正在加载变化检测模型...
+2025-03-20 13:04:24,826 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:04:24,826 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:04:25,248 - INFO - 正在执行变化检测...
+2025-03-20 13:04:25,248 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 13:04:25,248 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:04:25,702 - INFO - 检测成功
+2025-03-20 13:04:25,702 - INFO - 检测成功
+2025-03-20 13:04:34,692 - INFO - 已删除临时文件: inferrence/test_simple_results\test_77_0512_0256_change.png
+2025-03-20 13:04:34,708 - INFO - 没有临时文件需要清理
+2025-03-20 13:04:37,247 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_55_0256_0000.png
+2025-03-20 13:04:37,247 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_55_0256_0000.png
+2025-03-20 13:04:37,252 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:04:38,883 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_77_0512_0256.png
+2025-03-20 13:04:38,883 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_77_0512_0256.png
+2025-03-20 13:04:38,883 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:04:40,698 - INFO - 正在加载变化检测模型...
+2025-03-20 13:04:40,698 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:04:40,698 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:04:40,947 - INFO - 正在执行变化检测...
+2025-03-20 13:04:40,947 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_55_0256_0000.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/A/test_77_0512_0256.png
+2025-03-20 13:04:40,952 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:04:41,404 - INFO - 检测成功
+2025-03-20 13:04:41,404 - INFO - 检测成功
+2025-03-20 13:04:49,277 - INFO - 已删除临时文件: inferrence/test_simple_results\test_55_0256_0000_change.png
+2025-03-20 13:04:49,277 - INFO - 没有临时文件需要清理
+2025-03-20 13:05:51,561 - INFO - 应用程序启动
+2025-03-20 13:05:51,616 - INFO - 创建新日志文件: logs\log_20250320_130551.txt
+2025-03-20 13:05:51,616 - INFO - 日志文件保存在: logs\log_20250320_130551.txt
+2025-03-20 13:06:30,115 - INFO - 应用程序启动
+2025-03-20 13:06:30,164 - INFO - 创建新日志文件: logs\log_20250320_130630.txt
+2025-03-20 13:06:30,164 - INFO - 日志文件保存在: logs\log_20250320_130630.txt
+2025-03-20 13:06:36,136 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 13:06:36,136 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 13:06:36,152 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:06:40,101 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:06:40,101 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:06:40,108 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:06:41,698 - INFO - 正在显示图像信息...
+2025-03-20 13:06:41,714 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:06:41,714 - INFO - 
+前时相图像:
+2025-03-20 13:06:41,714 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 13:06:41,714 - INFO - 
+后时相图像:
+2025-03-20 13:06:41,714 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:06:41,714 - INFO - 
+=========================
+2025-03-20 13:06:42,069 - INFO - 正在加载变化检测模型...
+2025-03-20 13:06:42,069 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:06:42,069 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:06:42,572 - INFO - 正在执行变化检测...
+2025-03-20 13:06:42,572 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:06:42,572 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:06:42,572 - INFO - 添加项目根目录到sys.path: d:\VS_WORKBASE\BIT
+2025-03-20 13:06:45,737 - INFO - 检测成功
+2025-03-20 13:06:45,737 - INFO - 检测成功
+2025-03-20 13:06:59,797 - INFO - 已删除临时文件: inferrence/test_simple_results\test_2_0000_0000_change.png
+2025-03-20 13:06:59,799 - INFO - 已清理Python缓存文件: inferrence\__pycache__\inference.cpython-310.pyc
+2025-03-20 13:06:59,799 - INFO - 已清理Python缓存文件: inferrence\__pycache__\merged_bit_cd.cpython-310.pyc
+2025-03-20 13:06:59,799 - INFO - 已清理Python缓存文件: inferrence\__pycache__\utils.cpython-310.pyc
+2025-03-20 13:06:59,799 - INFO - 已清理Python缓存文件: PySide6\__pycache__\change_detection_model.cpython-310.pyc
+2025-03-20 13:06:59,805 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-20 13:06:59,806 - INFO - 共清理 5 个临时文件
+2025-03-20 13:06:59,806 - INFO - 已清理 5 个临时文件
+2025-03-20 13:07:08,630 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0512.png
+2025-03-20 13:07:08,630 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0512.png
+2025-03-20 13:07:08,642 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:07:14,394 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0512.png
+2025-03-20 13:07:14,394 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0512.png
+2025-03-20 13:07:14,397 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:07:18,019 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0512.png
+2025-03-20 13:07:18,019 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0512.png
+2025-03-20 13:07:18,019 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:07:25,290 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0512.png
+2025-03-20 13:07:25,290 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0512.png
+2025-03-20 13:07:25,290 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:07:29,552 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0512.png
+2025-03-20 13:07:29,552 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0512.png
+2025-03-20 13:07:29,552 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:07:31,302 - INFO - 正在显示图像信息...
+2025-03-20 13:07:31,302 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:07:31,302 - INFO - 
+前时相图像:
+2025-03-20 13:07:31,302 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0512.png
+2025-03-20 13:07:31,302 - INFO - 
+后时相图像:
+2025-03-20 13:07:31,302 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0512.png
+2025-03-20 13:07:31,302 - INFO - 
+=========================
+2025-03-20 13:07:33,704 - INFO - 正在加载变化检测模型...
+2025-03-20 13:07:33,704 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:07:33,704 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:07:35,247 - INFO - 正在执行变化检测...
+2025-03-20 13:07:35,247 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0512.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0512.png
+2025-03-20 13:07:35,247 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:07:35,715 - INFO - 检测成功
+2025-03-20 13:07:35,715 - INFO - 检测成功
+2025-03-20 13:07:46,654 - INFO - 已删除临时文件: inferrence/test_simple_results\test_2_0000_0512_change.png
+2025-03-20 13:07:46,654 - INFO - 没有临时文件需要清理
+2025-03-20 13:07:50,356 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_7_0256_0512.png
+2025-03-20 13:07:50,356 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_7_0256_0512.png
+2025-03-20 13:07:50,367 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:07:58,101 - INFO - 没有临时文件需要清理
+2025-03-20 13:08:00,540 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_7_0256_0512.png
+2025-03-20 13:08:00,540 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_7_0256_0512.png
+2025-03-20 13:08:00,540 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:08:03,710 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_7_0256_0512.png
+2025-03-20 13:08:03,710 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_7_0256_0512.png
+2025-03-20 13:08:03,710 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:08:04,826 - INFO - 正在显示图像信息...
+2025-03-20 13:08:04,826 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:08:04,826 - INFO - 
+前时相图像:
+2025-03-20 13:08:04,826 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_7_0256_0512.png
+2025-03-20 13:08:04,826 - INFO - 
+后时相图像:
+2025-03-20 13:08:04,826 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_7_0256_0512.png
+2025-03-20 13:08:04,826 - INFO - 
+=========================
+2025-03-20 13:08:05,566 - INFO - 正在执行变化检测...
+2025-03-20 13:08:05,566 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_7_0256_0512.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/test_7_0256_0512.png
+2025-03-20 13:08:05,566 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:08:06,068 - INFO - 检测成功
+2025-03-20 13:08:06,068 - INFO - 检测成功
+2025-03-20 13:08:07,145 - INFO - 正在加载变化检测模型...
+2025-03-20 13:08:07,145 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:08:07,145 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:08:07,651 - INFO - 正在执行变化检测...
+2025-03-20 13:08:07,651 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_7_0256_0512.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/test_7_0256_0512.png
+2025-03-20 13:08:07,651 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:08:08,118 - INFO - 检测成功
+2025-03-20 13:08:08,118 - INFO - 检测成功
+2025-03-20 13:08:22,131 - INFO - 正在显示图像信息...
+2025-03-20 13:08:22,131 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:08:22,131 - INFO - 
+前时相图像:
+2025-03-20 13:08:22,131 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_7_0256_0512.png
+2025-03-20 13:08:22,131 - INFO - 
+后时相图像:
+2025-03-20 13:08:22,131 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_7_0256_0512.png
+2025-03-20 13:08:22,131 - INFO - 
+=========================
+2025-03-20 13:08:45,348 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_55_0256_0000.png
+2025-03-20 13:08:45,348 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_55_0256_0000.png
+2025-03-20 13:08:45,351 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:08:49,471 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_55_0256_0000.png
+2025-03-20 13:08:49,471 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_55_0256_0000.png
+2025-03-20 13:08:49,471 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:08:51,772 - INFO - 正在显示图像信息...
+2025-03-20 13:08:51,772 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:08:51,772 - INFO - 
+前时相图像:
+2025-03-20 13:08:51,772 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_55_0256_0000.png
+2025-03-20 13:08:51,772 - INFO - 
+后时相图像:
+2025-03-20 13:08:51,772 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_55_0256_0000.png
+2025-03-20 13:08:51,772 - INFO - 
+=========================
+2025-03-20 13:08:56,985 - INFO - 正在加载变化检测模型...
+2025-03-20 13:08:56,985 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:08:56,985 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:08:57,374 - INFO - 正在执行变化检测...
+2025-03-20 13:08:57,374 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_55_0256_0000.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/A/test_55_0256_0000.png
+2025-03-20 13:08:57,374 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:08:57,854 - INFO - 检测成功
+2025-03-20 13:08:57,854 - INFO - 检测成功
+2025-03-20 13:09:02,559 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_55_0256_0000.png
+2025-03-20 13:09:02,559 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_55_0256_0000.png
+2025-03-20 13:09:02,562 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:09:06,972 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_55_0256_0000.png
+2025-03-20 13:09:06,972 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_55_0256_0000.png
+2025-03-20 13:09:06,972 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:09:11,085 - INFO - 正在显示图像信息...
+2025-03-20 13:09:11,085 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:09:11,085 - INFO - 
+前时相图像:
+2025-03-20 13:09:11,085 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_55_0256_0000.png
+2025-03-20 13:09:11,085 - INFO - 
+后时相图像:
+2025-03-20 13:09:11,085 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_55_0256_0000.png
+2025-03-20 13:09:11,085 - INFO - 
+=========================
+2025-03-20 13:09:11,462 - INFO - 正在加载变化检测模型...
+2025-03-20 13:09:11,462 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:09:11,462 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:09:11,922 - INFO - 正在执行变化检测...
+2025-03-20 13:09:11,922 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_55_0256_0000.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/test_55_0256_0000.png
+2025-03-20 13:09:11,922 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:09:12,404 - INFO - 检测成功
+2025-03-20 13:09:12,404 - INFO - 检测成功
+2025-03-20 13:09:30,173 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 13:09:30,173 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 13:09:30,173 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:09:33,588 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:09:33,588 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:09:33,588 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:09:34,722 - INFO - 正在显示图像信息...
+2025-03-20 13:09:34,722 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:09:34,722 - INFO - 
+前时相图像:
+2025-03-20 13:09:34,722 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 13:09:34,722 - INFO - 
+后时相图像:
+2025-03-20 13:09:34,722 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:09:34,722 - INFO - 
+=========================
+2025-03-20 13:09:35,541 - INFO - 正在加载变化检测模型...
+2025-03-20 13:09:35,541 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:09:35,541 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:09:36,563 - INFO - 正在执行变化检测...
+2025-03-20 13:09:36,563 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:09:36,563 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:09:37,046 - INFO - 检测成功
+2025-03-20 13:09:37,046 - INFO - 检测成功
+2025-03-20 13:09:40,255 - INFO - 正在执行变化检测...
+2025-03-20 13:09:40,255 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:09:40,255 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:09:40,731 - INFO - 检测成功
+2025-03-20 13:09:40,731 - INFO - 检测成功
+2025-03-20 13:09:41,941 - INFO - 正在执行变化检测...
+2025-03-20 13:09:41,946 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:09:41,946 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:09:42,381 - INFO - 检测成功
+2025-03-20 13:09:42,381 - INFO - 检测成功
+2025-03-20 13:09:43,007 - INFO - 已删除临时文件: inferrence/test_simple_results\test_55_0256_0000_change.png
+2025-03-20 13:09:43,007 - INFO - 没有临时文件需要清理
+2025-03-20 13:09:45,228 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:09:45,228 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:09:45,228 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:09:47,273 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:09:47,273 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:09:47,273 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:09:51,641 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 13:09:51,641 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 13:09:51,641 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:09:55,668 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:09:55,678 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:09:55,678 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:09:58,491 - INFO - 正在加载变化检测模型...
+2025-03-20 13:09:58,491 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:09:58,491 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:09:58,888 - INFO - 正在执行变化检测...
+2025-03-20 13:09:58,888 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:09:58,888 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:09:59,361 - INFO - 检测成功
+2025-03-20 13:09:59,361 - INFO - 检测成功
+2025-03-20 13:10:16,093 - INFO - 已删除临时文件: inferrence/test_simple_results\test_7_0256_0512_change.png
+2025-03-20 13:10:16,093 - INFO - 没有临时文件需要清理
+2025-03-20 13:10:18,993 - INFO - 未选择图像，裁剪操作取消
+2025-03-20 13:10:20,597 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:10:20,597 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:10:20,606 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:10:23,845 - INFO - 没有临时文件需要清理
+2025-03-20 13:10:26,951 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 13:10:26,951 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 13:10:26,958 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:10:30,853 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:10:30,853 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:10:30,853 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:10:33,428 - INFO - 正在显示图像信息...
+2025-03-20 13:10:33,428 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:10:33,428 - INFO - 
+前时相图像:
+2025-03-20 13:10:33,428 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 13:10:33,428 - INFO - 
+后时相图像:
+2025-03-20 13:10:33,428 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:10:33,428 - INFO - 
+=========================
+2025-03-20 13:10:36,673 - INFO - 正在加载变化检测模型...
+2025-03-20 13:10:36,675 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:10:36,675 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:10:39,120 - INFO - 正在执行变化检测...
+2025-03-20 13:10:39,120 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:10:39,120 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:10:39,599 - INFO - 检测成功
+2025-03-20 13:10:39,599 - INFO - 检测成功
+2025-03-20 13:10:48,233 - INFO - 已删除临时文件: inferrence/test_simple_results\test_2_0000_0000_change.png
+2025-03-20 13:10:48,234 - INFO - 没有临时文件需要清理
+2025-03-20 13:10:56,734 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 13:10:56,734 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 13:10:56,741 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:10:58,658 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 13:10:58,658 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 13:10:58,674 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:11:00,300 - INFO - 正在显示图像信息...
+2025-03-20 13:11:00,300 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:11:00,300 - INFO - 
+前时相图像:
+2025-03-20 13:11:00,300 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 13:11:00,300 - INFO - 
+后时相图像:
+2025-03-20 13:11:00,300 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 13:11:00,300 - INFO - 
+=========================
+2025-03-20 13:11:01,517 - INFO - 正在加载变化检测模型...
+2025-03-20 13:11:01,517 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:11:01,520 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:11:03,022 - INFO - 正在执行变化检测...
+2025-03-20 13:11:03,022 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png 与 D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 13:11:03,022 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:11:03,473 - INFO - 检测成功
+2025-03-20 13:11:03,473 - INFO - 检测成功
+2025-03-20 13:11:06,441 - INFO - 已删除临时文件: inferrence/test_simple_results\test0_后时相_change.png
+2025-03-20 13:11:06,441 - INFO - 没有临时文件需要清理
+2025-03-20 13:14:29,791 - INFO - 应用程序启动
+2025-03-20 13:14:29,842 - INFO - 创建新日志文件: logs\log_20250320_131429.txt
+2025-03-20 13:14:29,842 - INFO - 日志文件保存在: logs\log_20250320_131429.txt
+2025-03-20 13:14:53,203 - INFO - 导入前时相影像: C:/Users/qianx/Desktop/test0_前时相.png
+2025-03-20 13:14:53,203 - INFO - 使用原始图像路径: C:/Users/qianx/Desktop/test0_前时相.png
+2025-03-20 13:14:53,213 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:14:56,139 - INFO - 导入后时相影像: C:/Users/qianx/Desktop/test0_后时相.png
+2025-03-20 13:14:56,140 - INFO - 使用原始图像路径: C:/Users/qianx/Desktop/test0_后时相.png
+2025-03-20 13:14:56,141 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:14:57,070 - INFO - 正在显示图像信息...
+2025-03-20 13:14:57,070 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:14:57,070 - INFO - 
+前时相图像:
+2025-03-20 13:14:57,070 - INFO - 文件路径: C:/Users/qianx/Desktop/test0_前时相.png
+2025-03-20 13:14:57,070 - INFO - 
+后时相图像:
+2025-03-20 13:14:57,070 - INFO - 文件路径: C:/Users/qianx/Desktop/test0_后时相.png
+2025-03-20 13:14:57,070 - INFO - 
+=========================
+2025-03-20 13:14:58,587 - INFO - 正在加载变化检测模型...
+2025-03-20 13:14:58,587 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:14:58,587 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:14:59,777 - INFO - 正在执行变化检测...
+2025-03-20 13:14:59,777 - INFO - 执行变化检测: C:/Users/qianx/Desktop/test0_前时相.png 与 C:/Users/qianx/Desktop/test0_后时相.png
+2025-03-20 13:14:59,777 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:14:59,777 - INFO - 添加项目根目录到sys.path: d:\VS_WORKBASE\BIT
+2025-03-20 13:15:02,979 - INFO - 检测成功
+2025-03-20 13:15:02,981 - INFO - 检测成功
+2025-03-20 13:15:26,074 - INFO - 正在显示图像信息...
+2025-03-20 13:15:26,075 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:15:26,075 - INFO - 
+前时相图像:
+2025-03-20 13:15:26,075 - INFO - 文件路径: C:/Users/qianx/Desktop/test0_前时相.png
+2025-03-20 13:15:26,076 - INFO - 
+后时相图像:
+2025-03-20 13:15:26,076 - INFO - 文件路径: C:/Users/qianx/Desktop/test0_后时相.png
+2025-03-20 13:15:26,077 - INFO - 
+=========================
+2025-03-20 13:30:58,068 - INFO - 应用程序启动
+2025-03-20 13:30:58,450 - INFO - 创建新日志文件: logs\log_20250320_133058.txt
+2025-03-20 13:30:58,450 - INFO - 日志文件保存在: logs\log_20250320_133058.txt
+2025-03-20 13:31:15,021 - INFO - 正在裁剪图像: C:/Users/qianx/Desktop/SECOND_train_set/im1/00003.png
+2025-03-20 13:31:15,021 - INFO - 网格大小: 2x2
+2025-03-20 13:31:15,021 - INFO - 保存位置: C:/Users/qianx/Desktop
+2025-03-20 13:31:15,021 - INFO - 尝试读取图像: C:/Users/qianx/Desktop/SECOND_train_set/im1/00003.png
+2025-03-20 13:31:15,073 - INFO - 原始图像尺寸: 512x512
+2025-03-20 13:31:15,073 - INFO - 每个网格尺寸: 256x256
+2025-03-20 13:31:15,073 - INFO - 保存网格 1_1 到: C:/Users/qianx/Desktop\before_grid_1_1.png
+2025-03-20 13:31:15,081 - INFO - 保存网格 1_2 到: C:/Users/qianx/Desktop\before_grid_1_2.png
+2025-03-20 13:31:15,084 - INFO - 保存网格 2_1 到: C:/Users/qianx/Desktop\before_grid_2_1.png
+2025-03-20 13:31:15,086 - INFO - 保存网格 2_2 到: C:/Users/qianx/Desktop\before_grid_2_2.png
+2025-03-20 13:31:15,089 - INFO - 网格裁剪完成，共生成 4 个子图像，保存在: C:/Users/qianx/Desktop
+2025-03-20 13:31:15,089 - INFO - 裁剪完成，请手动导入需要的图像进行后续操作
+2025-03-20 13:31:44,849 - INFO - 正在裁剪图像: C:/Users/qianx/Desktop/SECOND_train_set/im2/00003.png
+2025-03-20 13:31:44,849 - INFO - 网格大小: 2x2
+2025-03-20 13:31:44,849 - INFO - 保存位置: C:/Users/qianx/Desktop
+2025-03-20 13:31:44,849 - INFO - 尝试读取图像: C:/Users/qianx/Desktop/SECOND_train_set/im2/00003.png
+2025-03-20 13:31:44,858 - INFO - 原始图像尺寸: 512x512
+2025-03-20 13:31:44,858 - INFO - 每个网格尺寸: 256x256
+2025-03-20 13:31:44,864 - INFO - 保存网格 1_1 到: C:/Users/qianx/Desktop\after_grid_1_1.png
+2025-03-20 13:31:44,866 - INFO - 保存网格 1_2 到: C:/Users/qianx/Desktop\after_grid_1_2.png
+2025-03-20 13:31:44,870 - INFO - 保存网格 2_1 到: C:/Users/qianx/Desktop\after_grid_2_1.png
+2025-03-20 13:31:44,873 - INFO - 保存网格 2_2 到: C:/Users/qianx/Desktop\after_grid_2_2.png
+2025-03-20 13:31:44,874 - INFO - 网格裁剪完成，共生成 4 个子图像，保存在: C:/Users/qianx/Desktop
+2025-03-20 13:31:44,874 - INFO - 裁剪完成，请手动导入需要的图像进行后续操作
+2025-03-20 13:31:52,411 - INFO - 导入前时相影像: C:/Users/qianx/Desktop/before_grid_1_1.png
+2025-03-20 13:31:52,411 - INFO - 使用原始图像路径: C:/Users/qianx/Desktop/before_grid_1_1.png
+2025-03-20 13:31:53,841 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:31:55,460 - INFO - 导入后时相影像: C:/Users/qianx/Desktop/after_grid_1_1.png
+2025-03-20 13:31:55,460 - INFO - 使用原始图像路径: C:/Users/qianx/Desktop/after_grid_1_1.png
+2025-03-20 13:31:55,462 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:31:57,171 - INFO - 正在显示图像信息...
+2025-03-20 13:31:57,172 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:31:57,173 - INFO - 
+前时相图像:
+2025-03-20 13:31:57,174 - INFO - 文件路径: C:/Users/qianx/Desktop/before_grid_1_1.png
+2025-03-20 13:31:57,174 - INFO - 图像尺寸: 512 x 512 像素
+2025-03-20 13:31:57,175 - INFO - 分辨率: 0.26 百万像素
+2025-03-20 13:31:57,176 - INFO - 文件大小: 0.10 MB
+2025-03-20 13:31:57,176 - INFO - 
+后时相图像:
+2025-03-20 13:31:57,176 - INFO - 文件路径: C:/Users/qianx/Desktop/after_grid_1_1.png
+2025-03-20 13:31:57,177 - INFO - 图像尺寸: 512 x 512 像素
+2025-03-20 13:31:57,177 - INFO - 分辨率: 0.26 百万像素
+2025-03-20 13:31:57,177 - INFO - 文件大小: 0.11 MB
+2025-03-20 13:31:57,178 - INFO - 
+=========================
+2025-03-20 13:31:58,112 - INFO - 正在加载变化检测模型...
+2025-03-20 13:31:58,112 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:31:58,112 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:32:00,022 - INFO - 正在执行变化检测...
+2025-03-20 13:32:00,022 - INFO - 执行变化检测: C:/Users/qianx/Desktop/before_grid_1_1.png 与 C:/Users/qianx/Desktop/after_grid_1_1.png
+2025-03-20 13:32:00,022 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:32:00,022 - INFO - 添加项目根目录到sys.path: d:\VS_WORKBASE\BIT
+2025-03-20 13:32:04,560 - INFO - 检测成功
+2025-03-20 13:32:04,565 - INFO - 检测成功
+2025-03-20 13:32:09,416 - INFO - 已删除临时文件: inferrence/test_simple_results\before_grid_1_1_change.png
+2025-03-20 13:32:09,418 - INFO - 已清理Python缓存文件: inferrence\__pycache__\inference.cpython-310.pyc
+2025-03-20 13:32:09,419 - INFO - 已清理Python缓存文件: inferrence\__pycache__\merged_bit_cd.cpython-310.pyc
+2025-03-20 13:32:09,419 - INFO - 已清理Python缓存文件: inferrence\__pycache__\utils.cpython-310.pyc
+2025-03-20 13:32:09,420 - INFO - 已清理Python缓存文件: PySide6\__pycache__\change_detection_model.cpython-310.pyc
+2025-03-20 13:32:09,421 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-20 13:32:09,421 - INFO - 共清理 5 个临时文件
+2025-03-20 13:32:09,421 - INFO - 已清理 5 个临时文件
+2025-03-20 13:32:12,865 - INFO - 导入前时相影像: C:/Users/qianx/Desktop/before_grid_1_1.png
+2025-03-20 13:32:12,865 - INFO - 使用原始图像路径: C:/Users/qianx/Desktop/before_grid_1_1.png
+2025-03-20 13:32:12,865 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:32:19,995 - INFO - 导入后时相影像: C:/Users/qianx/Desktop/after_grid_1_1.png
+2025-03-20 13:32:19,995 - INFO - 使用原始图像路径: C:/Users/qianx/Desktop/after_grid_1_1.png
+2025-03-20 13:32:19,996 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:32:22,142 - INFO - 正在执行变化检测...
+2025-03-20 13:32:22,143 - INFO - 执行变化检测: C:/Users/qianx/Desktop/before_grid_1_1.png 与 C:/Users/qianx/Desktop/after_grid_1_1.png
+2025-03-20 13:32:22,143 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:32:22,619 - INFO - 检测成功
+2025-03-20 13:32:22,621 - INFO - 检测成功
+2025-03-20 13:32:24,002 - INFO - 正在加载变化检测模型...
+2025-03-20 13:32:24,002 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:32:24,002 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:32:24,996 - INFO - 正在执行变化检测...
+2025-03-20 13:32:24,996 - INFO - 执行变化检测: C:/Users/qianx/Desktop/before_grid_1_1.png 与 C:/Users/qianx/Desktop/after_grid_1_1.png
+2025-03-20 13:32:24,996 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:32:25,484 - INFO - 检测成功
+2025-03-20 13:32:25,493 - INFO - 检测成功
+2025-03-20 13:32:27,592 - INFO - 正在执行变化检测...
+2025-03-20 13:32:27,592 - INFO - 执行变化检测: C:/Users/qianx/Desktop/before_grid_1_1.png 与 C:/Users/qianx/Desktop/after_grid_1_1.png
+2025-03-20 13:32:27,594 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:32:28,056 - INFO - 检测成功
+2025-03-20 13:32:28,064 - INFO - 检测成功
+2025-03-20 13:32:28,265 - INFO - 正在执行变化检测...
+2025-03-20 13:32:28,265 - INFO - 执行变化检测: C:/Users/qianx/Desktop/before_grid_1_1.png 与 C:/Users/qianx/Desktop/after_grid_1_1.png
+2025-03-20 13:32:28,265 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:32:28,722 - INFO - 检测成功
+2025-03-20 13:32:28,735 - INFO - 检测成功
+2025-03-20 13:32:29,299 - INFO - 正在执行变化检测...
+2025-03-20 13:32:29,304 - INFO - 执行变化检测: C:/Users/qianx/Desktop/before_grid_1_1.png 与 C:/Users/qianx/Desktop/after_grid_1_1.png
+2025-03-20 13:32:29,305 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:32:29,664 - INFO - 检测成功
+2025-03-20 13:32:29,665 - INFO - 检测成功
+2025-03-20 13:32:31,301 - INFO - 已删除临时文件: inferrence/test_simple_results\before_grid_1_1_change.png
+2025-03-20 13:32:31,301 - INFO - 没有临时文件需要清理
+2025-03-20 13:32:33,827 - INFO - 导入前时相影像: C:/Users/qianx/Desktop/before_grid_2_1.png
+2025-03-20 13:32:33,827 - INFO - 使用原始图像路径: C:/Users/qianx/Desktop/before_grid_2_1.png
+2025-03-20 13:32:33,831 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:32:37,366 - INFO - 导入后时相影像: C:/Users/qianx/Desktop/after_grid_2_1.png
+2025-03-20 13:32:37,366 - INFO - 使用原始图像路径: C:/Users/qianx/Desktop/after_grid_2_1.png
+2025-03-20 13:32:37,378 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:32:40,117 - INFO - 正在显示图像信息...
+2025-03-20 13:32:40,117 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:32:40,117 - INFO - 
+前时相图像:
+2025-03-20 13:32:40,117 - INFO - 文件路径: C:/Users/qianx/Desktop/before_grid_2_1.png
+2025-03-20 13:32:40,117 - INFO - 图像尺寸: 512 x 512 像素
+2025-03-20 13:32:40,117 - INFO - 分辨率: 0.26 百万像素
+2025-03-20 13:32:40,117 - INFO - 文件大小: 0.09 MB
+2025-03-20 13:32:40,117 - INFO - 
+后时相图像:
+2025-03-20 13:32:40,117 - INFO - 文件路径: C:/Users/qianx/Desktop/after_grid_2_1.png
+2025-03-20 13:32:40,117 - INFO - 图像尺寸: 512 x 512 像素
+2025-03-20 13:32:40,117 - INFO - 分辨率: 0.26 百万像素
+2025-03-20 13:32:40,128 - INFO - 文件大小: 0.11 MB
+2025-03-20 13:32:40,129 - INFO - 
+=========================
+2025-03-20 13:32:45,601 - INFO - 正在加载变化检测模型...
+2025-03-20 13:32:45,601 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:32:45,601 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:32:46,559 - INFO - 正在执行变化检测...
+2025-03-20 13:32:46,559 - INFO - 执行变化检测: C:/Users/qianx/Desktop/before_grid_2_1.png 与 C:/Users/qianx/Desktop/after_grid_2_1.png
+2025-03-20 13:32:46,559 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:32:47,023 - INFO - 检测成功
+2025-03-20 13:32:47,028 - INFO - 检测成功
+2025-03-20 13:33:01,115 - INFO - 已删除临时文件: inferrence/test_simple_results\before_grid_2_1_change.png
+2025-03-20 13:33:01,115 - INFO - 没有临时文件需要清理
+2025-03-20 13:33:01,243 - INFO - 没有临时文件需要清理
+2025-03-20 13:34:18,245 - INFO - 应用程序启动
+2025-03-20 13:34:18,304 - INFO - 创建新日志文件: logs\log_20250320_133418.txt
+2025-03-20 13:34:18,304 - INFO - 日志文件保存在: logs\log_20250320_133418.txt
+2025-03-20 13:34:24,420 - INFO - 导入前时相影像: C:/Users/qianx/Desktop/after_grid_1_1.png
+2025-03-20 13:34:24,420 - INFO - 使用原始图像路径: C:/Users/qianx/Desktop/after_grid_1_1.png
+2025-03-20 13:34:24,434 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:34:25,951 - INFO - 未选择图像，裁剪操作取消
+2025-03-20 13:34:34,777 - INFO - 导入后时相影像: C:/Users/qianx/Desktop/before_grid_1_1.png
+2025-03-20 13:34:34,777 - INFO - 使用原始图像路径: C:/Users/qianx/Desktop/before_grid_1_1.png
+2025-03-20 13:34:34,777 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:34:36,571 - INFO - 正在显示图像信息...
+2025-03-20 13:34:36,571 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:34:36,571 - INFO - 
+前时相图像:
+2025-03-20 13:34:36,571 - INFO - 文件路径: C:/Users/qianx/Desktop/after_grid_1_1.png
+2025-03-20 13:34:36,571 - INFO - 
+后时相图像:
+2025-03-20 13:34:36,571 - INFO - 文件路径: C:/Users/qianx/Desktop/before_grid_1_1.png
+2025-03-20 13:34:36,571 - INFO - 
+=========================
+2025-03-20 13:34:38,065 - INFO - 正在加载变化检测模型...
+2025-03-20 13:34:38,065 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:34:38,067 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:34:39,365 - INFO - 正在执行变化检测...
+2025-03-20 13:34:39,365 - INFO - 执行变化检测: C:/Users/qianx/Desktop/after_grid_1_1.png 与 C:/Users/qianx/Desktop/before_grid_1_1.png
+2025-03-20 13:34:39,365 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:34:39,371 - INFO - 添加项目根目录到sys.path: d:\VS_WORKBASE\BIT
+2025-03-20 13:34:41,377 - INFO - 执行变化检测时出错: CDInference.run() missing 3 required positional arguments: 'image_a_path', 'image_b_path', and 'output_dir'
+2025-03-20 13:34:41,377 - INFO - Traceback (most recent call last):
+  File "d:\VS_WORKBASE\BIT\PySide6\main.py", line 244, in on_begin_clicked
+    success = detect_change(before_image_path, after_image_path, output_dir, verbose=True)
+  File "d:\VS_WORKBASE\BIT\inferrence\merged_bit_cd.py", line 145, in detect_change
+    success = inferencer.run()
+TypeError: CDInference.run() missing 3 required positional arguments: 'image_a_path', 'image_b_path', and 'output_dir'
+
+2025-03-20 13:34:56,933 - INFO - 已清理Python缓存文件: inferrence\__pycache__\inference.cpython-310.pyc
+2025-03-20 13:34:56,933 - INFO - 已清理Python缓存文件: inferrence\__pycache__\merged_bit_cd.cpython-310.pyc
+2025-03-20 13:34:56,934 - INFO - 已清理Python缓存文件: inferrence\__pycache__\utils.cpython-310.pyc
+2025-03-20 13:34:56,934 - INFO - 已清理Python缓存文件: PySide6\__pycache__\change_detection_model.cpython-310.pyc
+2025-03-20 13:34:56,935 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-20 13:34:56,935 - INFO - 共清理 5 个临时文件
+2025-03-20 13:34:56,936 - INFO - 已清理 5 个临时文件
+2025-03-20 13:34:57,094 - INFO - 没有临时文件需要清理
+2025-03-20 13:38:49,870 - INFO - 应用程序启动
+2025-03-20 13:38:49,918 - INFO - 创建新日志文件: logs\log_20250320_133849.txt
+2025-03-20 13:38:49,919 - INFO - 日志文件保存在: logs\log_20250320_133849.txt
+2025-03-20 13:39:03,457 - INFO - 导入前时相影像: D:/VS_WORKBASE/PySide6/testdata/test0_后时相.png
+2025-03-20 13:39:03,457 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/testdata/test0_后时相.png
+2025-03-20 13:39:03,469 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:39:05,140 - INFO - 导入后时相影像: D:/VS_WORKBASE/PySide6/testdata/test0_前时相.png
+2025-03-20 13:39:05,140 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/testdata/test0_前时相.png
+2025-03-20 13:39:05,140 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:39:05,981 - INFO - 正在显示图像信息...
+2025-03-20 13:39:05,981 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:39:05,981 - INFO - 
+前时相图像:
+2025-03-20 13:39:05,981 - INFO - 文件路径: D:/VS_WORKBASE/PySide6/testdata/test0_后时相.png
+2025-03-20 13:39:05,987 - INFO - 
+后时相图像:
+2025-03-20 13:39:05,987 - INFO - 文件路径: D:/VS_WORKBASE/PySide6/testdata/test0_前时相.png
+2025-03-20 13:39:05,987 - INFO - 
+=========================
+2025-03-20 13:39:06,715 - INFO - 正在加载变化检测模型...
+2025-03-20 13:39:06,715 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:39:06,715 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:39:07,793 - INFO - 正在执行变化检测...
+2025-03-20 13:39:07,799 - INFO - 执行变化检测: D:/VS_WORKBASE/PySide6/testdata/test0_后时相.png 与 D:/VS_WORKBASE/PySide6/testdata/test0_前时相.png
+2025-03-20 13:39:07,800 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:39:07,800 - INFO - 添加项目根目录到sys.path: d:\VS_WORKBASE\BIT
+2025-03-20 13:39:11,215 - INFO - 检测成功
+2025-03-20 13:39:11,217 - INFO - 检测成功
+2025-03-20 13:39:12,539 - INFO - 已删除临时文件: inferrence/test_simple_results\test0_前时相_change.png
+2025-03-20 13:39:12,539 - INFO - 已清理Python缓存文件: inferrence\__pycache__\inference.cpython-310.pyc
+2025-03-20 13:39:12,539 - INFO - 已清理Python缓存文件: inferrence\__pycache__\merged_bit_cd.cpython-310.pyc
+2025-03-20 13:39:12,539 - INFO - 已清理Python缓存文件: inferrence\__pycache__\utils.cpython-310.pyc
+2025-03-20 13:39:12,539 - INFO - 已清理Python缓存文件: PySide6\__pycache__\change_detection_model.cpython-310.pyc
+2025-03-20 13:39:12,539 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-20 13:39:12,539 - INFO - 共清理 5 个临时文件
+2025-03-20 13:39:12,539 - INFO - 已清理 5 个临时文件
+2025-03-20 13:39:23,093 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 13:39:23,093 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 13:39:23,100 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:39:27,049 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:39:27,049 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:39:27,049 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:39:27,930 - INFO - 正在显示图像信息...
+2025-03-20 13:39:27,932 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:39:27,932 - INFO - 
+前时相图像:
+2025-03-20 13:39:27,932 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 13:39:27,932 - INFO - 
+后时相图像:
+2025-03-20 13:39:27,932 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:39:27,932 - INFO - 
+=========================
+2025-03-20 13:39:28,296 - INFO - 正在加载变化检测模型...
+2025-03-20 13:39:28,296 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:39:28,296 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:39:28,817 - INFO - 正在执行变化检测...
+2025-03-20 13:39:28,817 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:39:28,817 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:39:29,323 - INFO - 检测成功
+2025-03-20 13:39:29,325 - INFO - 检测成功
+2025-03-20 13:39:30,975 - INFO - 已删除临时文件: inferrence/test_simple_results\test0_前时相_change_resized.png
+2025-03-20 13:39:30,975 - INFO - 没有临时文件需要清理
+2025-03-20 13:39:32,332 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:39:32,332 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:39:32,333 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:39:34,145 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0512.png
+2025-03-20 13:39:34,145 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0512.png
+2025-03-20 13:39:34,145 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:39:37,427 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_7_0256_0512.png
+2025-03-20 13:39:37,427 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_7_0256_0512.png
+2025-03-20 13:39:37,430 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:39:38,230 - INFO - 正在加载变化检测模型...
+2025-03-20 13:39:38,230 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:39:38,230 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:39:38,626 - INFO - 正在执行变化检测...
+2025-03-20 13:39:38,631 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_7_0256_0512.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0512.png
+2025-03-20 13:39:38,631 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:39:39,095 - INFO - 检测成功
+2025-03-20 13:39:39,108 - INFO - 检测成功
+2025-03-20 13:39:41,633 - INFO - 已删除临时文件: inferrence/test_simple_results\test0_后时相_change.png
+2025-03-20 13:39:41,633 - INFO - 没有临时文件需要清理
+2025-03-20 13:39:44,664 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 13:39:44,664 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 13:39:44,679 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:39:48,024 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:39:48,024 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:39:48,024 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:39:49,892 - INFO - 正在显示图像信息...
+2025-03-20 13:39:49,892 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:39:49,892 - INFO - 
+前时相图像:
+2025-03-20 13:39:49,892 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 13:39:49,892 - INFO - 
+后时相图像:
+2025-03-20 13:39:49,892 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:39:49,892 - INFO - 
+=========================
+2025-03-20 13:39:50,292 - INFO - 正在加载变化检测模型...
+2025-03-20 13:39:50,292 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:39:50,292 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:39:50,650 - INFO - 正在执行变化检测...
+2025-03-20 13:39:50,650 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 13:39:50,650 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:39:51,106 - INFO - 检测成功
+2025-03-20 13:39:51,106 - INFO - 检测成功
+2025-03-20 13:39:56,657 - INFO - 已删除临时文件: inferrence/test_simple_results\test_2_0000_0000_change.png
+2025-03-20 13:39:56,657 - INFO - 没有临时文件需要清理
+2025-03-20 13:39:56,902 - INFO - 没有临时文件需要清理
+2025-03-20 13:39:59,455 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:39:59,455 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:39:59,462 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:40:04,604 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 13:40:04,620 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 13:40:04,631 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:40:05,557 - INFO - 正在显示图像信息...
+2025-03-20 13:40:05,557 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:40:05,557 - INFO - 
+前时相图像:
+2025-03-20 13:40:05,557 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 13:40:05,557 - INFO - 
+后时相图像:
+2025-03-20 13:40:05,557 - INFO - 文件路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 13:40:05,563 - INFO - 
+=========================
+2025-03-20 13:40:05,885 - INFO - 正在加载变化检测模型...
+2025-03-20 13:40:05,885 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:40:05,885 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:40:06,210 - INFO - 正在执行变化检测...
+2025-03-20 13:40:06,210 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 13:40:06,210 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:40:06,702 - INFO - 检测成功
+2025-03-20 13:40:06,703 - INFO - 检测成功
+2025-03-20 13:40:17,857 - INFO - 已删除临时文件: inferrence/test_simple_results\test_7_0256_0512_change.png
+2025-03-20 13:40:17,857 - INFO - 没有临时文件需要清理
+2025-03-20 13:40:20,528 - INFO - 未选择图像，裁剪操作取消
+2025-03-20 13:40:24,158 - INFO - 导入前时相影像: C:/Users/qianx/Desktop/after_grid_1_1.png
+2025-03-20 13:40:24,158 - INFO - 使用原始图像路径: C:/Users/qianx/Desktop/after_grid_1_1.png
+2025-03-20 13:40:24,171 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:40:26,750 - INFO - 导入后时相影像: C:/Users/qianx/Desktop/before_grid_1_1.png
+2025-03-20 13:40:26,750 - INFO - 使用原始图像路径: C:/Users/qianx/Desktop/before_grid_1_1.png
+2025-03-20 13:40:26,750 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:40:27,800 - INFO - 正在显示图像信息...
+2025-03-20 13:40:27,800 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:40:27,800 - INFO - 
+前时相图像:
+2025-03-20 13:40:27,800 - INFO - 文件路径: C:/Users/qianx/Desktop/after_grid_1_1.png
+2025-03-20 13:40:27,800 - INFO - 
+后时相图像:
+2025-03-20 13:40:27,800 - INFO - 文件路径: C:/Users/qianx/Desktop/before_grid_1_1.png
+2025-03-20 13:40:27,800 - INFO - 
+=========================
+2025-03-20 13:40:28,278 - INFO - 正在加载变化检测模型...
+2025-03-20 13:40:28,278 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:40:28,294 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:40:28,729 - INFO - 正在执行变化检测...
+2025-03-20 13:40:28,729 - INFO - 执行变化检测: C:/Users/qianx/Desktop/after_grid_1_1.png 与 C:/Users/qianx/Desktop/before_grid_1_1.png
+2025-03-20 13:40:28,729 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:40:29,212 - INFO - 检测成功
+2025-03-20 13:40:29,212 - INFO - 检测成功
+2025-03-20 13:40:32,444 - INFO - 已删除临时文件: inferrence/test_simple_results\after_grid_1_1_change.png
+2025-03-20 13:40:32,444 - INFO - 没有临时文件需要清理
+2025-03-20 13:40:34,270 - INFO - 导入前时相影像: C:/Users/qianx/Desktop/before_grid_2_2.png
+2025-03-20 13:40:34,270 - INFO - 使用原始图像路径: C:/Users/qianx/Desktop/before_grid_2_2.png
+2025-03-20 13:40:34,286 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:40:37,434 - INFO - 导入后时相影像: C:/Users/qianx/Desktop/after_grid_2_2.png
+2025-03-20 13:40:37,434 - INFO - 使用原始图像路径: C:/Users/qianx/Desktop/after_grid_2_2.png
+2025-03-20 13:40:37,439 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:40:38,454 - INFO - 正在显示图像信息...
+2025-03-20 13:40:38,454 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:40:38,454 - INFO - 
+前时相图像:
+2025-03-20 13:40:38,454 - INFO - 文件路径: C:/Users/qianx/Desktop/before_grid_2_2.png
+2025-03-20 13:40:38,454 - INFO - 
+后时相图像:
+2025-03-20 13:40:38,460 - INFO - 文件路径: C:/Users/qianx/Desktop/after_grid_2_2.png
+2025-03-20 13:40:38,460 - INFO - 
+=========================
+2025-03-20 13:40:38,742 - INFO - 正在加载变化检测模型...
+2025-03-20 13:40:38,742 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:40:38,742 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:40:39,050 - INFO - 正在执行变化检测...
+2025-03-20 13:40:39,050 - INFO - 执行变化检测: C:/Users/qianx/Desktop/before_grid_2_2.png 与 C:/Users/qianx/Desktop/after_grid_2_2.png
+2025-03-20 13:40:39,050 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:40:39,524 - INFO - 检测成功
+2025-03-20 13:40:39,538 - INFO - 检测成功
+2025-03-20 13:41:18,217 - INFO - 已删除临时文件: inferrence/test_simple_results\before_grid_2_2_change.png
+2025-03-20 13:41:18,219 - INFO - 没有临时文件需要清理
+2025-03-20 13:50:34,193 - INFO - 应用程序启动
+2025-03-20 13:50:34,247 - INFO - 创建新日志文件: logs\log_20250320_135034.txt
+2025-03-20 13:50:34,247 - INFO - 日志文件保存在: logs\log_20250320_135034.txt
+2025-03-20 13:50:36,339 - INFO - 请先导入图像
+2025-03-20 13:50:46,021 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 13:50:46,022 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相.png
+2025-03-20 13:50:46,042 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:50:46,785 - INFO - 原始图像尺寸: 252x250
+2025-03-20 13:50:46,815 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/BIT/PySide6/testdata\test0_后时相_256x256.png
+2025-03-20 13:50:51,141 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相_256x256.png
+2025-03-20 13:50:51,141 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相_256x256.png
+2025-03-20 13:50:51,144 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:50:54,022 - INFO - 原始图像尺寸: 256x256
+2025-03-20 13:50:54,063 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/BIT/PySide6/testdata\test0_后时相_256x256_256x256.png
+2025-03-20 13:51:10,492 - INFO - 原始图像尺寸: 256x256
+2025-03-20 13:51:10,524 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/BIT/PySide6/testdata\test0_后时相_256x256_256x256_256x256.png
+2025-03-20 13:51:16,699 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相_256x256.png
+2025-03-20 13:51:16,699 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相_256x256.png
+2025-03-20 13:51:16,699 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:51:21,515 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 13:51:21,515 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 13:51:21,528 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:51:23,213 - INFO - 已清理Python缓存文件: inferrence\__pycache__\inference.cpython-310.pyc
+2025-03-20 13:51:23,213 - INFO - 已清理Python缓存文件: inferrence\__pycache__\merged_bit_cd.cpython-310.pyc
+2025-03-20 13:51:23,213 - INFO - 已清理Python缓存文件: inferrence\__pycache__\utils.cpython-310.pyc
+2025-03-20 13:51:23,213 - INFO - 已清理Python缓存文件: PySide6\__pycache__\change_detection_model.cpython-310.pyc
+2025-03-20 13:51:23,213 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-20 13:51:23,213 - INFO - 共清理 5 个临时文件
+2025-03-20 13:51:23,213 - INFO - 已清理 5 个临时文件
+2025-03-20 13:51:24,753 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 13:51:24,753 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 13:51:24,753 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:51:26,674 - INFO - 没有临时文件需要清理
+2025-03-20 13:51:28,046 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 13:51:28,046 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相.png
+2025-03-20 13:51:28,046 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:51:28,978 - INFO - 原始图像尺寸: 257x255
+2025-03-20 13:51:29,009 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/BIT/PySide6/testdata\test0_前时相_256x256.png
+2025-03-20 13:51:30,599 - INFO - 没有临时文件需要清理
+2025-03-20 13:51:35,882 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相_256x256.png
+2025-03-20 13:51:35,882 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相_256x256.png
+2025-03-20 13:51:35,882 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:51:37,361 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相_256x256.png
+2025-03-20 13:51:37,362 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相_256x256.png
+2025-03-20 13:51:37,364 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:51:39,427 - INFO - 正在显示图像信息...
+2025-03-20 13:51:39,427 - INFO - 
+===== 图像详细信息 =====
+2025-03-20 13:51:39,427 - INFO - 
+前时相图像:
+2025-03-20 13:51:39,427 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相_256x256.png
+2025-03-20 13:51:39,433 - INFO - 
+后时相图像:
+2025-03-20 13:51:39,433 - INFO - 文件路径: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相_256x256.png
+2025-03-20 13:51:39,433 - INFO - 
+=========================
+2025-03-20 13:51:40,548 - INFO - 正在加载变化检测模型...
+2025-03-20 13:51:40,548 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:51:40,548 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 13:51:41,433 - INFO - 正在执行变化检测...
+2025-03-20 13:51:41,433 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/PySide6/testdata/test0_后时相_256x256.png 与 D:/VS_WORKBASE/BIT/PySide6/testdata/test0_前时相_256x256.png
+2025-03-20 13:51:41,433 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:51:41,433 - INFO - 添加项目根目录到sys.path: d:\VS_WORKBASE\BIT
+2025-03-20 13:51:44,746 - INFO - 检测成功
+2025-03-20 13:51:44,748 - INFO - 检测成功
+2025-03-20 13:51:51,544 - INFO - 已删除临时文件: inferrence/test_simple_results\test0_后时相_256x256_change.png
+2025-03-20 13:51:51,544 - INFO - 已清理Python缓存文件: inferrence\__pycache__\inference.cpython-310.pyc
+2025-03-20 13:51:51,555 - INFO - 已清理Python缓存文件: inferrence\__pycache__\merged_bit_cd.cpython-310.pyc
+2025-03-20 13:51:51,555 - INFO - 已清理Python缓存文件: inferrence\__pycache__\utils.cpython-310.pyc
+2025-03-20 13:51:51,555 - INFO - 共清理 3 个临时文件
+2025-03-20 13:51:51,555 - INFO - 已清理 3 个临时文件
+2025-03-20 13:56:15,577 - INFO - 应用程序启动
+2025-03-20 13:57:28,004 - INFO - 应用程序启动
+2025-03-20 13:57:28,051 - INFO - 创建新日志文件: logs\log_20250320_135728.txt
+2025-03-20 13:57:28,051 - INFO - 日志文件保存在: logs\log_20250320_135728.txt
+2025-03-20 13:57:40,742 - INFO - 原始图像尺寸: 256x256
+2025-03-20 13:57:40,763 - INFO - 图像已标准化为256x256，保存至: C:/Users/qianx/Desktop/1\after_grid_1_1_cliped.png
+2025-03-20 13:57:44,207 - INFO - 原始图像尺寸: 256x256
+2025-03-20 13:57:44,225 - INFO - 图像已标准化为256x256，保存至: C:/Users/qianx/Desktop/1\after_grid_1_1_cliped_cliped.png
+2025-03-20 13:57:47,238 - INFO - 导入前时相影像: C:/Users/qianx/Desktop/1/after_grid_1_1_cliped.png
+2025-03-20 13:57:47,238 - INFO - 使用原始图像路径: C:/Users/qianx/Desktop/1/after_grid_1_1_cliped.png
+2025-03-20 13:57:47,250 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:57:50,113 - INFO - 导入后时相影像: C:/Users/qianx/Desktop/1/after_grid_1_1_cliped_cliped.png
+2025-03-20 13:57:50,113 - INFO - 使用原始图像路径: C:/Users/qianx/Desktop/1/after_grid_1_1_cliped_cliped.png
+2025-03-20 13:57:50,116 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 13:57:53,855 - INFO - 正在执行变化检测...
+2025-03-20 13:57:53,858 - INFO - 执行变化检测: C:/Users/qianx/Desktop/1/after_grid_1_1_cliped.png 与 C:/Users/qianx/Desktop/1/after_grid_1_1_cliped_cliped.png
+2025-03-20 13:57:53,858 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 13:57:53,858 - INFO - 添加项目根目录到sys.path: D:\VS_WORKBASE\BIT
+2025-03-20 13:57:57,347 - INFO - 检测成功
+2025-03-20 13:57:57,349 - INFO - 检测成功
+2025-03-20 13:58:11,427 - INFO - 正在裁剪图像: C:/Users/qianx/Desktop/1/after_grid_1_1.png
+2025-03-20 13:58:11,427 - INFO - 网格大小: 2x2
+2025-03-20 13:58:11,427 - INFO - 保存位置: C:/Users/qianx/Desktop/1
+2025-03-20 13:58:11,428 - INFO - 裁剪图像时出错: 'NavigationFunctions' object has no attribute '_crop_image_grid_cv2'
+2025-03-20 13:58:11,428 - INFO - Traceback (most recent call last):
+  File "D:\VS_WORKBASE\BIT\PySide6\navigation_panel.py", line 915, in crop_image
+    self._crop_image_grid_cv2(file_path, grid_size, save_dir, is_before)
+AttributeError: 'NavigationFunctions' object has no attribute '_crop_image_grid_cv2'
+
+2025-03-20 14:00:35,549 - INFO - 应用程序启动
+2025-03-20 14:00:35,601 - INFO - 创建新日志文件: logs\log_20250320_140035.txt
+2025-03-20 14:00:35,601 - INFO - 日志文件保存在: logs\log_20250320_140035.txt
+2025-03-20 14:00:51,694 - INFO - 原始图像尺寸: 768x384
+2025-03-20 14:00:51,726 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/BIT/inferrence/samples/A\test_113_0256_cliped.png
+2025-03-20 14:01:00,132 - INFO - 原始图像尺寸: 768x383
+2025-03-20 14:01:00,165 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/BIT/inferrence/samples/B\test_113_0256_cliped.png
+2025-03-20 14:01:04,112 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_113_0256_cliped.png
+2025-03-20 14:01:04,113 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_113_0256_cliped.png
+2025-03-20 14:01:04,122 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 14:01:08,266 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_113_0256_cliped.png
+2025-03-20 14:01:08,267 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_113_0256_cliped.png
+2025-03-20 14:01:08,269 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 14:01:11,430 - INFO - 正在加载变化检测模型...
+2025-03-20 14:01:11,430 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 14:01:11,430 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 14:01:12,624 - INFO - 正在执行变化检测...
+2025-03-20 14:01:12,632 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_113_0256_cliped.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/A/test_113_0256_cliped.png
+2025-03-20 14:01:12,633 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 14:01:12,634 - INFO - 添加项目根目录到sys.path: D:\VS_WORKBASE\BIT
+2025-03-20 14:01:15,930 - INFO - 检测成功
+2025-03-20 14:01:15,931 - INFO - 检测成功
+2025-03-20 14:01:17,265 - INFO - 已删除临时文件: inferrence/test_simple_results\after_grid_1_1_cliped_change.png
+2025-03-20 14:01:17,267 - INFO - 已清理Python缓存文件: inferrence\__pycache__\inference.cpython-310.pyc
+2025-03-20 14:01:17,268 - INFO - 已清理Python缓存文件: inferrence\__pycache__\merged_bit_cd.cpython-310.pyc
+2025-03-20 14:01:17,268 - INFO - 已清理Python缓存文件: inferrence\__pycache__\utils.cpython-310.pyc
+2025-03-20 14:01:17,269 - INFO - 已清理Python缓存文件: PySide6\__pycache__\change_detection_model.cpython-310.pyc
+2025-03-20 14:01:17,270 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-20 14:01:17,270 - INFO - 共清理 5 个临时文件
+2025-03-20 14:01:17,270 - INFO - 已清理 5 个临时文件
+2025-03-20 14:01:29,935 - INFO - 没有临时文件需要清理
+2025-03-20 14:01:34,893 - INFO - 未选择图像，标准化操作取消
+2025-03-20 14:01:36,606 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/train_36_0512_0512.png
+2025-03-20 14:01:36,607 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/train_36_0512_0512.png
+2025-03-20 14:01:36,610 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 14:01:40,128 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/train_36_0512_0512.png
+2025-03-20 14:01:40,128 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/train_36_0512_0512.png
+2025-03-20 14:01:40,139 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 14:01:42,276 - INFO - 正在执行变化检测...
+2025-03-20 14:01:42,276 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/train_36_0512_0512.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/train_36_0512_0512.png
+2025-03-20 14:01:42,277 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 14:01:42,754 - INFO - 检测成功
+2025-03-20 14:01:42,756 - INFO - 检测成功
+2025-03-20 14:01:44,276 - INFO - 正在加载变化检测模型...
+2025-03-20 14:01:44,276 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 14:01:44,276 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 14:01:44,691 - INFO - 正在执行变化检测...
+2025-03-20 14:01:44,692 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/train_36_0512_0512.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/train_36_0512_0512.png
+2025-03-20 14:01:44,693 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 14:01:45,155 - INFO - 检测成功
+2025-03-20 14:01:45,156 - INFO - 检测成功
+2025-03-20 14:01:45,829 - INFO - 已删除临时文件: inferrence/test_simple_results\test_113_0256_cliped_change.png
+2025-03-20 14:01:45,831 - INFO - 没有临时文件需要清理
+2025-03-20 14:01:48,249 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 14:01:48,254 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 14:01:48,256 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 14:01:51,614 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 14:01:51,614 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 14:01:51,617 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 14:01:52,358 - INFO - 正在加载变化检测模型...
+2025-03-20 14:01:52,359 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 14:01:52,359 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 14:01:52,964 - INFO - 正在执行变化检测...
+2025-03-20 14:01:52,965 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 14:01:52,966 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 14:01:53,441 - INFO - 检测成功
+2025-03-20 14:01:53,442 - INFO - 检测成功
+2025-03-20 14:01:58,122 - INFO - 已删除临时文件: inferrence/test_simple_results\train_36_0512_0512_change.png
+2025-03-20 14:01:58,123 - INFO - 没有临时文件需要清理
+2025-03-20 14:02:00,376 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 14:02:00,377 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 14:02:00,377 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 14:02:03,947 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 14:02:03,947 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 14:02:03,951 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 14:02:04,670 - INFO - 正在执行变化检测...
+2025-03-20 14:02:04,670 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/val_27_0000_0256.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 14:02:04,670 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 14:02:05,148 - INFO - 检测成功
+2025-03-20 14:02:05,149 - INFO - 检测成功
+2025-03-20 14:03:21,576 - INFO - 应用程序启动
+2025-03-20 14:03:21,651 - INFO - 创建新日志文件: logs\log_20250320_140321.txt
+2025-03-20 14:03:21,651 - INFO - 日志文件保存在: logs\log_20250320_140321.txt
+2025-03-20 14:03:24,530 - INFO - 未选择图像，标准化操作取消
+2025-03-20 14:03:29,176 - INFO - 导入前时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 14:03:29,177 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 14:03:29,188 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 14:03:32,591 - INFO - 导入后时相影像: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 14:03:32,591 - INFO - 使用原始图像路径: D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 14:03:32,593 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 14:03:33,888 - INFO - 正在执行变化检测...
+2025-03-20 14:03:33,888 - INFO - 正在自动加载模型...
+2025-03-20 14:03:33,888 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 14:03:33,888 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 14:03:33,888 - INFO - 执行变化检测: D:/VS_WORKBASE/BIT/inferrence/samples/A/test_2_0000_0000.png 与 D:/VS_WORKBASE/BIT/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 14:03:33,888 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 14:03:33,888 - INFO - 添加项目根目录到sys.path: D:\VS_WORKBASE\BIT
+2025-03-20 14:03:37,252 - INFO - 检测成功
+2025-03-20 14:03:37,253 - INFO - 检测成功
+2025-03-20 23:05:18,426 - INFO - 应用程序启动
+2025-03-20 23:05:18,501 - INFO - 创建新日志文件: logs\log_20250320_230518.txt
+2025-03-20 23:05:18,501 - INFO - 日志文件保存在: logs\log_20250320_230518.txt
+2025-03-20 23:05:26,773 - INFO - 原始图像尺寸: 256x256
+2025-03-20 23:05:26,781 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A\test_2_0000_0000_cliped.png
+2025-03-20 23:05:35,287 - INFO - 导入前时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/test_2_0000_0000_cliped.png
+2025-03-20 23:05:35,291 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/test_2_0000_0000_cliped.png
+2025-03-20 23:05:35,300 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 23:05:46,950 - INFO - 原始图像尺寸: 256x256
+2025-03-20 23:05:46,961 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A\test_2_0000_0512_cliped.png
+2025-03-20 23:05:50,100 - INFO - 导入后时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/test_2_0000_0512_cliped.png
+2025-03-20 23:05:50,100 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/test_2_0000_0512_cliped.png
+2025-03-20 23:05:50,106 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 23:05:52,100 - INFO - 正在执行变化检测...
+2025-03-20 23:05:52,100 - INFO - 正在自动加载模型...
+2025-03-20 23:05:52,100 - INFO - 模型初始化: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 23:05:52,100 - INFO - 模型加载成功: 变化检测算法 (版本 1.0 (待开发))
+2025-03-20 23:05:52,100 - INFO - 执行变化检测: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A\test_2_0000_0512_cliped.png 与 D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/test_2_0000_0512_cliped.png
+2025-03-20 23:05:52,110 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 23:05:52,110 - INFO - 添加项目根目录到sys.path: d:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0
+2025-03-20 23:05:56,502 - INFO - 检测成功
+2025-03-20 23:05:56,506 - INFO - 检测成功
+2025-03-20 23:07:50,897 - INFO - 已删除临时文件: inferrence/test_simple_results\test_2_0000_0000_change.png
+2025-03-20 23:07:50,904 - INFO - 已清理Python缓存文件: inferrence\__pycache__\bit_cd.cpython-310.pyc
+2025-03-20 23:07:50,904 - INFO - 已清理Python缓存文件: inferrence\__pycache__\inference.cpython-310.pyc
+2025-03-20 23:07:50,907 - INFO - 已清理Python缓存文件: inferrence\__pycache__\merged_bit_cd.cpython-310.pyc
+2025-03-20 23:07:50,908 - INFO - 已清理Python缓存文件: inferrence\__pycache__\utils.cpython-310.pyc
+2025-03-20 23:07:50,909 - INFO - 已清理Python缓存文件: PySide6\__pycache__\change_detection_model.cpython-310.pyc
+2025-03-20 23:07:50,910 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-20 23:07:50,910 - INFO - 共清理 6 个临时文件
+2025-03-20 23:07:50,910 - INFO - 已清理 6 个临时文件
+2025-03-20 23:07:53,724 - INFO - 导入前时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/test_113_0256.png
+2025-03-20 23:07:53,724 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/test_113_0256.png
+2025-03-20 23:07:53,739 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 23:07:56,013 - INFO - 导入后时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/test_113_0256.png
+2025-03-20 23:07:56,024 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/test_113_0256.png
+2025-03-20 23:07:56,024 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 23:07:57,189 - INFO - 正在执行变化检测...
+2025-03-20 23:07:57,189 - INFO - 执行变化检测: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/test_113_0256.png 与 D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/test_113_0256.png
+2025-03-20 23:07:57,194 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 23:07:57,724 - INFO - 检测成功
+2025-03-20 23:07:57,729 - INFO - 检测成功
+2025-03-20 23:08:00,187 - INFO - 已删除临时文件: inferrence/test_simple_results\test_113_0256_change.png
+2025-03-20 23:08:00,194 - INFO - 没有临时文件需要清理
+2025-03-20 23:08:28,473 - INFO - 原始图像尺寸: 256x256
+2025-03-20 23:08:28,494 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A\test_2_0000_0000_cliped.png
+2025-03-20 23:08:30,144 - INFO - 没有临时文件需要清理
+2025-03-20 23:08:31,924 - INFO - 未选择图像，标准化操作取消
+2025-03-20 23:08:32,709 - INFO - 未选择图像，裁剪操作取消
+2025-03-20 23:08:34,164 - INFO - 导入前时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 23:08:34,164 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/test_2_0000_0000.png
+2025-03-20 23:08:34,164 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 23:08:37,504 - INFO - 导入后时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 23:08:37,504 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 23:08:37,518 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 23:08:39,594 - INFO - 正在执行变化检测...
+2025-03-20 23:08:39,601 - INFO - 执行变化检测: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/test_2_0000_0000.png 与 D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/B/test_2_0000_0000.png
+2025-03-20 23:08:39,601 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 23:08:40,083 - INFO - 检测成功
+2025-03-20 23:08:40,085 - INFO - 检测成功
+2025-03-20 23:08:43,619 - INFO - 已删除临时文件: inferrence/test_simple_results\test_2_0000_0000_change.png
+2025-03-20 23:08:43,619 - INFO - 没有临时文件需要清理
+2025-03-20 23:08:45,843 - INFO - 导入前时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 23:08:45,843 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 23:08:45,854 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 23:08:50,299 - INFO - 导入前时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 23:08:50,299 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 23:08:50,310 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 23:08:51,584 - INFO - 正在执行变化检测...
+2025-03-20 23:08:51,584 - INFO - 请先导入前后时相影像
+2025-03-20 23:08:55,694 - INFO - 导入后时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/test_55_0256_0000.png
+2025-03-20 23:08:55,694 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/test_55_0256_0000.png
+2025-03-20 23:08:55,694 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 23:08:57,724 - INFO - 正在执行变化检测...
+2025-03-20 23:08:57,728 - INFO - 执行变化检测: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/val_27_0000_0256.png 与 D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/test_55_0256_0000.png
+2025-03-20 23:08:57,728 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 23:08:58,185 - INFO - 检测成功
+2025-03-20 23:08:58,185 - INFO - 检测成功
+2025-03-20 23:09:03,242 - INFO - 已删除临时文件: inferrence/test_simple_results\test_2_0000_0512_cliped_change.png
+2025-03-20 23:09:03,244 - INFO - 没有临时文件需要清理
+2025-03-20 23:09:15,049 - INFO - 导入前时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 23:09:15,049 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/B/val_27_0000_0256.png
+2025-03-20 23:09:15,049 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 23:09:19,325 - INFO - 导入后时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 23:09:19,325 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 23:09:19,325 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 23:09:20,714 - INFO - 正在执行变化检测...
+2025-03-20 23:09:20,714 - INFO - 执行变化检测: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/B/val_27_0000_0256.png 与 D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/inferrence/samples/A/val_27_0000_0256.png
+2025-03-20 23:09:20,714 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 23:09:21,194 - INFO - 检测成功
+2025-03-20 23:09:21,197 - INFO - 检测成功
+2025-03-20 23:09:39,637 - INFO - 已删除临时文件: inferrence/test_simple_results\val_27_0000_0256_change.png
+2025-03-20 23:09:39,642 - INFO - 没有临时文件需要清理
+2025-03-20 23:37:58,788 - INFO - 应用程序启动
+2025-03-20 23:37:58,856 - INFO - 创建新日志文件: logs\log_20250320_233758.txt
+2025-03-20 23:37:58,857 - INFO - 日志文件保存在: logs\log_20250320_233758.txt
+2025-03-20 23:38:06,235 - INFO - 原始图像尺寸: 512x512
+2025-03-20 23:38:06,269 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/TEST/inferrence/inferrence/samples/A\00003_cliped.png
+2025-03-20 23:38:09,925 - INFO - 原始图像尺寸: 512x512
+2025-03-20 23:38:09,958 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/TEST/inferrence/inferrence/samples/B\00003_cliped.png
+2025-03-20 23:38:13,765 - INFO - 原始图像尺寸: 256x256
+2025-03-20 23:38:13,786 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/TEST/inferrence/inferrence/samples/A\00003_cliped_cliped.png
+2025-03-20 23:38:17,365 - INFO - 原始图像尺寸: 512x512
+2025-03-20 23:38:17,375 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/TEST/inferrence/inferrence/samples/A\00013_cliped.png
+2025-03-20 23:38:21,625 - INFO - 原始图像尺寸: 512x512
+2025-03-20 23:38:21,650 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/TEST/inferrence/inferrence/samples/B\00013_cliped.png
+2025-03-20 23:48:00,980 - INFO - 应用程序启动
+2025-03-20 23:48:01,037 - INFO - 创建新日志文件: logs\log_20250320_234801.txt
+2025-03-20 23:48:01,037 - INFO - 日志文件保存在: logs\log_20250320_234801.txt
+2025-03-20 23:48:04,310 - INFO - 未选择图像，标准化操作取消
+2025-03-20 23:48:08,458 - INFO - 导入前时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test0_后时相.png
+2025-03-20 23:48:08,458 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test0_后时相.png
+2025-03-20 23:48:08,470 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 23:48:09,730 - INFO - 导入后时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test0_后时相_256x256.png
+2025-03-20 23:48:09,730 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test0_后时相_256x256.png
+2025-03-20 23:48:09,734 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-20 23:48:10,364 - INFO - 正在执行变化检测...
+2025-03-20 23:48:10,364 - INFO - 正在自动加载模型...
+2025-03-20 23:48:10,364 - INFO - 模型初始化: BIT (版本 1.0 )
+2025-03-20 23:48:10,364 - INFO - 模型加载成功: BIT (版本 1.0 )
+2025-03-20 23:48:10,364 - INFO - 执行变化检测: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test0_后时相.png 与 D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test0_后时相_256x256.png
+2025-03-20 23:48:10,364 - INFO - 结果将保存到: inferrence/test_simple_results
+2025-03-20 23:48:10,364 - INFO - 添加项目根目录到sys.path: d:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0
+2025-03-20 23:48:10,370 - INFO - 执行变化检测时出错: No module named 'inferrence.merged_bit_cd'
+2025-03-20 23:48:10,370 - INFO - Traceback (most recent call last):
+  File "d:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\PySide6\main.py", line 237, in on_begin_clicked
+    from inferrence.merged_bit_cd import detect_change
+ModuleNotFoundError: No module named 'inferrence.merged_bit_cd'
+
+2025-03-20 23:48:12,900 - INFO - 已清理Python缓存文件: PySide6\__pycache__\change_detection_model.cpython-310.pyc
+2025-03-20 23:48:12,900 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-20 23:48:12,900 - INFO - 共清理 2 个临时文件
+2025-03-20 23:48:12,900 - INFO - 已清理 2 个临时文件
+2025-03-20 23:55:21,613 - INFO - 应用程序启动
+2025-03-20 23:55:21,664 - INFO - 创建新日志文件: logs\log_20250320_235521.txt
+2025-03-20 23:55:21,665 - INFO - 日志文件保存在: logs\log_20250320_235521.txt
+2025-03-20 23:55:23,281 - INFO - 正在执行变化检测...
+2025-03-20 23:55:23,282 - INFO - 请先导入前后时相影像
+2025-03-20 23:55:25,592 - INFO - 未选择图像，标准化操作取消
+2025-03-20 23:55:26,170 - INFO - 未选择图像，裁剪操作取消
+2025-03-20 23:55:28,172 - INFO - 正在执行变化检测...
+2025-03-20 23:55:28,173 - INFO - 请先导入前后时相影像
+2025-03-20 23:55:29,177 - INFO - 已清理Python缓存文件: PySide6\__pycache__\change_detection_model.cpython-310.pyc
+2025-03-20 23:55:29,177 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-20 23:55:29,177 - INFO - 共清理 2 个临时文件
+2025-03-20 23:55:29,178 - INFO - 已清理 2 个临时文件
+2025-03-20 23:55:39,780 - INFO - 没有临时文件需要清理
+2025-03-20 23:55:40,404 - INFO - 没有临时文件需要清理
+2025-03-20 23:55:40,543 - INFO - 没有临时文件需要清理
+2025-03-21 00:04:24,194 - INFO - 应用程序启动
+2025-03-21 00:04:24,248 - INFO - 创建新日志文件: logs\log_20250321_000424.txt
+2025-03-21 00:04:24,248 - INFO - 日志文件保存在: logs\log_20250321_000424.txt
+2025-03-21 00:04:26,847 - INFO - 未选择图像，标准化操作取消
+2025-03-21 00:04:28,705 - INFO - 正在执行变化检测...
+2025-03-21 00:04:28,705 - INFO - 请先导入前后时相影像
+2025-03-21 00:04:30,010 - INFO - 正在执行变化检测...
+2025-03-21 00:04:30,010 - INFO - 请先导入前后时相影像
+2025-03-21 00:04:30,564 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-21 00:04:30,567 - INFO - 共清理 1 个临时文件
+2025-03-21 00:04:30,568 - INFO - 已清理 1 个临时文件
+2025-03-21 00:04:34,274 - INFO - 未选择图像，标准化操作取消
+2025-03-21 00:04:57,806 - INFO - 原始图像尺寸: 252x250
+2025-03-21 00:04:57,830 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata\test0_后时相_cliped.png
+2025-03-21 00:05:00,924 - INFO - 原始图像尺寸: 256x256
+2025-03-21 00:05:00,956 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata\test0_后时相_256x256_cliped.png
+2025-03-21 00:05:04,529 - INFO - 未选择图像，裁剪操作取消
+2025-03-21 00:05:09,723 - INFO - 导入前时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test0_后时相_256x256.png
+2025-03-21 00:05:09,724 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test0_后时相_256x256.png
+2025-03-21 00:05:09,735 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-21 00:05:11,204 - INFO - 导入后时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test0_后时相_256x256_256x256.png
+2025-03-21 00:05:11,207 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test0_后时相_256x256_256x256.png
+2025-03-21 00:05:11,207 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-21 00:05:11,939 - INFO - 正在执行变化检测...
+2025-03-21 00:05:11,939 - INFO - 正在自动加载模型...
+2025-03-21 00:05:11,939 - INFO - 模型加载失败: name 'ChangeDetectionModel' is not defined
+2025-03-21 00:05:13,589 - INFO - 正在执行变化检测...
+2025-03-21 00:05:13,594 - INFO - 正在自动加载模型...
+2025-03-21 00:05:13,595 - INFO - 模型加载失败: name 'ChangeDetectionModel' is not defined
+2025-03-21 00:05:14,374 - INFO - 正在执行变化检测...
+2025-03-21 00:05:14,374 - INFO - 正在自动加载模型...
+2025-03-21 00:05:14,380 - INFO - 模型加载失败: name 'ChangeDetectionModel' is not defined
+2025-03-21 00:05:14,974 - INFO - 正在执行变化检测...
+2025-03-21 00:05:14,974 - INFO - 正在自动加载模型...
+2025-03-21 00:05:14,980 - INFO - 模型加载失败: name 'ChangeDetectionModel' is not defined
+2025-03-21 00:05:15,665 - INFO - 正在执行变化检测...
+2025-03-21 00:05:15,665 - INFO - 正在自动加载模型...
+2025-03-21 00:05:15,665 - INFO - 模型加载失败: name 'ChangeDetectionModel' is not defined
+2025-03-21 00:05:16,349 - INFO - 没有临时文件需要清理
+2025-03-21 00:08:22,548 - INFO - 应用程序启动
+2025-03-21 00:08:22,627 - INFO - 创建新日志文件: logs\log_20250321_000822.txt
+2025-03-21 00:08:22,627 - INFO - 日志文件保存在: logs\log_20250321_000822.txt
+2025-03-21 00:08:34,942 - INFO - 应用程序启动
+2025-03-21 00:08:35,023 - INFO - 创建新日志文件: logs\log_20250321_000835.txt
+2025-03-21 00:08:35,024 - INFO - 日志文件保存在: logs\log_20250321_000835.txt
+2025-03-21 00:08:41,191 - INFO - 应用程序启动
+2025-03-21 00:08:41,273 - INFO - 创建新日志文件: logs\log_20250321_000841.txt
+2025-03-21 00:08:41,273 - INFO - 日志文件保存在: logs\log_20250321_000841.txt
+2025-03-21 00:08:50,185 - INFO - 应用程序启动
+2025-03-21 00:08:50,285 - INFO - 创建新日志文件: logs\log_20250321_000850.txt
+2025-03-21 00:08:50,285 - INFO - 日志文件保存在: logs\log_20250321_000850.txt
+2025-03-21 00:08:52,553 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-21 00:08:52,553 - INFO - 共清理 1 个临时文件
+2025-03-21 00:08:52,553 - INFO - 已清理 1 个临时文件
+2025-03-21 00:08:57,336 - INFO - 没有临时文件需要清理
+2025-03-21 00:09:25,180 - INFO - 应用程序启动
+2025-03-21 00:09:25,253 - INFO - 创建新日志文件: logs\log_20250321_000925.txt
+2025-03-21 00:09:25,263 - INFO - 日志文件保存在: logs\log_20250321_000925.txt
+2025-03-21 00:09:38,845 - INFO - 应用程序启动
+2025-03-21 00:09:38,925 - INFO - 创建新日志文件: logs\log_20250321_000938.txt
+2025-03-21 00:09:38,925 - INFO - 日志文件保存在: logs\log_20250321_000938.txt
+2025-03-21 00:09:53,458 - INFO - 应用程序启动
+2025-03-21 00:09:53,541 - INFO - 创建新日志文件: logs\log_20250321_000953.txt
+2025-03-21 00:09:53,541 - INFO - 日志文件保存在: logs\log_20250321_000953.txt
+2025-03-21 00:09:55,033 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-21 00:09:55,033 - INFO - 共清理 1 个临时文件
+2025-03-21 00:09:55,033 - INFO - 已清理 1 个临时文件
+2025-03-21 00:09:58,760 - INFO - 应用程序启动
+2025-03-21 00:09:58,871 - INFO - 创建新日志文件: logs\log_20250321_000958.txt
+2025-03-21 00:09:58,872 - INFO - 日志文件保存在: logs\log_20250321_000958.txt
+2025-03-21 00:11:38,343 - INFO - 应用程序启动
+2025-03-21 00:11:38,423 - INFO - 创建新日志文件: logs\log_20250321_001138.txt
+2025-03-21 00:11:38,423 - INFO - 日志文件保存在: logs\log_20250321_001138.txt
+2025-03-21 00:11:40,483 - INFO - 未选择图像，标准化操作取消
+2025-03-21 00:11:41,221 - INFO - 未选择图像，裁剪操作取消
+2025-03-21 00:11:42,874 - INFO - 正在执行变化检测...
+2025-03-21 00:11:42,874 - INFO - 请先导入前后时相影像
+2025-03-21 00:11:43,524 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-21 00:11:43,524 - INFO - 共清理 1 个临时文件
+2025-03-21 00:11:43,524 - INFO - 已清理 1 个临时文件
+2025-03-21 00:11:44,343 - INFO - 正在执行变化检测...
+2025-03-21 00:11:44,343 - INFO - 请先导入前后时相影像
+2025-03-21 00:11:45,793 - INFO - 正在执行变化检测...
+2025-03-21 00:11:45,793 - INFO - 请先导入前后时相影像
+2025-03-21 00:11:46,207 - INFO - 正在执行变化检测...
+2025-03-21 00:11:46,207 - INFO - 请先导入前后时相影像
+2025-03-21 00:11:46,359 - INFO - 正在执行变化检测...
+2025-03-21 00:11:46,359 - INFO - 请先导入前后时相影像
+2025-03-21 00:11:47,705 - INFO - 没有临时文件需要清理
+2025-03-21 00:13:29,769 - INFO - 应用程序启动
+2025-03-21 00:13:29,869 - INFO - 创建新日志文件: logs\log_20250321_001329.txt
+2025-03-21 00:13:29,869 - INFO - 日志文件保存在: logs\log_20250321_001329.txt
+2025-03-21 00:18:43,717 - INFO - 应用程序启动
+2025-03-21 00:18:43,818 - INFO - 创建新日志文件: logs\log_20250321_001843.txt
+2025-03-21 00:18:43,818 - INFO - 日志文件保存在: logs\log_20250321_001843.txt
+2025-03-21 00:19:35,367 - INFO - 应用程序启动
+2025-03-21 00:19:35,450 - INFO - 创建新日志文件: logs\log_20250321_001935.txt
+2025-03-21 00:19:35,451 - INFO - 日志文件保存在: logs\log_20250321_001935.txt
+2025-03-21 00:19:41,876 - INFO - 应用程序启动
+2025-03-21 00:19:41,965 - INFO - 创建新日志文件: logs\log_20250321_001941.txt
+2025-03-21 00:19:41,965 - INFO - 日志文件保存在: logs\log_20250321_001941.txt
+2025-03-21 00:20:18,631 - INFO - 应用程序启动
+2025-03-21 00:20:18,710 - INFO - 创建新日志文件: logs\log_20250321_002018.txt
+2025-03-21 00:20:18,711 - INFO - 日志文件保存在: logs\log_20250321_002018.txt
+2025-03-21 00:20:20,470 - INFO - 未选择图像，标准化操作取消
+2025-03-21 00:20:21,013 - INFO - 未选择图像，裁剪操作取消
+2025-03-21 00:20:22,847 - INFO - 正在执行变化检测...
+2025-03-21 00:20:22,847 - INFO - 请先导入前后时相影像
+2025-03-21 00:20:23,570 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-21 00:20:23,570 - INFO - 共清理 1 个临时文件
+2025-03-21 00:20:23,570 - INFO - 已清理 1 个临时文件
+2025-03-21 00:20:24,691 - INFO - 没有临时文件需要清理
+2025-03-21 00:20:24,827 - INFO - 没有临时文件需要清理
+2025-03-21 00:21:50,617 - INFO - 应用程序启动
+2025-03-21 00:21:50,695 - INFO - 创建新日志文件: logs\log_20250321_002150.txt
+2025-03-21 00:21:50,695 - INFO - 日志文件保存在: logs\log_20250321_002150.txt
+2025-03-21 00:21:52,317 - INFO - 未选择图像，标准化操作取消
+2025-03-21 00:21:52,829 - INFO - 未选择图像，裁剪操作取消
+2025-03-21 00:21:54,079 - INFO - 正在执行变化检测...
+2025-03-21 00:21:54,079 - INFO - 请先导入前后时相影像
+2025-03-21 00:21:54,648 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-21 00:21:54,648 - INFO - 共清理 1 个临时文件
+2025-03-21 00:21:54,648 - INFO - 已清理 1 个临时文件
+2025-03-21 00:28:57,248 - INFO - 应用程序启动
+2025-03-21 00:28:57,279 - INFO - 创建新日志文件: logs\log_20250321_002857.txt
+2025-03-21 00:28:57,279 - INFO - 日志文件保存在: logs\log_20250321_002857.txt
+2025-03-21 00:29:33,494 - INFO - 应用程序启动
+2025-03-21 00:29:33,525 - INFO - 创建新日志文件: logs\log_20250321_002933.txt
+2025-03-21 00:29:33,525 - INFO - 日志文件保存在: logs\log_20250321_002933.txt
+2025-03-21 00:34:12,214 - INFO - 应用程序启动
+2025-03-21 00:34:12,239 - INFO - 创建新日志文件: logs\log_20250321_003412.txt
+2025-03-21 00:34:12,239 - INFO - 日志文件保存在: logs\log_20250321_003412.txt
+2025-03-21 00:39:37,017 - INFO - 应用程序启动
+2025-03-21 00:39:37,052 - INFO - 创建新日志文件: logs\log_20250321_003937.txt
+2025-03-21 00:39:37,053 - INFO - 日志文件保存在: logs\log_20250321_003937.txt
+2025-03-21 00:39:40,838 - INFO - 正在执行变化检测...
+2025-03-21 00:39:40,838 - INFO - 请先导入前后时相影像
+2025-03-21 00:39:41,615 - INFO - 正在执行变化检测...
+2025-03-21 00:39:41,615 - INFO - 请先导入前后时相影像
+2025-03-21 00:39:43,301 - INFO - 已清理Python缓存文件: PySide6\__pycache__\display.cpython-310.pyc
+2025-03-21 00:39:43,301 - INFO - 已清理Python缓存文件: PySide6\__pycache__\navigation_panel.cpython-310.pyc
+2025-03-21 00:39:43,301 - INFO - 共清理 2 个临时文件
+2025-03-21 00:39:43,301 - INFO - 已清理 2 个临时文件
+2025-03-21 00:40:59,738 - INFO - 应用程序启动
+2025-03-21 00:40:59,766 - INFO - 创建新日志文件: logs\log_20250321_004059.txt
+2025-03-21 00:40:59,767 - INFO - 日志文件保存在: logs\log_20250321_004059.txt
+2025-03-21 00:41:19,377 - INFO - 应用程序启动
+2025-03-21 00:41:19,402 - INFO - 创建新日志文件: logs\log_20250321_004119.txt
+2025-03-21 00:41:19,402 - INFO - 日志文件保存在: logs\log_20250321_004119.txt
+2025-03-21 00:44:15,686 - INFO - 应用程序启动
+2025-03-21 00:44:15,711 - INFO - 创建新日志文件: logs\log_20250321_004415.txt
+2025-03-21 00:44:15,711 - INFO - 日志文件保存在: logs\log_20250321_004415.txt
+2025-03-21 00:44:19,754 - INFO - 导入前时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test0_后时相.png
+2025-03-21 00:44:54,438 - INFO - 应用程序启动
+2025-03-21 00:44:54,468 - INFO - 创建新日志文件: logs\log_20250321_004454.txt
+2025-03-21 00:44:54,472 - INFO - 日志文件保存在: logs\log_20250321_004454.txt
+2025-03-21 00:44:58,538 - INFO - 导入前时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test0_后时相_256x256.png
+2025-03-21 00:45:02,103 - INFO - 导入后时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test0_后时相_256x256_256x256.png
+2025-03-21 00:50:20,206 - INFO - 应用程序启动
+2025-03-21 00:50:20,241 - INFO - 创建新日志文件: logs\log_20250321_005020.txt
+2025-03-21 00:50:20,241 - INFO - 日志文件保存在: logs\log_20250321_005020.txt
+2025-03-21 00:50:25,475 - INFO - 原始图像尺寸: 252x250
+2025-03-21 00:50:25,494 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata\test0_后时相_cliped.png
+2025-03-21 00:50:25,513 - INFO - 更新前时相图像显示
+2025-03-21 00:50:26,793 - INFO - 未选择图像，裁剪操作取消
+2025-03-21 00:50:52,450 - INFO - 正在裁剪图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 00:50:52,450 - INFO - 网格大小: 2x2
+2025-03-21 00:50:52,450 - INFO - 保存位置: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results
+2025-03-21 00:50:52,450 - INFO - 尝试读取图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 00:50:52,466 - INFO - 原始图像尺寸: 256x256
+2025-03-21 00:50:52,467 - INFO - 每个网格尺寸: 128x128
+2025-03-21 00:50:52,468 - INFO - 保存网格 1_1 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results\before_grid_1_1.png
+2025-03-21 00:50:52,468 - INFO - 保存网格 1_2 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results\before_grid_1_2.png
+2025-03-21 00:50:52,469 - INFO - 保存网格 2_1 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results\before_grid_2_1.png
+2025-03-21 00:50:52,469 - INFO - 保存网格 2_2 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results\before_grid_2_2.png
+2025-03-21 00:50:52,470 - INFO - 网格裁剪完成，共生成 4 个子图像，保存在: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results
+2025-03-21 00:50:52,470 - INFO - 裁剪完成，请手动导入需要的图像进行后续操作
+2025-03-21 00:51:12,535 - INFO - 导入前时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 00:51:12,535 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 00:51:12,544 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-21 00:51:15,999 - INFO - 导入后时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 00:51:15,999 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 00:51:16,004 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-21 00:51:16,889 - INFO - 正在执行变化检测...
+2025-03-21 00:51:16,889 - INFO - 正在自动加载模型...
+2025-03-21 00:51:16,889 - INFO - 模型加载失败: name 'ChangeDetectionModel' is not defined
+2025-03-21 00:51:18,059 - INFO - 已清理Python缓存文件: PySide6\__pycache__\display.cpython-310.pyc
+2025-03-21 00:51:18,059 - INFO - 共清理 1 个临时文件
+2025-03-21 00:51:18,059 - INFO - 已清理 1 个临时文件
+2025-03-21 00:51:28,775 - INFO - 正在裁剪图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 00:51:28,775 - INFO - 网格大小: 2x2
+2025-03-21 00:51:28,775 - INFO - 保存位置: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results
+2025-03-21 00:51:28,775 - INFO - 尝试读取图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 00:51:28,780 - INFO - 原始图像尺寸: 256x256
+2025-03-21 00:51:28,780 - INFO - 每个网格尺寸: 128x128
+2025-03-21 00:51:28,780 - INFO - 保存网格 1_1 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results\before_grid_1_1.png
+2025-03-21 00:51:28,780 - INFO - 保存网格 1_2 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results\before_grid_1_2.png
+2025-03-21 00:51:28,780 - INFO - 保存网格 2_1 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results\before_grid_2_1.png
+2025-03-21 00:51:28,784 - INFO - 保存网格 2_2 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results\before_grid_2_2.png
+2025-03-21 00:51:28,785 - INFO - 网格裁剪完成，共生成 4 个子图像，保存在: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/PySide6/testdata/test_simple_results
+2025-03-21 00:51:28,785 - INFO - 裁剪完成，请手动导入需要的图像进行后续操作
+2025-03-21 00:51:55,514 - INFO - 未选择图像，裁剪操作取消
+2025-03-21 00:55:42,506 - INFO - 应用程序启动
+2025-03-21 00:55:42,532 - INFO - 创建新日志文件: logs\log_20250321_005542.txt
+2025-03-21 00:55:42,536 - INFO - 日志文件保存在: logs\log_20250321_005542.txt
+2025-03-21 00:55:58,629 - INFO - 应用程序启动
+2025-03-21 00:55:58,664 - INFO - 创建新日志文件: logs\log_20250321_005558.txt
+2025-03-21 00:55:58,664 - INFO - 日志文件保存在: logs\log_20250321_005558.txt
+2025-03-21 00:56:56,523 - INFO - 应用程序启动
+2025-03-21 00:56:56,554 - INFO - 创建新日志文件: logs\log_20250321_005656.txt
+2025-03-21 00:56:56,554 - INFO - 日志文件保存在: logs\log_20250321_005656.txt
+2025-03-21 00:57:03,317 - INFO - 原始图像尺寸: 257x255
+2025-03-21 00:57:03,335 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata\test0_前时相_cliped.png
+2025-03-21 00:57:03,350 - INFO - 更新前时相图像显示
+2025-03-21 00:57:15,627 - INFO - 未选择图像，标准化操作取消
+2025-03-21 00:59:16,731 - INFO - 应用程序启动
+2025-03-21 00:59:16,773 - INFO - 创建新日志文件: logs\log_20250321_005916.txt
+2025-03-21 00:59:16,773 - INFO - 日志文件保存在: logs\log_20250321_005916.txt
+2025-03-21 00:59:21,466 - INFO - 应用程序启动
+2025-03-21 00:59:21,494 - INFO - 创建新日志文件: logs\log_20250321_005921.txt
+2025-03-21 00:59:21,494 - INFO - 日志文件保存在: logs\log_20250321_005921.txt
+2025-03-21 00:59:56,804 - INFO - 应用程序启动
+2025-03-21 00:59:56,834 - INFO - 创建新日志文件: logs\log_20250321_005956.txt
+2025-03-21 00:59:56,834 - INFO - 日志文件保存在: logs\log_20250321_005956.txt
+2025-03-21 01:00:02,768 - INFO - 原始图像尺寸: 252x250
+2025-03-21 01:00:02,794 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata\test0_后时相_cliped.png
+2025-03-21 01:00:02,808 - INFO - 更新前时相图像显示
+2025-03-21 01:00:20,923 - INFO - 导入前时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test0_后时相.png
+2025-03-21 01:00:20,924 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test0_后时相.png
+2025-03-21 01:00:20,927 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-21 01:00:22,153 - INFO - 导入后时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test0_后时相_cliped.png
+2025-03-21 01:00:22,153 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test0_后时相_cliped.png
+2025-03-21 01:00:22,156 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-21 01:00:25,845 - INFO - 原始图像尺寸: 256x256
+2025-03-21 01:00:25,865 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata\test0_后时相_cliped_cliped.png
+2025-03-21 01:00:25,869 - INFO - 更新前时相图像显示
+2025-03-21 01:00:25,871 - INFO - 更新后时相图像显示
+2025-03-21 01:00:27,928 - INFO - 原始图像尺寸: 257x255
+2025-03-21 01:00:27,957 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata\test0_前时相_cliped.png
+2025-03-21 01:00:27,961 - INFO - 更新前时相图像显示
+2025-03-21 01:00:27,962 - INFO - 更新后时相图像显示
+2025-03-21 01:00:37,716 - INFO - 原始图像尺寸: 257x255
+2025-03-21 01:00:37,736 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata\test0_前时相_cliped.png
+2025-03-21 01:00:37,740 - INFO - 更新前时相图像显示
+2025-03-21 01:00:37,742 - INFO - 更新后时相图像显示
+2025-03-21 01:00:47,933 - INFO - 未选择图像，标准化操作取消
+2025-03-21 01:00:49,459 - INFO - 已清理Python缓存文件: PySide6\__pycache__\display.cpython-310.pyc
+2025-03-21 01:00:49,460 - INFO - 共清理 1 个临时文件
+2025-03-21 01:00:49,460 - INFO - 已清理 1 个临时文件
+2025-03-21 01:04:31,266 - INFO - 应用程序启动
+2025-03-21 01:04:31,294 - INFO - 创建新日志文件: logs\log_20250321_010431.txt
+2025-03-21 01:04:31,296 - INFO - 日志文件保存在: logs\log_20250321_010431.txt
+2025-03-21 01:04:39,094 - INFO - 正在裁剪图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 01:04:39,094 - INFO - 网格大小: 2x2
+2025-03-21 01:04:39,094 - INFO - 保存位置: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results
+2025-03-21 01:04:39,099 - INFO - 尝试读取图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 01:04:39,107 - INFO - 原始图像尺寸: 256x256
+2025-03-21 01:04:39,108 - INFO - 每个网格尺寸: 128x128
+2025-03-21 01:04:39,109 - INFO - 保存网格 1_1 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results\before_grid_1_1.png
+2025-03-21 01:04:39,109 - INFO - 保存网格 1_2 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results\before_grid_1_2.png
+2025-03-21 01:04:39,110 - INFO - 保存网格 2_1 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results\before_grid_2_1.png
+2025-03-21 01:04:39,110 - INFO - 保存网格 2_2 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results\before_grid_2_2.png
+2025-03-21 01:04:39,111 - INFO - 网格裁剪完成，共生成 4 个子图像，保存在: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results
+2025-03-21 01:04:39,113 - INFO - 裁剪完成，请手动导入需要的图像进行后续操作
+2025-03-21 01:04:52,407 - INFO - 正在裁剪图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 01:04:52,411 - INFO - 网格大小: 2x2
+2025-03-21 01:04:52,411 - INFO - 保存位置: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results
+2025-03-21 01:04:52,412 - INFO - 尝试读取图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 01:04:52,416 - INFO - 原始图像尺寸: 256x256
+2025-03-21 01:04:52,416 - INFO - 每个网格尺寸: 128x128
+2025-03-21 01:04:52,416 - INFO - 保存网格 1_1 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results\before_grid_1_1.png
+2025-03-21 01:04:52,417 - INFO - 保存网格 1_2 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results\before_grid_1_2.png
+2025-03-21 01:04:52,417 - INFO - 保存网格 2_1 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results\before_grid_2_1.png
+2025-03-21 01:04:52,418 - INFO - 保存网格 2_2 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results\before_grid_2_2.png
+2025-03-21 01:04:52,418 - INFO - 网格裁剪完成，共生成 4 个子图像，保存在: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results
+2025-03-21 01:04:52,418 - INFO - 裁剪完成，请手动导入需要的图像进行后续操作
+2025-03-21 01:10:17,871 - INFO - 应用程序启动
+2025-03-21 01:10:17,929 - INFO - 创建新日志文件: logs\log_20250321_011017.txt
+2025-03-21 01:10:17,930 - INFO - 日志文件保存在: logs\log_20250321_011017.txt
+2025-03-21 01:10:26,505 - INFO - 正在裁剪图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 01:10:26,505 - INFO - 网格大小: 2x2
+2025-03-21 01:10:26,505 - INFO - 保存位置: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results
+2025-03-21 01:10:26,505 - INFO - 尝试读取图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 01:10:26,516 - INFO - 原始图像尺寸: 256x256
+2025-03-21 01:10:26,516 - INFO - 每个网格尺寸: 128x128
+2025-03-21 01:10:26,516 - INFO - 保存网格 1_1 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results\before_grid_1_1.png
+2025-03-21 01:10:26,517 - INFO - 保存网格 1_2 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results\before_grid_1_2.png
+2025-03-21 01:10:26,517 - INFO - 保存网格 2_1 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results\before_grid_2_1.png
+2025-03-21 01:10:26,517 - INFO - 保存网格 2_2 到: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results\before_grid_2_2.png
+2025-03-21 01:10:26,518 - INFO - 网格裁剪完成，共生成 4 个子图像，保存在: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results
+2025-03-21 01:10:26,519 - INFO - 裁剪完成，请手动导入需要的图像进行后续操作
+2025-03-21 01:10:40,321 - INFO - 正在裁剪图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 01:10:40,321 - INFO - 网格大小: 2x2
+2025-03-21 01:10:40,321 - INFO - 保存位置: D:/VS_WORKBASE/PySide6
+2025-03-21 01:10:40,321 - INFO - 尝试读取图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 01:10:40,326 - INFO - 原始图像尺寸: 256x256
+2025-03-21 01:10:40,326 - INFO - 每个网格尺寸: 128x128
+2025-03-21 01:10:40,331 - INFO - 保存网格 1_1 到: D:/VS_WORKBASE/PySide6\before_grid_1_1.png
+2025-03-21 01:10:40,333 - INFO - 保存网格 1_2 到: D:/VS_WORKBASE/PySide6\before_grid_1_2.png
+2025-03-21 01:10:40,334 - INFO - 保存网格 2_1 到: D:/VS_WORKBASE/PySide6\before_grid_2_1.png
+2025-03-21 01:10:40,336 - INFO - 保存网格 2_2 到: D:/VS_WORKBASE/PySide6\before_grid_2_2.png
+2025-03-21 01:10:40,336 - INFO - 网格裁剪完成，共生成 4 个子图像，保存在: D:/VS_WORKBASE/PySide6
+2025-03-21 01:10:40,336 - INFO - 裁剪完成，请手动导入需要的图像进行后续操作
+2025-03-21 01:12:50,111 - INFO - 应用程序启动
+2025-03-21 01:12:50,138 - INFO - 创建新日志文件: logs\log_20250321_011250.txt
+2025-03-21 01:12:50,138 - INFO - 日志文件保存在: logs\log_20250321_011250.txt
+2025-03-21 01:13:12,083 - INFO - 原始图像尺寸: 256x256
+2025-03-21 01:13:12,111 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/test_simple_results\test0_前时相_256x256 - 副本_cliped.png
+2025-03-21 01:13:12,125 - INFO - 更新前时相图像显示
+2025-03-21 01:13:18,764 - INFO - 正在裁剪图像: D:/VS_WORKBASE/PySide6/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 01:13:18,764 - INFO - 网格大小: 2x2
+2025-03-21 01:13:18,764 - INFO - 保存位置: D:/VS_WORKBASE/PySide6/test_simple_results
+2025-03-21 01:13:18,764 - INFO - 尝试读取图像: D:/VS_WORKBASE/PySide6/test_simple_results/test0_前时相_256x256 - 副本.png
+2025-03-21 01:13:18,769 - INFO - 原始图像尺寸: 256x256
+2025-03-21 01:13:18,769 - INFO - 每个网格尺寸: 128x128
+2025-03-21 01:13:18,771 - INFO - 保存网格 1_1 到: D:\VS_WORKBASE\PySide6\test_simple_results\before_grid_1_1.png
+2025-03-21 01:13:18,772 - INFO - 保存网格 1_2 到: D:\VS_WORKBASE\PySide6\test_simple_results\before_grid_1_2.png
+2025-03-21 01:13:18,782 - INFO - 保存网格 2_1 到: D:\VS_WORKBASE\PySide6\test_simple_results\before_grid_2_1.png
+2025-03-21 01:13:18,783 - INFO - 保存网格 2_2 到: D:\VS_WORKBASE\PySide6\test_simple_results\before_grid_2_2.png
+2025-03-21 01:13:18,783 - INFO - 网格裁剪完成，共生成 4 个子图像，保存在: D:/VS_WORKBASE/PySide6/test_simple_results
+2025-03-21 01:13:18,786 - INFO - 裁剪完成，请手动导入需要的图像进行后续操作
+2025-03-21 01:13:22,651 - INFO - 原始图像尺寸: 256x256
+2025-03-21 01:13:22,671 - INFO - 图像已标准化为256x256，保存至: D:/VS_WORKBASE/PySide6/test_simple_results\test0_前时相_256x256 - 副本_cliped.png
+2025-03-21 01:13:22,676 - INFO - 更新前时相图像显示
+2025-03-21 01:14:00,005 - INFO - 正在裁剪图像: D:/VS_WORKBASE/PySide6/test_simple_results/before_grid_1_1.png
+2025-03-21 01:14:00,005 - INFO - 网格大小: 2x2
+2025-03-21 01:14:00,005 - INFO - 保存位置: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0
+2025-03-21 01:14:00,005 - INFO - 尝试读取图像: D:/VS_WORKBASE/PySide6/test_simple_results/before_grid_1_1.png
+2025-03-21 01:14:00,005 - INFO - 原始图像尺寸: 128x128
+2025-03-21 01:14:00,005 - INFO - 每个网格尺寸: 64x64
+2025-03-21 01:14:00,010 - INFO - 保存网格 1_1 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\before_grid_1_1.png
+2025-03-21 01:14:00,010 - INFO - 保存网格 1_2 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\before_grid_1_2.png
+2025-03-21 01:14:00,011 - INFO - 保存网格 2_1 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\before_grid_2_1.png
+2025-03-21 01:14:00,011 - INFO - 保存网格 2_2 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\before_grid_2_2.png
+2025-03-21 01:14:00,012 - INFO - 网格裁剪完成，共生成 4 个子图像，保存在: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0
+2025-03-21 01:14:00,012 - INFO - 裁剪完成，请手动导入需要的图像进行后续操作
+2025-03-21 01:14:23,813 - INFO - 正在裁剪图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test1_前时相.png
+2025-03-21 01:14:23,813 - INFO - 网格大小: 2x2
+2025-03-21 01:14:23,813 - INFO - 保存位置: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata
+2025-03-21 01:14:23,813 - INFO - 尝试读取图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test1_前时相.png
+2025-03-21 01:14:23,817 - INFO - 原始图像尺寸: 259x254
+2025-03-21 01:14:23,817 - INFO - 每个网格尺寸: 129x127
+2025-03-21 01:14:23,817 - INFO - 保存网格 1_1 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_1.png
+2025-03-21 01:14:23,819 - INFO - 保存网格 1_2 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_2.png
+2025-03-21 01:14:23,819 - INFO - 保存网格 2_1 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_2_1.png
+2025-03-21 01:14:23,819 - INFO - 保存网格 2_2 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_2_2.png
+2025-03-21 01:14:23,820 - INFO - 网格裁剪完成，共生成 4 个子图像，保存在: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata
+2025-03-21 01:14:23,820 - INFO - 裁剪完成，请手动导入需要的图像进行后续操作
+2025-03-21 01:14:34,095 - INFO - 未选择图像，裁剪操作取消
+2025-03-21 01:14:36,017 - INFO - 已清理Python缓存文件: PySide6\__pycache__\display.cpython-310.pyc
+2025-03-21 01:14:36,017 - INFO - 共清理 1 个临时文件
+2025-03-21 01:14:36,017 - INFO - 已清理 1 个临时文件
+2025-03-21 01:15:54,450 - INFO - 应用程序启动
+2025-03-21 01:15:54,473 - INFO - 创建新日志文件: logs\log_20250321_011554.txt
+2025-03-21 01:15:54,473 - INFO - 日志文件保存在: logs\log_20250321_011554.txt
+2025-03-21 01:15:58,327 - INFO - 原始图像尺寸: 252x250
+2025-03-21 01:15:58,344 - INFO - 图像已标准化为256x256，保存至: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\test0_后时相_cliped.png
+2025-03-21 01:16:00,393 - INFO - 更新前时相图像显示
+2025-03-21 01:16:00,394 - INFO - 已更新显示为标准化后的图像
+2025-03-21 01:16:02,601 - INFO - 原始图像尺寸: 256x256
+2025-03-21 01:16:02,622 - INFO - 图像已标准化为256x256，保存至: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\test0_后时相_cliped_cliped_cliped.png
+2025-03-21 01:16:03,681 - INFO - 标准化完成，请手动导入标准化后的图像进行后续操作
+2025-03-21 01:16:04,826 - INFO - 已清理Python缓存文件: PySide6\__pycache__\display.cpython-310.pyc
+2025-03-21 01:16:04,828 - INFO - 共清理 1 个临时文件
+2025-03-21 01:16:04,828 - INFO - 已清理 1 个临时文件
+2025-03-21 01:16:06,281 - INFO - 原始图像尺寸: 257x255
+2025-03-21 01:16:06,308 - INFO - 图像已标准化为256x256，保存至: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\test0_前时相_cliped.png
+2025-03-21 01:16:07,300 - INFO - 标准化完成，请手动导入标准化后的图像进行后续操作
+2025-03-21 01:16:12,941 - INFO - 正在裁剪图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test0_后时相_cliped.png
+2025-03-21 01:16:12,943 - INFO - 网格大小: 2x2
+2025-03-21 01:16:12,943 - INFO - 保存位置: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata
+2025-03-21 01:16:12,944 - INFO - 尝试读取图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test0_后时相_cliped.png
+2025-03-21 01:16:12,945 - INFO - 原始图像尺寸: 256x256
+2025-03-21 01:16:12,945 - INFO - 每个网格尺寸: 128x128
+2025-03-21 01:16:12,949 - INFO - 保存网格 1_1 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_1.png
+2025-03-21 01:16:12,949 - INFO - 保存网格 1_2 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_2.png
+2025-03-21 01:16:12,950 - INFO - 保存网格 2_1 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_2_1.png
+2025-03-21 01:16:12,951 - INFO - 保存网格 2_2 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_2_2.png
+2025-03-21 01:16:12,952 - INFO - 网格裁剪完成，共生成 4 个子图像，保存在: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata
+2025-03-21 01:16:14,413 - INFO - 更新图像显示时出错: [Errno 2] No such file or directory: 'D:\\VS_WORKBASE\\PySide6\\遥感影像变化检测系统V2.0\\testdata\\before_grid_1_1.png'
+2025-03-21 01:16:14,417 - INFO - Traceback (most recent call last):
+  File "d:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\PySide6\display.py", line 495, in update_image_display
+    img = Image.open(self.file_path)
+  File "D:\anaconda3\envs\pytorch2.6\lib\site-packages\PIL\Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\VS_WORKBASE\\PySide6\\遥感影像变化检测系统V2.0\\testdata\\before_grid_1_1.png'
+
+2025-03-21 01:16:14,419 - INFO - 已显示裁剪后的图像: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_1.png
+2025-03-21 01:16:14,419 - INFO - 裁剪完成，请手动导入需要的图像进行后续操作
+2025-03-21 01:16:28,064 - INFO - 正在裁剪图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test0_后时相_cliped_cliped.png
+2025-03-21 01:16:28,064 - INFO - 网格大小: 2x2
+2025-03-21 01:16:28,064 - INFO - 保存位置: D:/VS_WORKBASE/PySide6
+2025-03-21 01:16:28,070 - INFO - 尝试读取图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test0_后时相_cliped_cliped.png
+2025-03-21 01:16:28,071 - INFO - 原始图像尺寸: 256x256
+2025-03-21 01:16:28,071 - INFO - 每个网格尺寸: 128x128
+2025-03-21 01:16:28,071 - INFO - 保存网格 1_1 到: D:\VS_WORKBASE\PySide6\before_grid_1_1.png
+2025-03-21 01:16:28,076 - INFO - 保存网格 1_2 到: D:\VS_WORKBASE\PySide6\before_grid_1_2.png
+2025-03-21 01:16:28,077 - INFO - 保存网格 2_1 到: D:\VS_WORKBASE\PySide6\before_grid_2_1.png
+2025-03-21 01:16:28,078 - INFO - 保存网格 2_2 到: D:\VS_WORKBASE\PySide6\before_grid_2_2.png
+2025-03-21 01:16:28,079 - INFO - 网格裁剪完成，共生成 4 个子图像，保存在: D:/VS_WORKBASE/PySide6
+2025-03-21 01:16:29,402 - INFO - 裁剪完成，请手动导入需要的图像进行后续操作
+2025-03-21 01:18:25,651 - INFO - 应用程序启动
+2025-03-21 01:18:25,690 - INFO - 创建新日志文件: logs\log_20250321_011825.txt
+2025-03-21 01:18:25,690 - INFO - 日志文件保存在: logs\log_20250321_011825.txt
+2025-03-21 01:18:31,241 - INFO - 正在裁剪图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test0_后时相_cliped.png
+2025-03-21 01:18:31,241 - INFO - 网格大小: 2x2
+2025-03-21 01:18:31,241 - INFO - 保存位置: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata
+2025-03-21 01:18:31,241 - INFO - 使用OpenCV裁剪图像: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\test0_后时相_cliped.png
+2025-03-21 01:18:31,251 - INFO - 使用PIL成功读取图像
+2025-03-21 01:18:31,251 - INFO - 原始图像尺寸: 256x256
+2025-03-21 01:18:31,253 - INFO - 每个网格尺寸: 128x128
+2025-03-21 01:18:31,265 - INFO - 保存网格 1_1 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_1.png
+2025-03-21 01:18:31,272 - INFO - 保存网格 1_2 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_2.png
+2025-03-21 01:18:31,276 - INFO - 保存网格 2_1 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_2_1.png
+2025-03-21 01:18:31,283 - INFO - 保存网格 2_2 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_2_2.png
+2025-03-21 01:18:31,283 - INFO - 网格裁剪完成，共生成 4 个子图像，保存在: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata
+2025-03-21 01:18:32,659 - INFO - 更新前时相图像显示
+2025-03-21 01:18:32,659 - INFO - 已显示裁剪后的图像: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_1.png
+2025-03-21 01:18:32,659 - INFO - 裁剪完成，请手动导入需要的图像进行后续操作
+2025-03-21 01:18:34,251 - INFO - 已清理Python缓存文件: PySide6\__pycache__\display.cpython-310.pyc
+2025-03-21 01:18:34,251 - INFO - 共清理 1 个临时文件
+2025-03-21 01:18:34,251 - INFO - 已清理 1 个临时文件
+2025-03-21 01:23:49,434 - INFO - 应用程序启动
+2025-03-21 01:23:49,460 - INFO - === 日志系统已启动 ===
+2025-03-21 01:23:52,955 - INFO - 原始图像尺寸: 252x250
+2025-03-21 01:23:52,981 - INFO - 图像已标准化为256x256，保存至: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\test0_后时相_cliped.png
+2025-03-21 01:23:54,755 - INFO - 已更新前时相图像显示: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\test0_后时相_cliped.png
+2025-03-21 01:23:54,756 - INFO - 已更新显示为标准化后的图像
+2025-03-21 01:24:01,792 - INFO - 正在裁剪图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test0_前时相.png
+2025-03-21 01:24:01,793 - INFO - 网格大小: 2x2
+2025-03-21 01:24:01,793 - INFO - 保存位置: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata
+2025-03-21 01:24:01,794 - INFO - 使用OpenCV裁剪图像: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\test0_前时相.png
+2025-03-21 01:24:01,796 - INFO - 使用PIL成功读取图像
+2025-03-21 01:24:01,797 - INFO - 原始图像尺寸: 257x255
+2025-03-21 01:24:01,797 - INFO - 每个网格尺寸: 128x127
+2025-03-21 01:24:01,811 - INFO - 保存网格 1_1 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_1.png
+2025-03-21 01:24:01,818 - INFO - 保存网格 1_2 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_2.png
+2025-03-21 01:24:01,824 - INFO - 保存网格 2_1 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_2_1.png
+2025-03-21 01:24:01,829 - INFO - 保存网格 2_2 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_2_2.png
+2025-03-21 01:24:01,830 - INFO - 网格裁剪完成，共生成 4 个子图像，保存在: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata
+2025-03-21 01:24:03,010 - INFO - 已更新前时相图像显示: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_1.png
+2025-03-21 01:24:03,011 - INFO - 已显示裁剪后的图像: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_1.png
+2025-03-21 01:24:03,012 - INFO - 裁剪完成，请手动导入需要的图像进行后续操作
+2025-03-21 01:24:04,895 - INFO - 已清理Python缓存文件: PySide6\__pycache__\display.cpython-310.pyc
+2025-03-21 01:24:04,895 - INFO - 共清理 1 个临时文件
+2025-03-21 01:24:04,896 - INFO - 已清理 1 个临时文件
+2025-03-21 01:24:06,692 - INFO - 导入前时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/before_grid_2_2.png
+2025-03-21 01:24:06,692 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/before_grid_2_2.png
+2025-03-21 01:24:06,693 - INFO - 前时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-21 01:24:08,746 - INFO - 导入后时相影像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test0_后时相_cliped.png
+2025-03-21 01:24:08,746 - INFO - 使用原始图像路径: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test0_后时相_cliped.png
+2025-03-21 01:24:08,746 - INFO - 后时相影像加载成功 (放大图像后，双击可恢复原始视图)
+2025-03-21 01:24:09,454 - INFO - 正在执行变化检测...
+2025-03-21 01:24:09,456 - INFO - 正在自动加载模型...
+2025-03-21 01:24:09,456 - INFO - 模型加载失败: name 'ChangeDetectionModel' is not defined
+2025-03-21 01:24:10,000 - INFO - 没有临时文件需要清理
+2025-03-21 01:24:12,699 - INFO - 原始图像尺寸: 128x127
+2025-03-21 01:24:12,721 - INFO - 图像已标准化为256x256，保存至: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_2_1_cliped.png
+2025-03-21 01:24:13,713 - INFO - 已更新前时相图像显示: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_2_1_cliped.png
+2025-03-21 01:24:13,714 - INFO - 已更新显示为标准化后的图像
+2025-03-21 01:24:17,927 - INFO - 正在裁剪图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/before_grid_2_1_cliped.png
+2025-03-21 01:24:17,927 - INFO - 网格大小: 2x2
+2025-03-21 01:24:17,928 - INFO - 保存位置: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata
+2025-03-21 01:24:17,928 - INFO - 使用OpenCV裁剪图像: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_2_1_cliped.png
+2025-03-21 01:24:17,931 - INFO - 使用PIL成功读取图像
+2025-03-21 01:24:17,931 - INFO - 原始图像尺寸: 256x256
+2025-03-21 01:24:17,932 - INFO - 每个网格尺寸: 128x128
+2025-03-21 01:24:17,938 - INFO - 保存网格 1_1 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_1.png
+2025-03-21 01:24:17,945 - INFO - 保存网格 1_2 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_2.png
+2025-03-21 01:24:17,951 - INFO - 保存网格 2_1 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_2_1.png
+2025-03-21 01:24:17,957 - INFO - 保存网格 2_2 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_2_2.png
+2025-03-21 01:24:17,957 - INFO - 网格裁剪完成，共生成 4 个子图像，保存在: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata
+2025-03-21 01:24:19,162 - INFO - 已更新前时相图像显示: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_1.png
+2025-03-21 01:24:19,163 - INFO - 已显示裁剪后的图像: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_1.png
+2025-03-21 01:24:19,163 - INFO - 裁剪完成，请手动导入需要的图像进行后续操作
+2025-03-21 01:26:01,046 - INFO - 应用程序启动
+2025-03-21 01:26:01,074 - INFO - === 日志系统已启动 ===
+2025-03-21 01:26:07,015 - INFO - 原始图像尺寸: 252x250
+2025-03-21 01:26:07,039 - INFO - 图像已标准化为256x256，保存至: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\test0_后时相_cliped.png
+2025-03-21 01:26:07,957 - INFO - 已更新前时相图像显示: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\test0_后时相_cliped.png
+2025-03-21 01:26:07,957 - INFO - 已更新显示为标准化后的图像
+2025-03-21 01:26:15,378 - INFO - 正在裁剪图像: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata/test0_后时相_cliped.png
+2025-03-21 01:26:15,378 - INFO - 网格大小: 2x2
+2025-03-21 01:26:15,379 - INFO - 保存位置: D:/VS_WORKBASE/PySide6/遥感影像变化检测系统V2.0/testdata
+2025-03-21 01:26:15,379 - INFO - 使用OpenCV裁剪图像: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\test0_后时相_cliped.png
+2025-03-21 01:26:15,379 - INFO - 使用PIL成功读取图像
+2025-03-21 01:26:15,379 - INFO - 原始图像尺寸: 256x256
+2025-03-21 01:26:15,379 - INFO - 每个网格尺寸: 128x128
+2025-03-21 01:26:15,394 - INFO - 保存网格 1_1 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_1.png
+2025-03-21 01:26:15,401 - INFO - 保存网格 1_2 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_2.png
+2025-03-21 01:26:15,407 - INFO - 保存网格 2_1 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_2_1.png
+2025-03-21 01:26:15,412 - INFO - 保存网格 2_2 到: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_2_2.png
+2025-03-21 01:26:15,413 - INFO - 网格裁剪完成，共生成 4 个子图像，保存在: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata
+2025-03-21 01:26:16,390 - INFO - 已更新前时相图像显示: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_1.png
+2025-03-21 01:26:16,391 - INFO - 已显示裁剪后的图像: D:\VS_WORKBASE\PySide6\遥感影像变化检测系统V2.0\testdata\before_grid_1_1.png
+2025-03-21 01:26:16,392 - INFO - 裁剪完成，请手动导入需要的图像进行后续操作
+2025-03-21 01:26:18,017 - INFO - 已清理Python缓存文件: PySide6\__pycache__\display.cpython-310.pyc
+2025-03-21 01:26:18,017 - INFO - 共清理 1 个临时文件
+2025-03-21 01:26:18,017 - INFO - 已清理 1 个临时文件
