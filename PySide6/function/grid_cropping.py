@@ -434,11 +434,14 @@ class GridCropping:
             grid_height = height // grid_size
             
             # 设置网格线的颜色和粗细，目前是在opencv中绘制，所以颜色是BGR格式
-            line_color = (0, 0, 255) # 红色线条
+            line_color =(255, 0, 0)  # 红色线条
             line_thickness = max(1, min(width, height) // 300)  # 根据图像尺寸自适应线条粗细
-            text_color = (255, 0, 0)# 蓝色文字
-            font = cv2.FONT_HERSHEY_SIMPLEX
-            font_scale = max(0.5, min(width, height) / 1000)  # 自适应字体大小
+            
+            # 设置文字样式，使其更加精致
+            text_color = (0, 0, 255)  # 蓝色文字
+            # 使用更精致的字体 - FONT_HERSHEY_SIMPLEX比较美观，或者尝试FONT_HERSHEY_TRIPLEX
+            font = cv2.FONT_HERSHEY_TRIPLEX  
+            font_scale = max(0.3, min(width, height) / 800)  
             
             # 绘制水平线
             for i in range(1, grid_size):
@@ -454,11 +457,26 @@ class GridCropping:
             for row in range(grid_size):
                 for col in range(grid_size):
                     # 计算文本位置
-                    text_x = col * grid_width + 10
-                    text_y = row * grid_height + 30
+                    text_x = col * grid_width + grid_width // 20  # 动态调整文本位置
+                    text_y = row * grid_height + grid_height // 10  # 动态调整文本位置
+                    
+                    # 为文字添加背景以增强可读性
+                    text = f"{row+1}_{col+1}"
+                    text_size = cv2.getTextSize(text, font, font_scale, max(1, line_thickness))[0]
+                    
+                    # 绘制半透明背景
+                    alpha = 0.7  # 透明度
+                    overlay = grid_preview.copy()
+                    cv2.rectangle(overlay, 
+                                 (text_x - 5, text_y - text_size[1] - 5),
+                                 (text_x + text_size[0] + 5, text_y + 5),
+                                 (255, 255, 255), -1)  # 白色背景
+                    
+                    # 将半透明背景合并到原图
+                    cv2.addWeighted(overlay, alpha, grid_preview, 1 - alpha, 0, grid_preview)
                     
                     # 添加网格索引文本
-                    cv2.putText(grid_preview, f"{row+1}_{col+1}", 
+                    cv2.putText(grid_preview, text, 
                                (text_x, text_y), font, font_scale, text_color, 
                                max(1, line_thickness), cv2.LINE_AA)
             
