@@ -390,7 +390,7 @@ class NavigationFunctions:
         self.file_path_after = None  # 后时相图像路径
         
         # 初始化主题设置
-        self.is_dark_theme = True  # 默认使用深色主题
+        self.is_dark_theme = False  # 默认使用浅色主题
         
         # 初始化日志时间
         self.log_start_time = datetime.now()
@@ -452,7 +452,25 @@ class NavigationFunctions:
             
             # 记录到UI
             if self.text_log:
-                self.text_log.append(message)
+                # 记录消息前确保文本使用正确的颜色
+                if hasattr(self, 'is_dark_theme'):
+                    try:
+                        from theme_manager import ThemeManager
+                        # 根据主题获取正确的文本颜色
+                        colors = ThemeManager.get_colors(self.is_dark_theme)
+                        text_color = colors["text"]
+                        # 使用HTML格式应用文本颜色
+                        formatted_message = f"<span style='color:{text_color};'>{message}</span>"
+                        # 添加格式化后的消息
+                        self.text_log.append(formatted_message)
+                    except Exception as e:
+                        # 如果设置颜色失败，不影响主流程，使用默认文本添加
+                        print(f"设置文本颜色失败: {str(e)}")
+                        self.text_log.append(message)
+                else:
+                    # 如果没有主题属性，使用默认文本添加
+                    self.text_log.append(message)
+                
                 # 自动滚动到底部
                 self.text_log.verticalScrollBar().setValue(self.text_log.verticalScrollBar().maximum())
         except Exception as e:

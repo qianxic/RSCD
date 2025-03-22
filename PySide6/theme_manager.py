@@ -12,7 +12,7 @@ class ThemeManager:
             # 基本颜色
             "background": "#202124",
             "background_secondary": "#2c2c2e",
-            "text": "#f7f7f8",
+            "text": "white",
             "border": "#444a5a",
             "separator": "#444a5a",
             
@@ -70,7 +70,7 @@ class ThemeManager:
             # 基本颜色
             "background": "#ffffff",
             "background_secondary": "#f5f5f7",
-            "text": "#333333",
+            "text": "black",
             "border": "#e6e6e6",
             "separator": "#e6e6e6",
             
@@ -248,10 +248,11 @@ class ThemeManager:
     @staticmethod
     def get_primary_button_style(is_dark_theme=False):
         colors = ThemeManager.get_colors(is_dark_theme)
+        # 始终使用白色文本，无论是深色还是浅色主题
         return f"""
             QPushButton {{
                 background-color: {colors["button_primary_bg"]};
-                color: {colors["button_primary_text"]};
+                color: white;
                 font-weight: bold;
                 border-radius: 4px;
                 padding: 5px 10px;
@@ -325,11 +326,15 @@ class ThemeManager:
     @staticmethod
     def get_log_text_style(is_dark_theme=False):
         colors = ThemeManager.get_colors(is_dark_theme)
+        # 深色主题使用白色文本，浅色主题使用黑色文本
+        text_color = colors["text"]
         return f"""
             background-color: {colors["background_secondary"]}; 
-            color: {colors["text"]};
+            color: {text_color};
             border: 1px solid {colors["border"]};
             border-radius: 4px;
+            font-family: 'Microsoft YaHei UI';
+            padding: 2px;
         """
     
     # 获取导航分隔线样式
@@ -415,4 +420,80 @@ class ThemeManager:
         elif icon_type == "error":
             color = colors["error_icon"]
             
-        return f"font-size: 28px; color: {color};" 
+        return f"font-size: 28px; color: {color};"
+        
+    # 获取选项卡部件样式
+    @staticmethod
+    def get_tab_widget_style(is_dark_theme=False):
+        colors = ThemeManager.get_colors(is_dark_theme)
+        return f"""
+            QTabWidget::pane {{
+                border: 1px solid {colors["border"]};
+                background-color: {colors["background"]};
+                border-radius: 3px;
+            }}
+            QTabBar::tab {{
+                background-color: {colors["background"]};
+                color: {colors["text"]};
+                border: 1px solid {colors["border"]};
+                padding: 6px 12px;
+                margin-right: 2px;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+            }}
+            QTabBar::tab:selected {{
+                background-color: {colors["button_primary_bg"]};
+                color: {colors["button_primary_text"]};
+                border-bottom-color: {colors["button_primary_bg"]};
+            }}
+            QTabBar::tab:!selected {{
+                margin-top: 2px;
+            }}
+            QTabBar::tab:hover:!selected {{
+                background-color: {colors["button_secondary_hover"]};
+            }}
+        """
+        
+    # 获取列表部件样式
+    @staticmethod
+    def get_list_widget_style(is_dark_theme=False):
+        colors = ThemeManager.get_colors(is_dark_theme)
+        return f"""
+            QListWidget {{
+                background-color: {colors["background_secondary"]};
+                color: {colors["text"]};
+                border: 1px solid {colors["border"]};
+                border-radius: 4px;
+                padding: 2px;
+            }}
+            QListWidget::item {{
+                padding: 4px;
+                border-radius: 2px;
+            }}
+            QListWidget::item:selected {{
+                background-color: {colors["button_primary_bg"]};
+                color: {colors["button_primary_text"]};
+            }}
+            QListWidget::item:hover:!selected {{
+                background-color: {colors["button_secondary_hover"]};
+            }}
+        """
+        
+    # 获取进度条样式
+    @staticmethod
+    def get_progress_bar_style(is_dark_theme=False):
+        colors = ThemeManager.get_colors(is_dark_theme)
+        return f"""
+            QProgressBar {{
+                border: 1px solid {colors["border"]};
+                border-radius: 4px;
+                background-color: {colors["background_secondary"]};
+                color: {colors["text"]};
+                text-align: center;
+                height: 20px;
+            }}
+            QProgressBar::chunk {{
+                background-color: {colors["button_primary_bg"]};
+                border-radius: 3px;
+            }}
+        """ 

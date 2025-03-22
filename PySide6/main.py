@@ -43,7 +43,7 @@ from function import (
 )
 
 class HomePage(QWidget):
-    def __init__(self, parent=None, is_dark_theme=True):
+    def __init__(self, parent=None, is_dark_theme=False):
         """初始化首页界面"""
         super().__init__(parent)
         self.is_dark_theme = is_dark_theme
@@ -227,6 +227,9 @@ class RemoteSensingApp(QMainWindow):
         
         # 连接按钮点击事件
         self.connect_buttons()
+        
+        # 初始化后立即应用按钮样式
+        self.apply_button_styles()
     
     def switch_to_main_page(self):
         """切换到主界面"""
@@ -234,7 +237,18 @@ class RemoteSensingApp(QMainWindow):
         # 设置鼠标为等待状态，提示用户正在加载
         QApplication.setOverrideCursor(Qt.WaitCursor)
         try:
+            # 确保日志使用正确的颜色
+            if hasattr(self, 'text_log'):
+                # 刷新日志文本颜色
+                self.refresh_log_text_color()
+                
+            # 切换到主界面页
             self.stacked_widget.setCurrentIndex(1)
+            
+            # 记录主界面已加载
+            if hasattr(self, 'navigation_functions'):
+                self.navigation_functions.log_message("已切换至主界面")
+                
             print("主界面切换完成")
         finally:
             # 恢复鼠标
@@ -246,51 +260,69 @@ class RemoteSensingApp(QMainWindow):
         # 确保首页使用当前主题
         if self.home_page.is_dark_theme != self.is_dark_theme:
             self.home_page.update_theme(self.is_dark_theme)
+        
+        # 确保日志使用正确的颜色
+        if hasattr(self, 'text_log'):
+            # 刷新日志文本颜色
+            self.refresh_log_text_color()
+            
+        # 切换到首页
         self.stacked_widget.setCurrentIndex(0)
+        
+        # 记录首页已加载
+        if hasattr(self, 'navigation_functions'):
+            self.navigation_functions.log_message("已切换至首页")
+            
         print("首页切换完成")
 
     def create_button_group(self, parent_layout):
         """创建按钮组"""
         button_layout = QHBoxLayout()
-        # 设置布局左对齐
-        button_layout.setAlignment(Qt.AlignLeft)
-        button_layout.setContentsMargins(5, 0, 5, 0)
         
         # 创建首页按钮
         self.btn_home = QPushButton("首页")
-        
-        # 创建美化后的按钮
-        self.btn_standard = QPushButton("影像裁剪")
-        self.btn_crop = QPushButton("渔网分割")
-        self.btn_import = QPushButton("导入前时相影像")
-        self.btn_import_after = QPushButton("导入后时相影像")
-        self.btn_begin = QPushButton("开始检测")
-        self.btn_export = QPushButton("结果导出")
-        self.btn_clear = QPushButton("清空当前界面")
-        self.btn_help = QPushButton("帮助")
-        self.btn_theme = QPushButton("切换主题")
-        
-        # 设置首页按钮样式 - 使用主题管理器的蓝色主要按钮样式
-        self.btn_home.setStyleSheet(ThemeManager.get_primary_button_style(self.is_dark_theme))
-        
-        # 设置主要功能按钮样式 - 使用主题管理器的蓝色主要按钮样式
-        primary_buttons = [self.btn_begin, self.btn_export]
-        for btn in primary_buttons:
-            btn.setStyleSheet(ThemeManager.get_primary_button_style(self.is_dark_theme))
-        
-        # 次要按钮样式 - 使用主题管理器的次要按钮样式
-        secondary_buttons = [self.btn_standard, self.btn_crop, self.btn_import, self.btn_import_after]
-        for btn in secondary_buttons:
-            btn.setStyleSheet(ThemeManager.get_secondary_button_style(self.is_dark_theme))
-        
-        # 工具按钮样式 - 使用主题管理器的工具按钮样式
-        utility_buttons = [self.btn_clear, self.btn_help, self.btn_theme]
-        for btn in utility_buttons:
-            btn.setStyleSheet(ThemeManager.get_utility_button_style(self.is_dark_theme))
-        
-        # 添加按钮到布局（先添加首页按钮）
+        self.btn_home.setIcon(QIcon(":/icons/home.png"))
         button_layout.addWidget(self.btn_home)
-        for btn in [self.btn_standard, self.btn_crop, self.btn_import, self.btn_import_after, self.btn_begin, self.btn_export, self.btn_theme, self.btn_clear, self.btn_help]:
+        
+        # 创建标准化按钮
+        self.btn_standard = QPushButton("影像分割")
+        self.btn_standard.setIcon(QIcon(":/icons/image.png"))
+        
+        # 创建渔网裁剪按钮
+        self.btn_crop = QPushButton("渔网裁剪")
+        self.btn_crop.setIcon(QIcon(":/icons/crop.png"))
+        
+        # 创建导入前后时相影像按钮
+        self.btn_import = QPushButton("导入前时相影像")
+        self.btn_import.setIcon(QIcon(":/icons/import.png"))
+        
+        self.btn_import_after = QPushButton("导入后时相影像")
+        self.btn_import_after.setIcon(QIcon(":/icons/import_after.png"))
+        
+        # 创建开始解译按钮
+        self.btn_begin = QPushButton("开始解译")
+        self.btn_begin.setIcon(QIcon(":/icons/play.png"))
+        
+        # 创建结果导出按钮
+        self.btn_export = QPushButton("导出结果")
+        self.btn_export.setIcon(QIcon(":/icons/export.png"))
+        
+        # 创建批量处理按钮
+        self.btn_batch = QPushButton("批量处理")
+        self.btn_batch.setIcon(QIcon(":/icons/batch.png"))
+        
+        # 创建功能按钮
+        self.btn_theme = QPushButton("切换主题")
+        self.btn_theme.setIcon(QIcon(":/icons/theme.png"))
+        
+        self.btn_clear = QPushButton("清空界面")
+        self.btn_clear.setIcon(QIcon(":/icons/clear.png"))
+        
+        self.btn_help = QPushButton("帮助")
+        self.btn_help.setIcon(QIcon(":/icons/help.png"))
+        
+        # 添加所有按钮到布局（除首页按钮外，已在前面添加）
+        for btn in [self.btn_standard, self.btn_crop, self.btn_import, self.btn_import_after, self.btn_begin, self.btn_export, self.btn_batch, self.btn_theme, self.btn_clear, self.btn_help]:
             button_layout.addWidget(btn)
             # 设置固定高度并增加间距
             btn.setFixedHeight(32)
@@ -324,46 +356,59 @@ class RemoteSensingApp(QMainWindow):
         self.btn_help.clicked.connect(self.show_help)
         self.btn_export.clicked.connect(self.on_export_clicked)
         self.btn_theme.clicked.connect(self.toggle_theme)
+        self.btn_batch.clicked.connect(self.show_batch_processing)
 
     def toggle_theme(self):
         """切换深浅主题并更新首页主题"""
+        # 切换主题
         self.is_dark_theme = not self.is_dark_theme
         
-        # 应用主题样式表
-        self.apply_theme()
+        # 记录当前主题
+        theme_name = "深色" if self.is_dark_theme else "浅色"
+        print(f"已切换至{theme_name}主题")
+        
+        # 应用主题样式
+        self.setStyleSheet(ThemeManager.get_app_stylesheet(self.is_dark_theme))
         
         # 更新首页主题
-        self.home_page.update_theme(self.is_dark_theme)
+        if hasattr(self, 'home_page'):
+            self.home_page.update_theme(self.is_dark_theme)
         
-        # 重新连接首页按钮信号
-        self.connect_home_page_signals()
+        # 重新连接首页信号
+        if hasattr(self, 'connect_home_page_signals'):
+            self.connect_home_page_signals()
         
-        # 更新各个UI元素的样式
-        
-        # 更新顶部容器的样式
+        # 更新顶部容器样式
         if hasattr(self, 'top_container'):
-            self.top_container.setStyleSheet(ThemeManager.get_separator_style(self.is_dark_theme))
+            self.top_container.setStyleSheet(f"background-color: {ThemeManager.get_colors(self.is_dark_theme)['header_bg']};")
         
         # 更新标题标签样式
-        if hasattr(self, 'label_before_title') and hasattr(self, 'label_after_title'):
-            label_style = f"color: {ThemeManager.get_colors(self.is_dark_theme)['text']}; font-size: 14px; font-weight: bold;"
-            self.label_before_title.setStyleSheet(label_style)
-            self.label_after_title.setStyleSheet(label_style)
+        if hasattr(self, 'title_label'):
+            self.title_label.setStyleSheet(f"color: {ThemeManager.get_colors(self.is_dark_theme)['header_text']};")
         
         # 更新图像显示区域样式
-        self.label_before.setStyleSheet(ThemeManager.get_image_label_style(self.is_dark_theme))
-        self.label_after.setStyleSheet(ThemeManager.get_image_label_style(self.is_dark_theme))
-        self.text_log.setStyleSheet(ThemeManager.get_log_text_style(self.is_dark_theme))
-        self.label_result.setStyleSheet(ThemeManager.get_image_label_style(self.is_dark_theme))
+        image_labels = [self.label_before, self.label_after, self.label_result]
+        for label in image_labels:
+            if hasattr(label, 'setStyleSheet'):
+                label.setStyleSheet(ThemeManager.get_image_label_style(self.is_dark_theme))
         
-        # 更新导航栏分隔线颜色
+        # 更新日志文本区域样式
+        if hasattr(self, 'text_log'):
+            # 设置样式
+            self.text_log.setStyleSheet(ThemeManager.get_log_text_style(self.is_dark_theme))
+            # 刷新所有日志文本颜色
+            self.refresh_log_text_color()
+        
+        # 更新分隔线样式
         if hasattr(self, 'nav_separator'):
             self.nav_separator.setStyleSheet(ThemeManager.get_separator_style(self.is_dark_theme))
         
-        # 重新设置所有按钮的尺寸和字体，确保一致性
-        all_buttons = [self.btn_home, self.btn_standard, self.btn_crop, self.btn_import, 
-                      self.btn_import_after, self.btn_begin, self.btn_export, 
-                      self.btn_theme, self.btn_clear, self.btn_help]
+        # 更新所有按钮的尺寸和字体
+        all_buttons = [
+            self.btn_home, self.btn_standard, self.btn_crop, self.btn_import, 
+            self.btn_import_after, self.btn_begin, self.btn_export, self.btn_batch,
+            self.btn_theme, self.btn_clear, self.btn_help
+        ]
         
         for btn in all_buttons:
             btn.setFixedHeight(32)
@@ -372,24 +417,10 @@ class RemoteSensingApp(QMainWindow):
         # 主页按钮字体加粗
         self.btn_home.setFont(QFont("Microsoft YaHei UI", 9, QFont.Bold))
         
-        # 更新按钮样式
-        # 主要按钮（首页、开始检测、结果导出）- 使用主题管理器的主要按钮样式
-        primary_buttons = [self.btn_home, self.btn_begin, self.btn_export]
-        for btn in primary_buttons:
-            btn.setStyleSheet(ThemeManager.get_primary_button_style(self.is_dark_theme))
-        
-        # 次要按钮 - 使用主题管理器的次要按钮样式
-        secondary_buttons = [self.btn_standard, self.btn_crop, self.btn_import, self.btn_import_after]
-        for btn in secondary_buttons:
-            btn.setStyleSheet(ThemeManager.get_secondary_button_style(self.is_dark_theme))
-        
-        # 工具按钮 - 使用主题管理器的工具按钮样式
-        utility_buttons = [self.btn_clear, self.btn_help, self.btn_theme]
-        for btn in utility_buttons:
-            btn.setStyleSheet(ThemeManager.get_utility_button_style(self.is_dark_theme))
+        # 使用统一的方法应用按钮样式
+        self.apply_button_styles()
         
         # 日志记录
-        theme_name = "深色" if self.is_dark_theme else "浅色"
         if hasattr(self, 'navigation_functions'):
             # 更新导航功能中的主题标志
             self.navigation_functions.is_dark_theme = self.is_dark_theme
@@ -461,21 +492,53 @@ class RemoteSensingApp(QMainWindow):
         layout_after.addWidget(self.label_after)
         parent_layout.addWidget(self.group_after, 1)  # 设置比例权重为1，确保平分区域
     
+    def refresh_log_text_color(self):
+        """刷新日志文本框中所有文本的颜色，使其与当前主题一致"""
+        if hasattr(self, 'text_log'):
+            # 获取当前文本并清空
+            current_text = self.text_log.toPlainText()
+            self.text_log.clear()
+            
+            # 根据当前主题确定文本颜色
+            text_color = "white" if self.is_dark_theme else "black"
+            
+            # 设置默认文本颜色
+            if self.is_dark_theme:
+                self.text_log.setTextColor(Qt.GlobalColor.white)
+            else:
+                self.text_log.setTextColor(Qt.GlobalColor.black)
+            
+            # 将文本拆分成行并使用HTML格式重新添加，确保每行都有正确的文本颜色
+            lines = current_text.split('\n')
+            for line in lines:
+                if line.strip():  # 跳过空行
+                    formatted_line = f"<span style='color:{text_color};'>{line}</span>"
+                    self.text_log.append(formatted_line)
+    
     def create_log_group(self, parent_layout):
         """创建日志组"""
-        # 不再添加到主布局，而是返回组件供后续操作
-        self.group_log = QGroupBox("日志记录")
+        self.group_log = QGroupBox("系统日志")
         layout_log = QVBoxLayout(self.group_log)
         layout_log.setContentsMargins(8, 16, 8, 8)  # 增加内边距
         
         self.text_log = QTextEdit()
         self.text_log.setReadOnly(True)
-        self.text_log.setFont(QFont("Consolas", 9))
+        self.text_log.setFont(QFont("Microsoft YaHei UI", 9))  # 设置合适的字体和大小
         
-        # 使用主题管理器设置样式
+        # 使用主题管理器设置日志区域样式
         self.text_log.setStyleSheet(ThemeManager.get_log_text_style(self.is_dark_theme))
         
+        # 确保文本颜色正确设置
+        if self.is_dark_theme:
+            self.text_log.setTextColor(Qt.GlobalColor.white)
+        else:
+            self.text_log.setTextColor(Qt.GlobalColor.black)
+        
         layout_log.addWidget(self.text_log)
+        
+        if parent_layout:
+            parent_layout.addWidget(self.group_log)
+        
         return self.group_log
     
     def create_output_group(self, parent_layout):
@@ -764,12 +827,18 @@ class RemoteSensingApp(QMainWindow):
 
     def init_function_modules(self):
         """初始化功能模块"""
-        # 初始化NavigationFunctions
+        # 初始化导航功能模块并确保所有子模块获取正确的主题信息
         self.navigation_functions = NavigationFunctions(self.label_before, self.label_after, self.label_result, self.text_log)
         # 设置NavigationFunctions的main_window引用，方便子模块访问
         self.navigation_functions.main_window = self
-        # 设置NavigationFunctions的当前主题信息，确保弹出窗口使用正确的主题
+        # 设置当前主题信息，确保子模块使用正确的主题
         self.navigation_functions.is_dark_theme = self.is_dark_theme
+        
+        # 确保日志文本颜色正确
+        if self.is_dark_theme:
+            self.text_log.setTextColor(Qt.GlobalColor.white)
+        else:
+            self.text_log.setTextColor(Qt.GlobalColor.black)
         
         # 初始化各功能模块
         self.image_standardization = ImageStandardization(self.navigation_functions)
@@ -792,6 +861,10 @@ class RemoteSensingApp(QMainWindow):
         # 初始化图像导出模块
         from function.image_export import ImageExport
         self.image_export = ImageExport(self.navigation_functions)
+        
+        # 初始化批量处理模块
+        from function.batch_processing import BatchProcessing
+        self.batch_processing = BatchProcessing(self.navigation_functions)
 
     def apply_theme(self):
         """应用当前主题样式"""
@@ -802,6 +875,36 @@ class RemoteSensingApp(QMainWindow):
         if hasattr(self, 'home_page'):
             if self.home_page.is_dark_theme != self.is_dark_theme:
                 self.home_page.update_theme(self.is_dark_theme)
+
+    def show_batch_processing(self):
+        """显示批量处理对话框"""
+        try:
+            self.batch_processing.show_batch_processing_dialog()
+        except Exception as e:
+            self.navigation_functions.log_message(f"显示批量处理界面出错: {str(e)}")
+            import traceback
+            self.navigation_functions.log_message(traceback.format_exc())
+
+    def apply_button_styles(self):
+        """应用按钮样式"""
+        # 首页按钮使用主要按钮样式
+        self.btn_home.setStyleSheet(ThemeManager.get_primary_button_style(self.is_dark_theme))
+        
+        # 解译和导出按钮使用主要按钮样式
+        self.btn_begin.setStyleSheet(ThemeManager.get_primary_button_style(self.is_dark_theme))
+        self.btn_export.setStyleSheet(ThemeManager.get_primary_button_style(self.is_dark_theme))
+        self.btn_batch.setStyleSheet(ThemeManager.get_primary_button_style(self.is_dark_theme))
+        
+        # 导入按钮使用次要按钮样式
+        self.btn_import.setStyleSheet(ThemeManager.get_secondary_button_style(self.is_dark_theme))
+        self.btn_import_after.setStyleSheet(ThemeManager.get_secondary_button_style(self.is_dark_theme))
+        self.btn_standard.setStyleSheet(ThemeManager.get_secondary_button_style(self.is_dark_theme))
+        self.btn_crop.setStyleSheet(ThemeManager.get_secondary_button_style(self.is_dark_theme))
+        
+        # 功能性按钮使用工具按钮样式
+        self.btn_theme.setStyleSheet(ThemeManager.get_utility_button_style(self.is_dark_theme))
+        self.btn_help.setStyleSheet(ThemeManager.get_utility_button_style(self.is_dark_theme))
+        self.btn_clear.setStyleSheet(ThemeManager.get_utility_button_style(self.is_dark_theme))
 
 def main():
     """主函数"""
