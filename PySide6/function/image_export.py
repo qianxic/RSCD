@@ -1,7 +1,15 @@
 import os
+import sys
 import shutil
 from pathlib import Path
-from PySide6.QtWidgets import QFileDialog, QMessageBox
+
+# 添加项目根目录到Python路径
+# sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+
+from PySide6.QtWidgets import QFileDialog, QMessageBox, QDialog, QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QWidget
+from PySide6.QtCore import Qt
+# 从theme_utils导入ThemeManager
+from .theme_utils import ThemeManager
 
 class ImageExport:
     def __init__(self, navigation_functions):
@@ -83,131 +91,78 @@ class ImageExport:
         """显示符合应用主题的消息框
         
         Args:
-            title: 标题
+            title: 对话框标题
             text: 消息内容
-            icon_type: 图标类型，可选值为information, warning, critical, question
+            icon_type: 图标类型，可选值：information, warning, error, success
         """
-        from PySide6.QtWidgets import QDialog, QVBoxLayout, QHBoxLayout, QLabel, QPushButton
-        from PySide6.QtGui import QIcon, QPixmap
-        from PySide6.QtCore import Qt
+        # 检查是否使用深色主题
+        is_dark_theme = hasattr(self.navigation_functions, 'is_dark_theme') and self.navigation_functions.is_dark_theme
         
         # 创建自定义对话框
         dialog = QDialog()
         dialog.setWindowTitle(title)
-        dialog.setFixedSize(280, 120)  # 更小的尺寸
+        dialog.setFixedSize(400, 150)
         
-        # 确定主题
-        is_dark_theme = hasattr(self.navigation_functions, 'is_dark_theme') and self.navigation_functions.is_dark_theme
-        
-        # 设置对话框样式
-        if is_dark_theme:
-            dialog.setStyleSheet("""
-                QDialog {
-                    background-color: #202124;
-                    border: 1px solid #444a5a;
-                }
-                QLabel {
-                    color: #f7f7f8;
-                    font-size: 14px;
-                    font-family: "Microsoft YaHei UI";
-                }
-                QPushButton {
-                    background-color: #444a5a;
-                    color: white;
-                    border-radius: 3px;
-                    padding: 3px 10px;
-                    font-size: 14px;
-                    font-family: "Microsoft YaHei UI";
-                    min-width: 50px;
-                }
-                QPushButton:hover {
-                    background-color: #5d6576;
-                }
-                QPushButton:pressed {
-                    background-color: #353b4a;
-                }
-            """)
-        else:
-            dialog.setStyleSheet("""
-                QDialog {
-                    background-color: #ffffff;
-                    border: 1px solid #e6e6e6;
-                }
-                QLabel {
-                    color: #333333;
-                    font-size: 14px;
-                    font-family: "Microsoft YaHei UI";
-                }
-                QPushButton {
-                    background-color: #f0f0f2;
-                    color: #333333;
-                    border: 1px solid #e6e6e6;
-                    border-radius: 3px;
-                    padding: 3px 10px;
-                    font-size: 14px;
-                    font-family: "Microsoft YaHei UI";
-                    min-width: 50px;
-                }
-                QPushButton:hover {
-                    background-color: #e6e6e9;
-                }
-                QPushButton:pressed {
-                    background-color: #d9d9dc;
-                }
-            """)
+        # 使用ThemeManager设置对话框样式
+        dialog.setStyleSheet(ThemeManager.get_dialog_style(is_dark_theme))
         
         # 创建布局
         layout = QVBoxLayout(dialog)
-        layout.setContentsMargins(10, 10, 10, 10)
-        layout.setSpacing(10)
+        layout.setContentsMargins(20, 20, 20, 20)
+        layout.setSpacing(15)
         
-        # 创建消息内容区域
-        content_layout = QHBoxLayout()
+        # 创建消息容器
+        message_container = QWidget()
+        message_layout = QHBoxLayout(message_container)
+        message_layout.setContentsMargins(0, 0, 0, 0)
+        message_layout.setSpacing(15)
         
-        # 添加图标
+        # 创建图标标签
         icon_label = QLabel()
-        icon_size = 24
         
-        # 根据图标类型设置图标
-        if icon_type == "information":
-            icon_pixmap = QPixmap(":/icons/info.png")  # 使用应用内置图标或者替换为您的图标路径
-        elif icon_type == "warning":
-            icon_pixmap = QPixmap(":/icons/warning.png")
-        elif icon_type == "critical":
-            icon_pixmap = QPixmap(":/icons/error.png")
-        elif icon_type == "question":
-            icon_pixmap = QPixmap(":/icons/question.png")
+        # 设置字体图标，使用Unicode字符
+        if icon_type == "warning":
+            icon_label.setText("⚠️")
+        elif icon_type == "error":
+            icon_label.setText("❌")
+        elif icon_type == "success":
+            icon_label.setText("✅")
+        else:  # information
+            icon_label.setText("ℹ️")
+            
+        # 使用ThemeManager设置图标样式
+        icon_label.setStyleSheet(ThemeManager.get_icon_style(icon_type, is_dark_theme))
         
-        # 如果没有图标资源，显示一个黄色的警告三角图标（简单的模拟）
-        if icon_pixmap.isNull():
-            # 创建一个简单的文本替代图标
-            icon_label.setText("⚠")
-            icon_label.setStyleSheet("font-size: 28px; color: #FFD700;")
-        else:
-            icon_label.setPixmap(icon_pixmap.scaled(icon_size, icon_size, Qt.KeepAspectRatio, Qt.SmoothTransformation))
-        
-        content_layout.addWidget(icon_label)
-        content_layout.addSpacing(10)
-        
-        # 添加文本
+        # 创建文本标签
         text_label = QLabel(text)
         text_label.setWordWrap(True)
-        text_label.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
-        content_layout.addWidget(text_label, 1)
+        text_label.setAlignment(Qt.AlignVCenter | Qt.AlignLeft)
+        text_label.setStyleSheet(ThemeManager.get_dialog_label_style(is_dark_theme))
         
-        layout.addLayout(content_layout)
+        # 添加图标和文本到消息布局
+        message_layout.addWidget(icon_label)
+        message_layout.addWidget(text_label, 1)  # 文本标签扩展
         
-        # 创建按钮区域
-        button_layout = QHBoxLayout()
-        button_layout.addStretch()
+        # 创建按钮容器
+        button_container = QWidget()
+        button_layout = QHBoxLayout(button_container)
+        button_layout.setContentsMargins(0, 0, 0, 0)
+        button_layout.setSpacing(10)
         
-        # 添加确定按钮
+        # 创建确定按钮
         ok_button = QPushButton("确定")
-        ok_button.setFixedWidth(80)
+        ok_button.setFixedWidth(100)
+        ok_button.setStyleSheet(ThemeManager.get_dialog_button_style(is_dark_theme))
         ok_button.clicked.connect(dialog.accept)
+        
+        # 添加按钮到布局
+        button_layout.addStretch()
         button_layout.addWidget(ok_button)
         
-        layout.addLayout(button_layout)
+        # 添加组件到主布局
+        layout.addWidget(message_container)
+        layout.addStretch()
+        layout.addWidget(button_container)
         
         # 显示对话框
-        return dialog.exec_() 
+        dialog.exec() 
